@@ -58,23 +58,29 @@
   src: url('/assets/fonts/VanillaRavioli_Demo.ttf');
 }
 
+:root {
+  --ravioli: 'Vanilla Ravioli', serif;
+  --sans: 'DM Sans', sans-serif;
+  --sub-sans: 'DM Sans Subset', sans-serif;
+}
+
 body {
-  font-family: 'DM Sans Subset', sans-serif;
+  font-family: var(--sub-sans);
 }
 .fonts-loaded-1 body {
-  font-family: 'DM Sans Subset';
+  font-family: var(--sub-sans);
 }
 .fonts-loaded-2 body {
-  font-family: 'DM Sans';
+  font-family: var(--sans);
 }
 :is(h1,h2,h3) {
   font-family: serif;
-  font-size: 29px;
   line-height: 1.15;
   letter-spacing: 1.9px;
   word-spacing: 0px;
   font-weight: 500;;
 }
 .fonts-loaded-2 :is(h1,h2,h3) {
-  font-family: 'Vanilla Ravioli';
+  font-family: var(--ravioli);
+  letter-spacing: 0px;
 }

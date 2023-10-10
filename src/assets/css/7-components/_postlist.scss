@@ -5,21 +5,35 @@
         list-style-type: none;
         padding: 0;
     }
+    p {
+        margin: 0;
+    }
 }
 
 .postlist-item {
     h2 {
-        font-family: Vanilla Ravioli, serif;
         font-size: var(--fluid-2);
     }
     &:has(a + time) h2 {
         margin-bottom: 1rem;
     }
+    &:has(.postlist-subtitle) h2 {
+        margin-bottom: 0.5rem;
+    }
     time,
     .post-tag {
         font-size: 0.95rem;
     }
+
+    .postlist-link {
+        text-decoration-color: transparent;
+        &:hover {
+            text-decoration-color: currentColor;
+        }
+    }
+
+    .postlist-link,
     .post-tag {
-        color: var(--accentColor);
+        color: var(--primaryColor);
     }
 }
