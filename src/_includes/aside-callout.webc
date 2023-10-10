@@ -1,0 +1,4 @@
+<aside>
+    <h3><slot name="title"></slot></h3>
+    <slot name="content"></slot>
+</aside>

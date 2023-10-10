@@ -1,0 +1,25 @@
+
+.postlist {
+    max-width: 60ch;
+    ol[class] {
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+.postlist-item {
+    h2 {
+        font-family: Vanilla Ravioli, serif;
+        font-size: var(--fluid-2);
+    }
+    &:has(a + time) h2 {
+        margin-bottom: 1rem;
+    }
+    time,
+    .post-tag {
+        font-size: 0.95rem;
+    }
+    .post-tag {
+        color: var(--accentColor);
+    }
+}
