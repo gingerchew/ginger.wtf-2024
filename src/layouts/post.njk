@@ -5,5 +5,13 @@ layout: base
     <article class="post">
         <h1>{{ title }}</h1>
         {{ content | safe }}
+        <div class="utterances"></div>
+        <script src="https://utteranc.es/client.js"
+            repo="gingerchew/ginger.wtf-2024"
+            issue-term="title"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+        </script>
     </article>
 </div>
