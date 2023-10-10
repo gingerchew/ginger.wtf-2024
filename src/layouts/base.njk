@@ -6,7 +6,7 @@
     <title>{{ meta.title }}</title>
 
 	<link rel="preload" href="/assets/fonts/dm-sans/dm-sans-v11-latin-regular-subset.woff2" as="font" type="font/woff2" crossorigin="">
-
+	<meta name="view-transition" content="same-origin" />
     {% include "meta.njk" %}
 
 	<script>
@@ -18,8 +18,10 @@
 				document.documentElement.className += " fonts-loaded-2";
 				return;
 			}
-
-			document.fonts.load("1em 'DM Sans Subset'").then(function () {
+			Promise.all([
+				document.fonts.load('1em "Vanilla Ravioli"'), 
+				document.fonts.load("1em 'DM Sans Subset'")
+			]).then(function () {
 				document.documentElement.className += " fonts-loaded-1";
 
 				Promise.all([
@@ -37,7 +39,14 @@
 		}
 	})();
 	</script>
-    
+    <style>
+		p {
+			text-wrap: pretty;
+		}
+		:is(h1,h2,h3,.h1,.h2,.h3) {
+			text-wrap: balance;
+		}
+	</style>
 	<link rel="stylesheet" href="/assets/css/main.scss">
 </head>
 <body>
