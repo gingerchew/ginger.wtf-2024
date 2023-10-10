@@ -8,8 +8,6 @@ eleventyNavigation:
 
 ## My name is ginger!
 
-## What do you do?
-
 I build apps and websites. I play guitar and bass. I play video games.
 
 ## What have you done?
