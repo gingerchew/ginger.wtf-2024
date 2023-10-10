@@ -22,4 +22,12 @@
             padding: 0.25em 0;
         }
     }
+
+    &__right {
+        position: relative;
+    }
+    nav {
+        position: absolute;
+        right: 0;
+    }
 }

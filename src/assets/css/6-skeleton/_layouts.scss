@@ -10,6 +10,7 @@ body {
     min-height: 100%;
     min-height: 100vh;
     position: relative;
+    height: 100%;
 }
 
 .container {
@@ -18,4 +19,8 @@ body {
     max-width: var(--container-max-width);
     padding: 2rem 1rem; // fallback
     padding: 2rem clamp(var(--spacing-medium), 3.75vw, var(--spacing-x-large));
+}
+
+.layout > main {
+    flex: 1;
 }
