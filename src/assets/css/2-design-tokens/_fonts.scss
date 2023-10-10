@@ -14,6 +14,7 @@
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
     src: local(''),
          url('/assets/fonts/dm-sans/dm-sans-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('/assets/fonts/dm-sans/dm-sans-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -23,6 +24,7 @@
     font-family: 'DM Sans';
     font-style: italic;
     font-weight: 400;
+    font-display: swap;
     src: local(''),
          url('/assets/fonts/dm-sans/dm-sans-v11-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('/assets/fonts/dm-sans/dm-sans-v11-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -32,6 +34,7 @@
     font-family: 'DM Sans';
     font-style: italic;
     font-weight: 700;
+    font-display: swap;
     src: local(''),
          url('/assets/fonts/dm-sans/dm-sans-v11-latin-bolditalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('/assets/fonts/dm-sans/dm-sans-v11-latin-bolditalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -41,6 +44,7 @@
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 700;
+    font-display: swap;
     src: local(''),
          url('/assets/fonts/dm-sans/dm-sans-v11-latin-bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('/assets/fonts/dm-sans/dm-sans-v11-latin-bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -55,11 +59,22 @@
 }
 
 body {
-    font-family: sans-serif;
+  font-family: 'DM Sans Subset', sans-serif;
 }
 .fonts-loaded-1 body {
-    font-family: 'DM Sans Subset';
+  /*font-family: 'DM Sans Subset';*/
 }
 .fonts-loaded-2 body {
-    font-family: 'DM Sans';
+  font-family: 'DM Sans';
+}
+:is(h1,h2,h3) {
+  font-family: serif;
+  font-size: 29px;
+  line-height: 1.15;
+  letter-spacing: 1.9px;
+  word-spacing: 0px;
+  font-weight: 500;;
+}
+.fonts-loaded-2 :is(h1,h2,h3) {
+  font-family: 'Vanilla Ravioli';
 }

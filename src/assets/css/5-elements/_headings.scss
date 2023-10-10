@@ -1,9 +1,12 @@
 h1 {
+    &:first-child {
+        margin-top: 0;
+    }
     font-size: var(--fluid-4);
     margin-bottom: 0.5em;
     font-family: 'Vanilla Ravioli', serif;
     + h2 {
-        font-size: var(--fluid-2);
+        font-size: var(--fluid-1);
     }
 }
 
