@@ -3,6 +3,7 @@
  */
  @font-face {
     font-family: 'DM Sans Subset';
+    font-display: swap;
     src: url('/assets/fonts/dm-sans/dm-sans-v11-latin-regular-subset.woff2') format('woff2'),
              url('/assets/fonts/dm-sans/dm-sans-v11-latin-regular-subset.woff') format('woff');
     unicode-range: U+21-80,U+91-94,U+BF-D6,U+D8-F6,U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
