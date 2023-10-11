@@ -4,3 +4,4 @@
 
 - [ ] Some sort of highlight component
 - [ ] convert to eleventy vue template plugin
+- [ ] Theme chooser
