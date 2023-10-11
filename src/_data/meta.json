@@ -1,8 +1,8 @@
 {
-    "title": "Eleventy Plus Vite",
-    "description": "An Eleventy 2 Starter Project with Vite",
-    "url": "https://eleventyplusvite.netlify.app",
+    "title": "Ginger.WTF",
+    "description": "A blog of posts for people in various demographics",
+    "url": "https://ginger.wtf",
     "lang": "en",
     "locale": "en_us",
-    "author": "Matthias Ott"
+    "author": "ginger"
 }
