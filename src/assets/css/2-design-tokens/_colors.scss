@@ -7,10 +7,19 @@
     --backgroundColor: #ffffff;
     --complementColor: #e7c1fb;
     --complementColorRGB: 231, 193, 251;
-    --accentColor: #1055e0;
+    --accentColor: #7a10e5;
 }
 
-// Very basic support for a dark color scheme
+:root[data-mode="dark"] {
+    --backgroundColor: #070901;
+    --textColor: #fcfef6;
+    --primaryColor: #240ba2;
+    --complementColor: #2a043e;
+    --complementColorRGB: 42, 4, 62;
+    --accentColor: #1f64ef;
+}
+
+/* Very basic support for a dark color scheme
 @media (prefers-color-scheme: dark) {
     :root {
         --color-mode: 'dark';
@@ -24,4 +33,39 @@
         --complementColor: #2a043e;
         --accentColor: #1f64ef;
     }
+}*/
+
+:root[data-theme="blue"]:not([data-mode="dark"]) {
+    --backgroundColor: #fdfdff;
+    --primaryColor: #56A1EB;
+    --focusColor: #56A1EB;
+    --complementColor: #c4def8;
+    --complementColorRGB: 196, 222, 248;
+    --accentColor: #156ec6;
+}
+
+
+:root[data-theme="blue"][data-mode="dark"] {
+    --primaryColor: #2887e6;
+    --focusColor: #2887e6;
+    --complementColor: #07213b;
+    --complementColorRGB: 7, 33, 59;
+    --accentColor: #2887E6;
+}
+
+:root[data-theme="red"]:not([data-mode="dark"]) {
+    --backgroundColor: #FFFDFe;
+    --primaryColor: #f88282;
+    --focusColor: #f88282;
+    --complementColor: #fbacac;
+    --complementColorRGB: 251, 172, 172;
+    --accentColor: #d00b0b;
+}
+
+:root[data-theme="red"][data-mode="dark"] {
+    --primaryColor: #7d0707;
+    --focusColor: #7d0707;
+    --complementColor: #530404;
+    --complementColorRGB: 83, 4, 4;
+    --accentColor: #f42f2f;
 }

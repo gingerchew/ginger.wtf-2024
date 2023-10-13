@@ -1,6 +1,6 @@
 button, .button {
     background-color: var(--textColor);
-    color: white;
+    color: var(--backgroundColor);
     
     display: inline-flex;
     align-items: center;
@@ -13,8 +13,24 @@ button, .button {
     text-transform: none;
     white-space: nowrap;
     text-decoration: none;
+    border: unset;
 
     &:hover {
-        background-color: rgba(26, 26, 26, 0.85);
+        background-color: var(--accentColor);
+        color: var(--textColor);
+    }
+}
+
+.toggle-dark-mode {
+    display: grid;
+    padding: 0;
+    grid-template-columns: 48px;
+    grid-template-rows: 48px;
+    justify-content: center;
+    > * {
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+        height: 100%;
+        place-content: center;
     }
 }
