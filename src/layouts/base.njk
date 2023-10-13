@@ -10,6 +10,9 @@
     {% include "meta.njk" %}
 
 	<script>
+	if (localStorage.mode) document.documentElement.dataset.mode = localStorage.mode;
+	if (localStorage.theme) document.documentElement.dataset.theme = localStorage.theme;
+	console.log(localStorage.mode);
 	/* Font loading: Critical FOFT with preload, see: https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-with-preload */
 	(function() {
 		if( "fonts" in document ) {
