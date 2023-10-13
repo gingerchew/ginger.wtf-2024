@@ -74,7 +74,7 @@ module.exports = function (eleventyConfig) {
 								],
 								penthouse: {
 									forceInclude: ['.fonts-loaded-1 body', '.fonts-loaded-2 body'],
-								  }
+								}
 							}
 						})
 					]
@@ -106,11 +106,12 @@ module.exports = function (eleventyConfig) {
 		breaks: true,
 		linkify: true
 	}).use(markdownItAnchor, {
-		permalink: markdownItAnchor.permalink.ariaHidden({
+		permalink: markdownItAnchor.permalink.linkInsideHeader({
 			placement: 'after',
 			class: 'direct-link',
-			symbol: '#',
-			level: [1, 2, 3, 4]
+			symbol: `<span aria-hidden="true">#</span>
+					<span class="visually-hidden">Jump to heading</span>`,
+			level: [1, 2, 3]
 		}),
 		slugify: eleventyConfig.getFilter('slug')
 	})
