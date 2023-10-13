@@ -10,45 +10,45 @@
 }
 
 
-/* dm-sans-regular - latin */
+/* dm-sans-regular - latin *
 @font-face {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: local(''),
-         url('/assets/fonts/dm-sans/dm-sans-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('/assets/fonts/dm-sans/dm-sans-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('/assets/fonts/dm-sans/dm-sans-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ *
+         url('/assets/fonts/dm-sans/dm-sans-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ *
   }
-  /* dm-sans-italic - latin */
+  /* dm-sans-italic - latin *
   @font-face {
     font-family: 'DM Sans';
     font-style: italic;
     font-weight: 400;
     font-display: swap;
     src: local(''),
-         url('/assets/fonts/dm-sans/dm-sans-v11-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('/assets/fonts/dm-sans/dm-sans-v11-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('/assets/fonts/dm-sans/dm-sans-v11-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ *
+         url('/assets/fonts/dm-sans/dm-sans-v11-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ *
   }
-  /* dm-sans-700italic - latin */
+  /* dm-sans-700italic - latin *
   @font-face {
     font-family: 'DM Sans';
     font-style: italic;
     font-weight: 700;
     font-display: swap;
     src: local(''),
-         url('/assets/fonts/dm-sans/dm-sans-v11-latin-bolditalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('/assets/fonts/dm-sans/dm-sans-v11-latin-bolditalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('/assets/fonts/dm-sans/dm-sans-v11-latin-bolditalic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ *
+         url('/assets/fonts/dm-sans/dm-sans-v11-latin-bolditalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ *
   }
-  /* dm-sans-700 - latin */
+  /* dm-sans-700 - latin *
   @font-face {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
     src: local(''),
-         url('/assets/fonts/dm-sans/dm-sans-v11-latin-bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('/assets/fonts/dm-sans/dm-sans-v11-latin-bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('/assets/fonts/dm-sans/dm-sans-v11-latin-bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ *
+         url('/assets/fonts/dm-sans/dm-sans-v11-latin-bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ *
   }
 
 @font-face {
@@ -58,11 +58,27 @@
   font-style: normal;
   src: url('/assets/fonts/VanillaRavioli_Demo.ttf');
 }
+*/
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-display: swap;
+  src: local(''),
+    url(../fonts/Fraunces[SOFT,WONK,opsz,wght].woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-display: swap;
+  src: local(''),
+    url(../fonts/Fraunces-Italic[SOFT,WONK,opsz,wght].woff2) format('woff2');
+}
 
 :root {
-  --ravioli: 'Vanilla Ravioli', serif;
-  --sans: 'DM Sans', sans-serif;
-  --sub-sans: 'DM Sans Subset', sans-serif;
+  --ravioli: 'Fraunces', serif;
+  --sans: helvetica, sans-serif;
+  --sub-sans: helvetica, sans-serif;
 }
 
 body {
