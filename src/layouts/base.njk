@@ -10,8 +10,9 @@
     {% include "meta.njk" %}
 
 	<script>
-	if (localStorage.mode) document.documentElement.dataset.mode = localStorage.mode;
-	if (localStorage.theme) document.documentElement.dataset.theme = localStorage.theme;
+        var { mode, theme } = localStorage;
+	    if (mode) document.documentElement.dataset.mode = mode;
+	    if (theme) document.documentElement.dataset.theme = theme;
 	</script>
     <style>
 		p {
