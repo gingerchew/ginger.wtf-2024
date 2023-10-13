@@ -6,7 +6,7 @@ eleventyNavigation:
     order: 3
 ---
 
-## My name is ginger!
+## My name is {% serifName %}!
 
 I build apps and websites. I play guitar and bass. I play video games.
 
