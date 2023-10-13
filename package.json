@@ -13,6 +13,7 @@
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "build": "npx @11ty/eleventy",
     "clean": "del-cli _site",
+    "perf":"npx unlighthouse --site https://ginger.wtf/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
