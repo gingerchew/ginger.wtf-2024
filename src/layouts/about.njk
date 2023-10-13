@@ -2,8 +2,10 @@
 layout: base
 ---
 <div class="container">
+    <div class="title-container">
+        <h1 class="main-title">{{ title }}</h1>
+    </div>
     <article class="post">
-        <h1>{{ title }}</h1>
         {{ content | safe }}
     </article>
 </div>
