@@ -25,13 +25,13 @@ window.customElements.define(
 
 <small class="text__muted">Credit goes to [Zach Leatherman](https://twitter.com/zachleat) for this [codepen](https://codepen.io/zachleat/pen/dyGjawM).</small>
 
-**Ha Ha... okay but really.**
+## Ha Ha... okay but really.
 
 Okay, first step is to draft up the idea. The base HTML elements aren't complex and our custom element shouldn't be either. I ask myself:
 
 <small class="text__muted">What's a repeated task that I hate doing over and over again?</small>
 
-### `tel:` links
+## `tel:` links
 
 There could be some [discourse](https://css-tricks.com/the-current-state-of-telephone-links/) about `tel:`, and its distant relatives `mailto:`, `fax:`, `sms:`, and `callto:`. For now I just want to focus on `tel:`.
 
