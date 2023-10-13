@@ -1,13 +1,13 @@
 /**
  * Font Face
- */
+ *
  @font-face {
     font-family: 'DM Sans Subset';
     font-display: swap;
     src: url('/assets/fonts/dm-sans/dm-sans-v11-latin-regular-subset.woff2') format('woff2'),
              url('/assets/fonts/dm-sans/dm-sans-v11-latin-regular-subset.woff') format('woff');
     unicode-range: U+21-80,U+91-94,U+BF-D6,U+D8-F6,U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
-}
+}*/
 
 
 /* dm-sans-regular - latin *
@@ -50,7 +50,7 @@
          url('/assets/fonts/dm-sans/dm-sans-v11-latin-bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ *
          url('/assets/fonts/dm-sans/dm-sans-v11-latin-bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ *
   }
-
+*/
 @font-face {
   font-family: 'Vanilla Ravioli';
   font-weight: 700;
@@ -58,7 +58,7 @@
   font-style: normal;
   src: url('/assets/fonts/VanillaRavioli_Demo.ttf');
 }
-*/
+/*
 @font-face {
   font-family: 'Fraunces';
   font-style: normal;
@@ -73,12 +73,12 @@
   font-display: swap;
   src: local(''),
     url(../fonts/Fraunces-Italic[SOFT,WONK,opsz,wght].woff2) format('woff2');
-}
+}*/
 
 :root {
-  --ravioli: 'Fraunces', serif;
-  --sans: helvetica, sans-serif;
-  --sub-sans: helvetica, sans-serif;
+  --ravioli: 'Vanilla Ravioli', serif;
+  --sans: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+  --sub-sans: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
 }
 
 body {
@@ -91,13 +91,9 @@ body {
   font-family: var(--sans);
 }
 :is(h1,h2,h3) {
-  font-family: serif;
-  line-height: 1.15;
-  letter-spacing: 1.9px;
+  line-height: 1.1;
   word-spacing: 0px;
-  font-weight: 500;;
-}
-.fonts-loaded-2 :is(h1,h2,h3) {
+  font-weight: 500;
   font-family: var(--ravioli);
-  letter-spacing: 0px;
+  letter-spacing: calc(-0.01 * 1em);
 }

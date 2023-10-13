@@ -45,7 +45,7 @@ article.post {
         margin-top: 0;
     }
     h2, h3 {
-        font-family: 'Vanilla Ravioli', serif;
+        font-family: var(--ravioli);
         font-size: var(--fluid-2);
     }
 

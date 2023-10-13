@@ -2,14 +2,13 @@ h1 {
     font-size: var(--fluid-4);
     margin-bottom: 0.5em;
     font-family: var(--ravioli);
-    font-variation-settings: "WONK" 1, "SOFT" 20, "opsz" 104, "wght" 600;
 
     &:first-child {
         margin-top: 0;
     }
     + h2 {
         font-size: var(--fluid-1);
-        font-family: var(--sans-subset);
+        font-family: var(--sans);
     }
 
     &.main-title {
