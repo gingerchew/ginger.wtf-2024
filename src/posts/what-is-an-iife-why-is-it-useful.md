@@ -1,5 +1,5 @@
 ---
-title: What is an IIFE?? Why is it useful?
+title: What is an IIFE?
 date: 2021-11-05T16:55:39.349Z
 tags:
   - javascript
@@ -12,7 +12,7 @@ tags:
 >
 > An IIFE can be treated similarly as a module, like when using Universal Module Definition.
 >
-> IIFE's are also convenient for making code more succinct.
+> But now the ESM is standardised, you should probably just use that.
 
 Let’s say we need to get tomorrow’s date to use as a constant. Since we only need to calculate the date once, we’d rather not run a function to get tomorrow’s date each time. This is where an IIFE is most useful.
 
@@ -89,6 +89,6 @@ import './nonEsModule.js';
 console.log(tomorrow) // tomorrows date
 ```
 
-There was a point in time where IIFE usage was pretty popular, to a point where a lot of them were not commented. You could make the case that they were often used improperly. It is understandable to see that syntax and be a little confused, especially if you come from a non-technical background.
+There was a point in time where IIFE usage was pretty popular, to the point where none of them were not commented.
 
-Despite the prevalence of ES Modules, IIFE's still have there place.
+Nowadays I think they are safe to convert to ES modules and call it a day.
