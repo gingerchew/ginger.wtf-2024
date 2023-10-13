@@ -25,11 +25,11 @@ The solution was to just use `@11ty/eleventy-plugin-cache` to cache the list. Wh
 
 Now how do I get the domains from the cache to the webpage. Just use the `_data` cascade and loop through it of course.
 
-```njk
+```html
 <ul class="domains">
-    {% for domain in domains %}
-    <li>.{{ domain }}</li>
-    {% endfor %}
+    {% raw %}{% for domain in domains %}
+    <li>.{ domain }</li>
+    {% endfor %}{% endraw %}
 </ul>
 ```
 
@@ -44,6 +44,7 @@ Apparently, loading a website with a large amount of elements on the page is bad
 So I wrap the first pass with nunjucks into a `<noscript>` tag, and look at my options. First thing's first, how do I get the data without making a request. Here is a trick that I think more people should use to transport medium amounts of JSON. Zero requests, and the browser sees it as a string, not an object/array.
 
 ```html
+{%- raw %}
 <script id="$data" type="application/json">
     [
         {{ data }}
@@ -52,6 +53,7 @@ So I wrap the first pass with nunjucks into a `<noscript>` tag, and look at my o
 <script type="module">
     const data = JSON.parse($data.textContent.trim());
 </script>
+{% endraw %}
 ```
 
 `JSON.parse()` is also surprisingly performant.
@@ -67,23 +69,26 @@ This is roughly what the markup looks like.
 Yeah, that is in fact it. Let's see the JavaScript though.
 
 ```js
+{%- raw %}
 import { createApp } from 'petite-vue';
 
 const domains = JSON.parse($domains.textContent.trim());
 function Domains() {
     return {
-        $template: `<li v-for="domain of domains">.{{domain}}</li>`
+        $template: `<li v-for="domain of domains">.{{ domain }}</li>`
     }
 }
 createApp({
     Domains,
     domains
 }).mount();
+{% endraw %}
 ```
 
 Granted the naming conventions could use some work, but the list was generating. Still getting flagged for too many DOM elements. Next is filter/pagination, I want to show only 1 letter at a time, each letter of the alphabet gets a button. Looks like this:
 
 ```js
+{%- raw %}
 function Pagination() {
     const _alpha = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
@@ -99,6 +104,7 @@ function Pagination() {
         }
     }
 }
+{% endraw %}
 ```
 
 Now need to update how domains are gotten, since we are adding filtering.
@@ -138,9 +144,12 @@ createApp({
 Now let's see it all together, first the markup:
 
 ```html
+{%- raw %}
 <div v-scope>
     <script id=$data" type="application/json">
-    {{ domains }}
+        [
+            {{ domains }}
+        ]
     </script>
     <search>
         <label for="search">Search</label>
@@ -158,11 +167,13 @@ Now let's see it all together, first the markup:
     </ul>
     <script type="module" src="./path/to/module.js"></script>
 </div>
+{% endraw %}
 ```
 
 And the JavaScript:
 
 ```js
+{%- raw %}
 import { createApp } from 'petite-vue';
 
 function Pagination() {
@@ -182,7 +193,7 @@ function Pagination() {
 
 function Domains() {
     return {
-        $template: `<li v-for="domain of domains">.{{domain}}</li>`,
+        $template: `<li v-for="domain of domains">.{{ domain }}</li>`,
     }
 }
 createApp({
@@ -204,6 +215,7 @@ createApp({
     Domains,
     Pagination,
 }).mount();
+{% endraw %}
 ```
 
 And voila! My dream, addiction enabling, domain hunting website is complete. Lighthouse score? 100's across the board.

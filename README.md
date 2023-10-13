@@ -2,6 +2,7 @@
 
 **TODO**
 
-- [ ] Some sort of highlight component
+- [ ] Fix menu on mobile
+- [x] Some sort of highlight component
 - [ ] convert to eleventy vue template plugin
-- [ ] Theme chooser
+- [ ] Theme chooser (in progress)

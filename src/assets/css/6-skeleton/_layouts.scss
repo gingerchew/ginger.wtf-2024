@@ -21,6 +21,14 @@ body {
     padding: 2rem clamp(var(--spacing-medium), 3.75vw, var(--spacing-x-large));
 }
 
+/**
+ * Title was wrapping funny inside of the post container,
+ * this fixed that
+ */
+.title-container {
+    width: 80%;
+}
+
 .layout > main {
     flex: 1;
 }
