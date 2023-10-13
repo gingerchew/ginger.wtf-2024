@@ -31,3 +31,21 @@
         right: 0;
     }
 }
+
+@media (max-width: 992px) {
+    .theme-select {
+        display: none;
+    }
+
+    .site-header-container {
+        flex-wrap: wrap;
+    }
+    .site-header__right {
+        width: 100%;
+
+        .nav__menu {
+            display: flex;
+            gap: 1ch;
+        }
+    }
+}
