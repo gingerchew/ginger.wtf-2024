@@ -32,3 +32,9 @@
         }
     }
 }
+
+.post-tag {
+    padding: 0.25ch 0.5ch;
+    background-color: rgba(var(--accentColorRGB), 0.3);
+    border-radius: 4px;
+}
