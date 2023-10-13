@@ -9,15 +9,14 @@ import 'focus-visible'
 
 
 const root = document.documentElement;
-
-if (root.dataset.mode !== 'light' && !localStorage.mode) {
+const { mode, theme } = localStorage;
+if (root.dataset.mode !== 'light' && !mode) {
     const mode = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     
-    localStorage.mode = mode;
-    root.dataset.mode = mode;
+    root.dataset.mode = localStorage.mode = mode;
 }
-if (localStorage.theme) {
-    themeSelect.value = localStorage.theme;
+if (theme) {
+    themeSelect.value = theme;
 }
 toggleDarkMode.onclick = () => localStorage.mode = root.dataset.mode = document.documentElement.dataset.mode === 'light' ? 'dark' : 'light';
 
