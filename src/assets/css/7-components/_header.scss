@@ -11,12 +11,30 @@
     }
 
     .nav--primary {
-        
+        display: grid;
+        grid-template-columns: 1fr min-content;
+        place-items: center;
+        column-gap: 2ch;
+        @media (min-width: 992px) {
+            grid-template-columns: 1fr;
+        }
         ul {
+            grid-column: 1;
             font-size: var(--fluid-1);
             margin: 0.75rem 0;
         }
-        
+        @media (max-width: 992px) {
+            ul, 
+            .toggle-dark-mode {
+                grid-row: 1;
+            }
+            ul {
+                grid-column: 1;
+            }
+            .toggle-dark-mode {
+                grid-column: 2;
+            }
+        }
         a {
             display: block;
             padding: 0.25em 0;

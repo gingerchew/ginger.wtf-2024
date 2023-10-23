@@ -1,4 +1,9 @@
 <nav class="nav nav--primary" role="navigation" tabindex="-1">
+    <button class="toggle-dark-mode" id="toggleDarkMode">
+        <span class="visually-hidden">Toggle dark mode</span>
+        <span class="show-dark"><span class="gg-moon"></span></span>
+        <span class="show-light"><span class="gg-sun"></span></span>
+    </button>
     {# Nav Links  #}
     <ul class="nav__menu">
         {%- for item in collections.all | eleventyNavigation -%}
@@ -12,20 +17,5 @@
                 </li>
             {%- endif -%}
         {%- endfor -%}
-        {#
-        <li class="nav__item nav__controls">
-            <button class="toggle-dark-mode" id="toggleDarkMode">
-                <span class="visually-hidden">Toggle dark mode</span>
-                <span class="show-dark"><span class="gg-moon"></span></span>
-                <span class="show-light"><span class="gg-sun"></span></span>
-            </button>
-            <label for="themeSelect" class="theme-select">Theme</label>
-            <select id="themeSelect" class="theme-select">
-                <option value="default">Default</option>
-                <option value="blue">Blue</option>
-                <option value="red">Red</option>
-            </select>
-        </li>
-        #}
     </ul>
 </nav>
