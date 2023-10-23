@@ -5,6 +5,7 @@ tags:
   - web-component
   - custom-element
   - progressive-enhancement
+id: 'create-custom-element'
 ---
 
 ## DRAFT

@@ -5,6 +5,7 @@ tags:
   - javascript
   - vanilla
   - old-school
+id: 'what-is-iife'
 ---
 ## A What Now?
 

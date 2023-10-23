@@ -5,6 +5,7 @@ tags:
     - privacy
     - artificial intelligence
     - rant
+id: 'optout-world'
 ---
 
 Recently ChatGPT released an update that lets websites opt out of their crawler crawling their site. Add some simple text to your `robots.txt` file and when the crawler finds your site, it will stop and move onto the next site it finds.

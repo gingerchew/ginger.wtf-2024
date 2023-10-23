@@ -5,6 +5,7 @@ date: 2023-10-10
 tags:
     - video games
     - opinion
+id: 'monster-hunter-loop'
 ---
 
 For the uninitiated, a gameplay loop is a "mechanic" in video games that keeps you coming back. As a living medium they have an opportunity that books, movies, and tv shows don't get. 

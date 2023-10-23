@@ -5,6 +5,7 @@ tags:
     - retrospective
     - javascript
     - eleventy
+id: 'what-i-learned-topleveldev'
 ---
 
 My name is ginger, and I have problem. Anytime says "Do you think there is a website {x}.com?" I have to look it up. What's worse is the number I end up registering. Instead of dealing with that issue, I've decided to enable all my fellow domain addicts.

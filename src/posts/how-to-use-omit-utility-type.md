@@ -5,6 +5,7 @@ tags:
   - typescript
   - validity-state
   - utility-types
+id: 'omit-utility-type'
 ---
 
 ## Checking the `<input />`s that matter
