@@ -1,0 +1,28 @@
+---
+permalink: '.well-known/webfinger'
+eleventyExcludeFromCollection: true
+dynamicPermalink: false
+---
+{
+  "subject": "acct:gingerchew@queer.party",
+  "aliases": [
+    "https://queer.party/@gingerchew",
+    "https://queer.party/users/gingerchew"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://queer.party/@gingerchew"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://queer.party/users/gingerchew"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://queer.party/authorize_interaction?uri={uri}"
+    }
+  ]
+}
