@@ -87,7 +87,7 @@ module.exports = function (eleventyConfig) {
 	Object.keys(filters).forEach((filterName) => {
 		eleventyConfig.addFilter(filterName, filters[filterName])
 	})
-
+	
 	// Transforms
 	Object.keys(transforms).forEach((transformName) => {
 		eleventyConfig.addTransform(transformName, transforms[transformName])
