@@ -97,6 +97,7 @@ module.exports = function (eleventyConfig) {
 	Object.keys(shortcodes).forEach((shortcodeName) => {
 		eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
 	})
+	
 	eleventyConfig.addShortcode('serifName', () => `<span class="serif">Ginger</span>`)
 	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`)
 
