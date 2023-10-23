@@ -3,7 +3,7 @@ title: We live in an opt out world
 date: 2023-08-10
 tags:
     - privacy
-    - ai
+    - artificial intelligence
     - rant
 ---
 
@@ -33,7 +33,7 @@ It is if you let it.
 
 ### *Is this the part where you say "Call your senator!"*
 
-No. Personally, I don't want to keep slapping these companies on the wrist and then wait patiently until the f\*ck up again. *(But calling your senator can't hurt.)* That's not the point.
+No. Personally, I don't want to keep slapping these companies on the wrist and then wait patiently until they f\*ck up again. *(But calling your senator can't hurt.)* That's not the point.
 
 ## Ultimately my take away is this...
 
