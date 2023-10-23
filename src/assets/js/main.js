@@ -15,9 +15,10 @@ if (root.dataset.mode !== 'light' && !mode) {
     
     root.dataset.mode = localStorage.mode = mode;
 }
-if (theme) {
-    themeSelect.value = theme;
-}
-toggleDarkMode.onclick = () => localStorage.mode = root.dataset.mode = document.documentElement.dataset.mode === 'light' ? 'dark' : 'light';
+if (window.themeSelect) {
 
-themeSelect.onchange = () => localStorage.theme = root.dataset.theme = themeSelect.value;
+    themeSelect.value = theme ?? 'blue';
+    themeSelect?.addEventListener('change', () => localStorage.theme = root.dataset.theme = themeSelect.value) ;
+}
+
+window.toggleDarkMode && toggleDarkMode?.addEventListener('click', () => localStorage.mode = root.dataset.mode = document.documentElement.dataset.mode === 'light' ? 'dark' : 'light');
