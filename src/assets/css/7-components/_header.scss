@@ -15,7 +15,7 @@
         grid-template-columns: 1fr min-content;
         place-items: center;
         column-gap: 2ch;
-        @media (min-width: 992px) {
+        @media (min-width: 768px) {
             grid-template-columns: 1fr;
         }
         ul {
@@ -23,7 +23,7 @@
             font-size: var(--fluid-1);
             margin: 0.75rem 0;
         }
-        @media (max-width: 992px) {
+        @media (max-width: 768px) {
             ul, 
             .toggle-dark-mode {
                 grid-row: 1;
@@ -50,7 +50,7 @@
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .theme-select {
         display: none;
     }
