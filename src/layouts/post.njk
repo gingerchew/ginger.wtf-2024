@@ -4,7 +4,7 @@ layout: base
 <div class="container">
     <div class="title-container">
         <a href="/posts/">Back</a>
-        <h1>{{ title }}</h1>
+        <h1 style="view-transition-name: post-{{ id }}">{{ title }}</h1>
     </div>
     <article class="post">
         {{ content | safe }}
