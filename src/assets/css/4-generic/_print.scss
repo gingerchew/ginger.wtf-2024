@@ -18,11 +18,11 @@
   a:visited {
     text-decoration: underline;
   }
-
+  /* 
   a[href]:after {
     content: " (" attr(href) ")";
   }
-
+  */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -70,5 +70,8 @@
   h2,
   h3 {
     page-break-after: avoid;
+  }
+  .toggle-dark-mode {
+    display: none !important;
   }
 }

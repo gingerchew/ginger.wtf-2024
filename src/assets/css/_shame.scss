@@ -11,3 +11,11 @@
  
   ----------------------------------------------------------------------------- 
 */
+.layout-about .direct-link {
+  opacity: 0;
+}
+
+.layout-about :where(h1,h2,h3):hover .direct-link,
+.layout-about .direct-link:is(:focus, :focus-visible) {
+  opacity: 1;
+}
