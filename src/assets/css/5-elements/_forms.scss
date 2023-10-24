@@ -4,8 +4,10 @@ input[type="radio"],
 input[type="range"],
 select,
 progress {
+	font-family: sans-serif;
     accent-color: var(--primaryColor);
 }
+
 /*
 select {
     width: 100%;
