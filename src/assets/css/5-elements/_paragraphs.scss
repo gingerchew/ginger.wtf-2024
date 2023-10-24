@@ -86,24 +86,7 @@ article.post {
 }
 
 mark {
-
-    /*
-    position: relative;
-    color: var(--textColor);
-
-    background-color: transparent;
-    &::after {
-        content: '';
-        position: absolute;
-        top: -0.25ch;
-        right: 0.1ch;
-        bottom: -0.25ch;
-        left: 0.1ch;
-        background-color: var(--accentColor);
-        opacity: 0.15;
-        transform: skewX(-5deg);
-    }
-    */
+    // Icon from: https://svgbox.net/iconset/pen-brushes
     background: url('/assets/icons/highlight.svg');
     background-size: cover;
     background-repeat: no-repeat;
