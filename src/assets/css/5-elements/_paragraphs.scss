@@ -38,7 +38,7 @@ article.post {
         margin: 0;
         margin-top: 0.5em;
     }
-    > * + p {
+    > * + :not(p) {
         margin-top: 1em;
     }
     h1 {
