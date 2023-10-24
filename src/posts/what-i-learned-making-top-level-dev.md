@@ -8,7 +8,7 @@ tags:
 id: 'what-i-learned-topleveldev'
 ---
 
-My name is ginger, and I have problem. Anytime says "Do you think there is a website {x}.com?" I have to look it up. What's worse is the number I end up registering. Instead of dealing with that issue, I've decided to enable all my fellow domain addicts.
+My name is ginger, and I have problem. Anytime someone says "Do you think there is a website {x}.com?" I have to look it up. What's worse is the number I end up registering. Instead of dealing with that issue, I've decided to enable all my fellow domain addicts.
 
 ## So what is it?
 
@@ -40,7 +40,7 @@ Again, these are not difficult problems to solve. First, I wanted to see what my
 
 *Family Feud Buzzer* Wrong, it wasn't.
 
-Apparently, loading a website with a large amount of elements on the page is bad for performance. The solution ended up being... JavaScript... I know, I hate saying it, but it is.
+Apparently, loading a website with a large amount of elements on the page is *"bad for performance"*. The solution ended up being... JavaScript... I know, I hate saying it, but it is.
 
 So I wrap the first pass with nunjucks into a `<noscript>` tag, and look at my options. First thing's first, how do I get the data without making a request. Here is a trick that I think more people should use to transport medium amounts of JSON. Zero requests, and the browser sees it as a string, not an object/array.
 
