@@ -27,6 +27,14 @@ That is where [HTMLElementPlus](https://github.com/AdaRoseCannon/html-element-pl
 
 TL;DR; Here's the whole component
 
+<theme-select>
+    <select ref="select" style="padding: 0.5ch 1ch;margin-block: 2.5ch;">
+        <option value="default" ref="default">Default</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+    </select>
+</theme-select>
+
 ```js
 const root = document.documentElement;
 

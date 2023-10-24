@@ -9,16 +9,47 @@ import 'focus-visible'
 
 
 const root = document.documentElement;
-const { mode, theme } = localStorage;
+const { mode } = localStorage;
 if (root.dataset.mode !== 'light' && !mode) {
     const mode = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     
     root.dataset.mode = localStorage.mode = mode;
 }
-if (window.themeSelect) {
 
-    themeSelect.value = theme ?? 'blue';
-    themeSelect?.addEventListener('change', () => localStorage.theme = root.dataset.theme = themeSelect.value) ;
+toggleDarkMode?.addEventListener('click', () => localStorage.mode = root.dataset.mode = document.documentElement.dataset.mode === 'light' ? 'dark' : 'light');
+
+const updateTheme = ({ value }) => {
+    localStorage.theme = value;
+    root.dataset.theme = value;
 }
 
-window.toggleDarkMode && toggleDarkMode?.addEventListener('click', () => localStorage.mode = root.dataset.mode = document.documentElement.dataset.mode === 'light' ? 'dark' : 'light');
+
+class ThemeSelect extends HTMLElement {
+    constructor() { 
+        super();
+
+        /* derived from HTMLElementPlus */
+        this.refs = new Proxy({}, {
+            get: (_, refName) => this.querySelector(`[ref="${refName}"]`),
+        });
+
+        const previousTheme = localStorage.theme;
+        if (previousTheme) {
+            updateTheme({ value: previousTheme });
+            this.refs.select.value = previousTheme;
+        }
+    }
+    connectedCallback() {
+        const select = this.refs.select;
+
+        if (root.dataset.theme === '') {
+            const defaultValue = this.refs.default.value;
+            root.dataset.theme = defaultValue; // just use the default value if none has been set
+            select.value = defaultValue;
+        }
+        // Add a listener to update the theme on change.
+        select.addEventListener('change', ({ target }) => updateTheme(target))
+    }
+}
+
+customElements.define('theme-select', ThemeSelect);
