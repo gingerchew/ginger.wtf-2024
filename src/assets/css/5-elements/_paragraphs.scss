@@ -57,11 +57,12 @@ article.post {
         text-wrap: pretty;
     }
     
-    aside {
+    :is(aside, blockquote) {
         font-size: var(--fluid-1);
         background-color: rgba(var(--complementColorRGB), 0.3);
         padding: 1ch 1.25ch;
         border-radius: 0.5ch;
+        margin-block: 1em;
         :is(p, h2, h3) {
             margin-top: 0;
         }
