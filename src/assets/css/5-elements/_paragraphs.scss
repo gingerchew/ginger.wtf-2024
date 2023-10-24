@@ -21,7 +21,7 @@ article.post {
     @media (min-width: 768px) {
         p {
             max-width: 60ch;
-        }
+        }/*
         aside {
             float: right;
             margin-right: -10ch;
@@ -31,7 +31,7 @@ article.post {
         }
         :where(:not(aside)) {
             grid-column: 1 / span 2;
-        }
+        }*/
     }
     
     > * + * {
