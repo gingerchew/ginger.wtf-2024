@@ -84,3 +84,28 @@ article.post {
         font-size: 1.1rem;
     }
 }
+
+mark {
+
+    /*
+    position: relative;
+    color: var(--textColor);
+
+    background-color: transparent;
+    &::after {
+        content: '';
+        position: absolute;
+        top: -0.25ch;
+        right: 0.1ch;
+        bottom: -0.25ch;
+        left: 0.1ch;
+        background-color: var(--accentColor);
+        opacity: 0.15;
+        transform: skewX(-5deg);
+    }
+    */
+    background: url('../icons/highlight.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
