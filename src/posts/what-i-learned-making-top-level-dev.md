@@ -1,6 +1,5 @@
 ---
 title: What I learned making top-level.dev
-layout: post
 tags:
     - retrospective
     - javascript
