@@ -24,6 +24,22 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyPluginNavigation)
 	eleventyConfig.addPlugin(EleventyPluginRss)
 	eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight)
+
+	const rootThemeAndMode = [
+		'arc',
+		'red',
+		'blue',
+		'default'
+	].reduce((selectors, currString) => {
+		const newSelector = [
+			`:root[data-theme="${currString}"]`,
+			`:root[data-theme="${currString}"][data-mode="dark"]`
+		]
+
+		selectors.concat(...newSelector);
+
+		return selectors;
+	}, [])
 	eleventyConfig.addPlugin(EleventyVitePlugin, {
 		tempFolderName: '.11ty-vite', // Default name of the temp folder
 
@@ -73,7 +89,11 @@ module.exports = function (eleventyConfig) {
 									}
 								],
 								penthouse: {
-									forceInclude: ['.fonts-loaded-1 body', '.fonts-loaded-2 body'],
+									forceInclude: [
+										'.fonts-loaded-1 body', 
+										'.fonts-loaded-2 body',
+										...rootThemeAndMode
+									],
 								}
 							}
 						})
