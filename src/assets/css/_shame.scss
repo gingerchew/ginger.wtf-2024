@@ -19,3 +19,10 @@
 .layout-about .direct-link:is(:focus, :focus-visible) {
   opacity: 1;
 }
+
+.layout-base .container:has(> .post) {
+  container: inline;
+}
+.layout-base .post {
+  max-width: 70cqi;
+}
