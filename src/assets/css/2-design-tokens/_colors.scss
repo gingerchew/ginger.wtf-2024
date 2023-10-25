@@ -69,3 +69,19 @@
     --complementColorRGB: 83, 4, 4;
     --accentColor: #f42f2f;
 }
+
+:root[data-theme="arc"] {
+    --backgroundColor: var(--arc-palette-maxContrastColor);
+    --primaryColor: var(--arc-palette-cutoutColor);
+    --complementColor: var(--arc-palette-background);
+    --focusColor: var(--arc-palette-focus);
+    --accentColor: var(--arc-palette-minContrastColor);
+    --complementColorRGB: 0, 0, 0;
+}
+
+:root[data-theme="arc"][data-mode="dark"] {
+    --backgroundColor: var(--arc-palette-background);
+    --textColor: var(--arc-palette-title);
+    --complementColor: var(--arc-palette-subtitle);
+    --accentColor: var(--arc-palette-maxContrastColor);
+}

@@ -1,5 +1,16 @@
 <footer class="site-footer" role="contentinfo">
     <div class="site-footer__inner container">
         <p><span>made with {emoji} by {% serifName %}</span></p>
+        <div>
+            <theme-select>
+                <label for="themeSelect">Theme</label>
+                <select ref="select" id="themeSelect">
+                    <option value="default" ref="default">Default</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="arc">Arc</option>
+                </select>
+            </theme-select>
+        </div>
     </div>
 </footer>

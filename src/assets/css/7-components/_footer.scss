@@ -12,6 +12,11 @@
         }
     }
 
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
     a {
         font-weight: bold;
         text-decoration: underline;
