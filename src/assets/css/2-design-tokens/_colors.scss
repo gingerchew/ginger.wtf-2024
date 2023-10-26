@@ -1,5 +1,3 @@
-@use 'sass:color';
-
 :root {
     --textColor: #070901;
     --primaryColor: #765df4;
@@ -19,23 +17,7 @@
     --accentColor: #1f64ef;
 }
 
-/* Very basic support for a dark color scheme
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-mode: 'dark';
-    }
-    
-    :root:not([data-user-color-scheme]) {
-        // --backgroundColor: #000000;
-        --backgroundColor: #070901;
-        --textColor: #fcfef6;
-        --primaryColor: #240ba2;
-        --complementColor: #2a043e;
-        --accentColor: #1f64ef;
-    }
-}*/
-
-:root[data-theme="blue"]:not([data-mode="dark"]) {
+:root[data-theme="blue"] {
     --backgroundColor: #fdfdff;
     --primaryColor: #56A1EB;
     --focusColor: #56A1EB;
@@ -53,7 +35,7 @@
     --accentColor: #2887E6;
 }
 
-:root[data-theme="red"]:not([data-mode="dark"]) {
+:root[data-theme="red"] {
     --backgroundColor: #FFFDFe;
     --primaryColor: #f88282;
     --focusColor: #f88282;

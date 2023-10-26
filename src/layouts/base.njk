@@ -14,6 +14,75 @@
 	    if (theme) document.documentElement.dataset.theme = theme;
 	</script>
     <style>
+        :root {
+            --textColor: #070901;
+            --primaryColor: #765df4;
+            --focusColor: #765df4;
+            --backgroundColor: #ffffff;
+            --complementColor: #e7c1fb;
+            --complementColorRGB: 231, 193, 251;
+            --accentColor: #7a10e5;
+        }
+
+        :root[data-mode="dark"] {
+            --backgroundColor: #070901;
+            --textColor: #fcfef6;
+            --primaryColor: #240ba2;
+            --complementColor: #2a043e;
+            --complementColorRGB: 42, 4, 62;
+            --accentColor: #1f64ef;
+        }
+
+        :root[data-theme="blue"]:not([data-mode="dark"]) {
+            --backgroundColor: #fdfdff;
+            --primaryColor: #56A1EB;
+            --focusColor: #56A1EB;
+            --complementColor: #c4def8;
+            --complementColorRGB: 196, 222, 248;
+            --accentColor: #156ec6;
+        }
+
+
+        :root[data-theme="blue"] {
+            --primaryColor: #2887e6;
+            --focusColor: #2887e6;
+            --complementColor: #07213b;
+            --complementColorRGB: 7, 33, 59;
+            --accentColor: #2887E6;
+        }
+
+        :root[data-theme="red"] {
+            --backgroundColor: #FFFDFe;
+            --primaryColor: #f88282;
+            --focusColor: #f88282;
+            --complementColor: #fbacac;
+            --complementColorRGB: 251, 172, 172;
+            --accentColor: #d00b0b;
+        }
+
+        :root[data-theme="red"][data-mode="dark"] {
+            --primaryColor: #7d0707;
+            --focusColor: #7d0707;
+            --complementColor: #530404;
+            --complementColorRGB: 83, 4, 4;
+            --accentColor: #f42f2f;
+        }
+
+        :root[data-theme="arc"] {
+            --backgroundColor: var(--arc-palette-maxContrastColor);
+            --primaryColor: var(--arc-palette-cutoutColor);
+            --complementColor: var(--arc-palette-background);
+            --focusColor: var(--arc-palette-focus);
+            --accentColor: var(--arc-palette-minContrastColor);
+            --complementColorRGB: 0, 0, 0;
+        }
+
+        :root[data-theme="arc"][data-mode="dark"] {
+            --backgroundColor: var(--arc-palette-background);
+            --textColor: var(--arc-palette-title);
+            --complementColor: var(--arc-palette-subtitle);
+            --accentColor: var(--arc-palette-maxContrastColor);
+        }
 		p {
 			text-wrap: pretty;
 		}
