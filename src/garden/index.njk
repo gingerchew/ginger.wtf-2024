@@ -1,0 +1,23 @@
+---
+layout: base
+eleventyNavigation:
+    key: Garden
+    order: 3
+---
+
+<div class="container postlist-wrapper garden-wrapper">
+    <h1 class="main-title">Garden</h1>
+    <div class="post">
+        <h2 class="sub-title" style="font-size: var(--fluid-2)">A lovingly grown collection of links that are worth sharing with the world.</h2>
+        <ul role="list" class="postlist">
+            {% for flower in garden %}
+            <li>
+                <h3 style="font-size: var(--fluid-1);">{{ flower.title }}</h3>
+                <p>{{ flower.description }}</p>
+                <a href="{{ flower.link }}">Visit <span class="visually-hidden">the linked post: {{ flower.title }}</span></a>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+

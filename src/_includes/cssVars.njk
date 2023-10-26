@@ -17,14 +17,6 @@
     --accentColor: #1f64ef;
 }
 
-:root[data-theme="blue"][data-mode="dark"] {
-    --primaryColor: #2887e6;
-    --focusColor: #2887e6;
-    --complementColor: #07213b;
-    --complementColorRGB: 7, 33, 59;
-    --accentColor: #2887E6;
-}
-
 :root[data-theme="blue"]:not([data-mode="dark"]) {
     --backgroundColor: #fdfdff;
     --primaryColor: #56A1EB;
@@ -34,8 +26,15 @@
     --accentColor: #156ec6;
 }
 
+:root[data-theme="blue"][data-mode="dark"] {
+    --primaryColor: #2887e6;
+    --focusColor: #2887e6;
+    --complementColor: #07213b;
+    --complementColorRGB: 7, 33, 59;
+    --accentColor: #2887E6;
+}
 
-:root[data-theme="red"] {
+:root[data-theme="red"]:not([data-mode="dark"]) {
     --backgroundColor: #FFFDFe;
     --primaryColor: #f88282;
     --focusColor: #f88282;
@@ -50,6 +49,24 @@
     --complementColor: #530404;
     --complementColorRGB: 83, 4, 4;
     --accentColor: #f42f2f;
+}
+
+:root[data-theme="green"]:not([data-mode="dark"]) {
+    --textColor: #070901;
+    --primaryColor: #1f624f;
+    --focusColor: #3f8071;
+    --backgroundColor: #daf3ec;
+    --complementColor: #011d18;
+    --accentColor: #1f624f;
+}
+
+:root[data-theme="green"][data-mode="dark"] {
+    --textColor: #d8e7e4;
+    --primaryColor: #240ba2;
+    --focusColor: #765df4;
+    --backgroundColor: #011d18;
+    --complementColor: #6d7a76;
+    --accentColor: #daf3ec;
 }
 
 :root[data-theme="arc"]:not([data-mode="dark"]) {

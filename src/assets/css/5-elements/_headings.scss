@@ -16,6 +16,24 @@ h1 {
     }
 }
 
+.garden-wrapper {
+    .main-title {
+        margin: 0;
+    }
+    .sub-title {
+        margin-top: 0;
+        margin-bottom: 1.5em;
+    }
+}
+.main-title:has( + .sub-title) {
+margin-bottom: 0;
+}
+
+.main-title + .sub-title {
+    margin-top: 0.25em;
+    margin-bottom: 1.5em;
+}
+
 .fonts-loaded-2 h1 + h2 {
     font-family: var(--sans);
 }
