@@ -1,7 +1,7 @@
 ---
 title: Using Arc Browsers exposed custom properties to theme my website
 tags: 
-    - retrospective
+    - retrospectives
     - success
 id: 'arc-browser-theme'
 ---

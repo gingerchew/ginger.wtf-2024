@@ -8,7 +8,7 @@ permalink: /tags/{{ tag }}/
 ---
 
 <div class="container postlist-wrapper">
-    <h1 class="main-title">Posts with the tag {{ tag }}</h1>
+    <h1 class="main-title">Posts with tag: {{ tag }}</h1>
     {% set postslist = collections[tag] %}
     {% include "postslist.njk" %}
 </div>

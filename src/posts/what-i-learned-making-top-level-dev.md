@@ -1,7 +1,7 @@
 ---
 title: What I learned making top-level.dev
 tags:
-    - retrospective
+    - retrospectives
     - javascript
     - eleventy
 id: 'what-i-learned-topleveldev'

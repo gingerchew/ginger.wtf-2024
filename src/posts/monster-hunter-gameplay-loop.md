@@ -3,7 +3,7 @@ title: Monster Hunter's gameplay loop
 subtitle: Some thoughts on a unique games' unusual way of bringing you back
 date: 2023-10-10
 tags:
-    - video games
+    - games
     - opinion
 id: 'monster-hunter-loop'
 ---
