@@ -16,6 +16,15 @@
     --complementColorRGB: 42, 4, 62;
     --accentColor: #1f64ef;
 }
+
+:root[data-theme="blue"][data-mode="dark"] {
+    --primaryColor: #2887e6;
+    --focusColor: #2887e6;
+    --complementColor: #07213b;
+    --complementColorRGB: 7, 33, 59;
+    --accentColor: #2887E6;
+}
+
 :root[data-theme="blue"]:not([data-mode="dark"]) {
     --backgroundColor: #fdfdff;
     --primaryColor: #56A1EB;
@@ -26,15 +35,7 @@
 }
 
 
-:root[data-theme="blue"][data-mode="dark"] {
-    --primaryColor: #2887e6;
-    --focusColor: #2887e6;
-    --complementColor: #07213b;
-    --complementColorRGB: 7, 33, 59;
-    --accentColor: #2887E6;
-}
-
-:root[data-theme="red"]:not([data-mode="dark"]) {
+:root[data-theme="red"] {
     --backgroundColor: #FFFDFe;
     --primaryColor: #f88282;
     --focusColor: #f88282;
@@ -51,7 +52,7 @@
     --accentColor: #f42f2f;
 }
 
-:root[data-theme="arc"]:not([data-mode="dark"]) {
+:root[data-theme="arc"] {
     --backgroundColor: var(--arc-palette-maxContrastColor);
     --primaryColor: var(--arc-palette-cutoutColor);
     --complementColor: var(--arc-palette-background);
