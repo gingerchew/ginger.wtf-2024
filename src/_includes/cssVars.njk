@@ -1,20 +1,27 @@
 :root {
-    --textColor: #070901;
-    --primaryColor: #765df4;
-    --focusColor: #765df4;
-    --backgroundColor: #ffffff;
-    --complementColor: #e7c1fb;
-    --complementColorRGB: 231, 193, 251;
-    --accentColor: #7a10e5;
+    --_textColor: #070901;
+    --_primaryColor: #765df4;
+    --_focusColor: #765df4;
+    --_backgroundColor: #ffffff;
+    --_complementColor: #e7c1fb;
+    --_complementColorRGB: 231, 193, 251;
+    --_accentColor: #7a10e5;
+    --textColor: var(--_textColor);
+    --primaryColor: var(--_primaryColor);
+    --focusColor: var(--_focusColor);
+    --backgroundColor: var(--_backgroundColor);
+    --complementColor: var(--_complementColor);
+    --complementColorRGB: var(--_complementColorRGB);
+    --accentColor: var(--_accentColor);
 }
 
 :root[data-mode="dark"] {
-    --backgroundColor: #070901;
-    --textColor: #fcfef6;
-    --primaryColor: #240ba2;
-    --complementColor: #2a043e;
-    --complementColorRGB: 42, 4, 62;
-    --accentColor: #1f64ef;
+    --_backgroundColor: #070901;
+    --_textColor: #fcfef6;
+    --_primaryColor: #240ba2;
+    --_complementColor: #2a043e;
+    --_complementColorRGB: 42, 4, 62;
+    --_accentColor: #1f64ef;
 }
 
 :root[data-theme="blue"]:not([data-mode="dark"]) {
@@ -70,17 +77,17 @@
 }
 
 :root[data-theme="arc"]:not([data-mode="dark"]) {
-    --backgroundColor: var(--arc-palette-maxContrastColor);
-    --primaryColor: var(--arc-palette-cutoutColor);
-    --complementColor: var(--arc-palette-background);
-    --focusColor: var(--arc-palette-focus);
-    --accentColor: var(--arc-palette-minContrastColor);
-    --complementColorRGB: 0, 0, 0;
+    --backgroundColor: var(--arc-palette-maxContrastColor, var(--_backgroundColor));
+    --primaryColor: var(--arc-palette-cutoutColor, var(--_primaryColor));
+    --complementColor: var(--arc-palette-background, var(--_complementColor));
+    --focusColor: var(--arc-palette-focus, var(--_focusColor));
+    --accentColor: var(--arc-palette-minContrastColor, var(--_accentColor));
+    --complementColorRGB: var(--_complementColorRGB);
 }
 
 :root[data-theme="arc"][data-mode="dark"] {
-    --backgroundColor: var(--arc-palette-background);
-    --textColor: var(--arc-palette-title);
-    --complementColor: var(--arc-palette-subtitle);
-    --accentColor: var(--arc-palette-maxContrastColor);
+    --backgroundColor: var(--arc-palette-background, var(--_backgroundColor));
+    --textColor: var(--arc-palette-title, var(--_textColor));
+    --complementColor: var(--arc-palette-subtitle, var(--_complementColor));
+    --accentColor: var(--arc-palette-maxContrastColor, var(--_accentColor));
 }
