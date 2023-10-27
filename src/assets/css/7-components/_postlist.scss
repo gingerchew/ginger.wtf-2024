@@ -8,6 +8,12 @@
     p {
         margin: 0;
     }
+
+    &.garden {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
 
 .postlist-item {
@@ -41,3 +47,4 @@
     min-height: 48px;
     display: inline-block;
 }
+
