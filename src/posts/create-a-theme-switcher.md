@@ -6,6 +6,7 @@ tags:
     - how to
     - build with me
 id: 'theme-switcher-build-along'
+date: 2023-10-21
 ---
 
 ## Plan

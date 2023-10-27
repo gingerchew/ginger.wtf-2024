@@ -5,6 +5,7 @@ tags:
     - retrospectives
     - success
 id: 'finished-website'
+date: 2023-10-25
 ---
 
 ## It can be done.

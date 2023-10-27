@@ -1,9 +1,10 @@
 ---
-title: Using Arc Browsers exposed custom properties to theme my website
+title: Using Arc Browser's exposed custom properties to theme my website
 tags: 
     - retrospectives
     - success
 id: 'arc-browser-theme'
+date: 2023-10-25
 ---
 
 I'm in the process of making a theme switcher for my site, this means messing with css custom properties. Checking and double checking contrast ratios, thinking up worth-while themes.
