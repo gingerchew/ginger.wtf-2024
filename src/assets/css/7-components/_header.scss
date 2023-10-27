@@ -3,23 +3,28 @@
     &__container {
         position: relative;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         max-width: var(--container-max-width);
         margin: 0 auto;
         padding: 2rem 1rem; // fallback
         padding: clamp(var(--spacing-x-small), 4vw, var(--spacing-x-large)) clamp(var(--spacing-medium), 3.75vw, var(--spacing-x-large));
+        @media (min-width: 768px) {
+            flex-wrap: nowrap;
+        }
     }
 
     .nav--primary {
         display: grid;
         grid-template-columns: 1fr min-content;
         column-gap: 2ch;
-        justify-items: end;
+        justify-items: left;
         align-items: center;
-
+        
         @media (min-width: 768px) {
             grid-template-columns: 1fr;
+            justify-items: end;
             place-items: center;
         }
         ul {
