@@ -3,8 +3,8 @@ title: Create a Theme Switcher
 subtitle: "I want to add color to my site, and give control to the reader"
 tags: 
     - tutorial
-    - how to
-    - build with me
+    - how-to
+    - build-with-me
 id: 'theme-switcher-build-along'
 date: 2023-10-21
 ---

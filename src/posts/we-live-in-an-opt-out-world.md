@@ -3,7 +3,7 @@ title: We live in an opt out world
 date: 2023-08-10
 tags:
     - privacy
-    - artificial intelligence
+    - artificial-intelligence
     - rant
 id: 'optout-world'
 ---
