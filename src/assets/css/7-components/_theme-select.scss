@@ -1,0 +1,9 @@
+theme-select {
+    display: flex;
+    flex-flow: column;
+    gap: 0.5ch 1ch;
+    @media (min-width: 768px) {
+        flex-flow: row;
+        align-items: center;
+    }
+}
