@@ -1,7 +1,7 @@
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 
-const EleventyPluginWebc = require('@11ty/eleventy-plugin-webc');
+
 const EleventyPluginNavigation = require('@11ty/eleventy-navigation')
 const EleventyPluginRss = require('@11ty/eleventy-plugin-rss')
 const EleventyPluginSyntaxhighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
@@ -20,26 +20,10 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("public");
 
 	// Plugins
-	eleventyConfig.addPlugin(EleventyPluginWebc);
 	eleventyConfig.addPlugin(EleventyPluginNavigation)
 	eleventyConfig.addPlugin(EleventyPluginRss)
 	eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight)
 
-	const rootThemeAndMode = [
-		'arc',
-		'red',
-		'blue',
-		'default'
-	].reduce((selectors, currString) => {
-		const newSelector = [
-			`:root[data-theme="${currString}"]`,
-			`:root[data-theme="${currString}"][data-mode="dark"]`
-		]
-
-		selectors.concat(...newSelector);
-
-		return selectors;
-	}, [])
 	eleventyConfig.addPlugin(EleventyVitePlugin, {
 		tempFolderName: '.11ty-vite', // Default name of the temp folder
 
@@ -56,7 +40,7 @@ module.exports = function (eleventyConfig) {
 			build: {
 				mode: 'production',
 				sourcemap: 'true',
-				manifest: true,
+				manifest: false,
 				modulePreload: false,
 				// This puts CSS and JS in subfolders – remove if you want all of it to be in /assets instead
 				rollupOptions: {
@@ -93,7 +77,6 @@ module.exports = function (eleventyConfig) {
 									forceInclude: [
 										'.fonts-loaded-1 body', 
 										'.fonts-loaded-2 body',
-										...rootThemeAndMode
 									],
 								}
 							}
