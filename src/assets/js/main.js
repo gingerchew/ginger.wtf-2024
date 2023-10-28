@@ -16,9 +16,19 @@ if (root.dataset.mode !== 'light' && !mode) {
     root.dataset.mode = localStorage.mode = mode;
 }
 
-toggleDarkMode?.addEventListener('click', () => localStorage.mode = root.dataset.mode = root.dataset.mode === 'light' ? 'dark' : 'light');
+const updateThemeColor = () => requestAnimationFrame(() => {
+    $themeColor.content = window.getComputedStyle(document.documentElement).getPropertyValue('--backgroundColor');
+})
 
-const updateTheme = ({ value }) => localStorage.theme = root.dataset.theme = value;
+toggleDarkMode?.addEventListener('click', () => requestAnimationFrame(()=>{
+    localStorage.mode = root.dataset.mode = root.dataset.mode === 'light' ? 'dark' : 'light';
+    updateThemeColor()
+}))
+
+const updateTheme = ({ value }) => requestAnimationFrame(() => {
+    localStorage.theme = root.dataset.theme = value;
+    updateThemeColor()
+});
 
 
 class ThemeSelect extends HTMLElement {
