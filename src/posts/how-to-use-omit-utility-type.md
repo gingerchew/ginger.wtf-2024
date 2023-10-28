@@ -8,11 +8,11 @@ tags:
 id: 'omit-utility-type'
 ---
 
-## Checking the `<input />`s that matter
+## Checking the inputs that matter
 
 I needed to check whether an input was valid. I could check just the old faithful `input.validity.valid === true`. Problem is I needed to check this input alongside inputs I'd really rather ignore. For example, `[type="hidden"]`, `[type="password"]`, `[type="search"]`. I'd rather just ignore these entirely.
 
-If I was using just Vanilla&reg; JavaScript&copy;, I would just add a property to the `input` element;
+If I was using just Vanilla JavaScript, I would just add a property to the `input` element;
 
 ```js
 input.__ignore = ['hidden','search','password'].includes(input.type);
