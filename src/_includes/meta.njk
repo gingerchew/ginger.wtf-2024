@@ -13,11 +13,9 @@
     <meta property="og:description" content="{{ description  or meta.description }}">
     <meta property="og:url" content="{{ absolutePageUrl }}">
     <meta property="og:locale" content="{{ meta.locale }}">
-    <meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}">
-    {%- if image -%}
-        <meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}">
-    {%- endif -%}
-
+    <!--meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}"-->
+    <meta property="op:image" content="https://ogchew.netlify.app/{{ absolutePageUrl | urlencode }}/small/">
+    
     {# Favicon #}
     <!--link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-touch-icon.png' | url }}">
     <link rel="icon" type="image/png" href="{{ '/assets/images/favicon/favicon-32x32.png' | url }}" sizes="32x32">
