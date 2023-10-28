@@ -9,7 +9,7 @@ body {
 .show-dark { display: none; }
 .show-light { display: grid }
 
-:root[data-mode="dark"] {
+.toggle-dark-mode:where([data-mode="dark"]) {
     .show-dark { display: grid }
     .show-light { display: none }
 }

@@ -47,6 +47,10 @@
         a {
             display: block;
             padding: 0.25em 0;
+            transition: text-decoration-color 0.1s ease;
+            &:hover {
+                text-decoration-color: transparent;
+            }
         }
     }
 
@@ -62,10 +66,6 @@
 }
 
 @media (max-width: 768px) {
-    .theme-select {
-        display: none;
-    }
-
     .site-header-container {
         flex-wrap: wrap;
     }

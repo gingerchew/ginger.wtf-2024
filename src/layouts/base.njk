@@ -12,11 +12,6 @@
 	<meta name="view-transition" content="same-origin" />
     {% include "meta.njk" %}
 
-	<script>
-        var { mode, theme } = localStorage;
-	    if (mode) document.documentElement.dataset.mode = mode;
-	    if (theme) document.documentElement.dataset.theme = theme;
-	</script>
     <style>
 		p {
 			text-wrap: pretty;
@@ -28,6 +23,16 @@
 	<link rel="stylesheet" href="/assets/css/main.scss">
 </head>
 <body class="layout-{{layout}}">
+	<script type="module">
+        var { mode, theme } = localStorage;
+        if (mode) document.getElementById('$toggleDarkMode').dataset.mode = mode;
+        if (theme) {
+            var select = document.getElementById('$themeSelect');
+            select.dataset.theme = select.value = localStorage.theme;
+            // document.getElementById('$themeSelect').dataset.theme = theme;
+        }
+        window.umtc = () => requestAnimationFrame(_=>document.getElementById('$themeColor').content = getComputedStyle(document.documentElement).getPropertyValue('--backgroundColor'));
+	</script>
     <a href="#main" class="skiplink">Skip to main content</a>
 
     <div class="layout" role="document">

@@ -34,6 +34,8 @@
     .postlist-link {
         text-decoration-color: transparent;
         color: currentColor;
+        display: block;
+        transition: text-decoration-color 0.1s ease;
         &:hover {
             text-decoration-color: var(--accentColor);
         }
@@ -49,6 +51,12 @@
         background-color: var(--accentColorTransparent);
         border-radius: 4px;
         padding: 0.5ch 1ch;
+        transition: all 0.1s ease;
+        transition-property: background-color, color;
+    }
+    &:hover > span {
+        background-color: var(--accentColor);
+        color: var(--backgroundColor);
     }
 }
 
