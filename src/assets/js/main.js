@@ -16,12 +16,9 @@ if (root.dataset.mode !== 'light' && !mode) {
     root.dataset.mode = localStorage.mode = mode;
 }
 
-toggleDarkMode?.addEventListener('click', () => localStorage.mode = root.dataset.mode = document.documentElement.dataset.mode === 'light' ? 'dark' : 'light');
+toggleDarkMode?.addEventListener('click', () => localStorage.mode = root.dataset.mode = root.dataset.mode === 'light' ? 'dark' : 'light');
 
-const updateTheme = ({ value }) => {
-    localStorage.theme = value;
-    root.dataset.theme = value;
-}
+const updateTheme = ({ value }) => localStorage.theme = root.dataset.theme = value;
 
 
 class ThemeSelect extends HTMLElement {
