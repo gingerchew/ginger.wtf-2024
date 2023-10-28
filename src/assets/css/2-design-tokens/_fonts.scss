@@ -3,15 +3,23 @@
  */
 
 @font-face {
+  font-family: 'Adjusted Ravioli';
+  src: local(serif);
+}
+
+@font-face {
   font-family: 'Vanilla Ravioli';
   font-weight: 700;
   font-display: swap;
   font-style: normal;
+  size-adjust: 103%;
+  ascent-override: 75%;
+  descent-override: 10%;
   src: url('/assets/fonts/VanillaRavioli_Demo.ttf');
 }
 
 :root {
-  --ravioli: 'Vanilla Ravioli', serif;
+  --ravioli: 'Vanilla Ravioli', 'Adjusted Ravioli', serif;
   --sans: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
   --sub-sans: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
 }

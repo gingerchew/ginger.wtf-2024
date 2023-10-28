@@ -15,7 +15,21 @@ h1 {
         font-size: var(--fluid-5);
     }
 }
+h1:has(.size-adjust) {
+    display: grid;
+    > * {
+        grid-row: 1;
+        grid-column: 1;
+        color: blue;
+        border: 1px solid;
+    }
 
+    .size-adjust {
+        font-family: 'Adjusted Ravioli';
+        mix-blend-mode: multiply;
+        color: red;
+    }
+}
 .garden-wrapper {
     .main-title {
         margin: 0;
