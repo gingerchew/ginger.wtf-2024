@@ -26,3 +26,7 @@
 .layout-base .post {
   max-width: 70cqi;
 }
+
+.utterances:not(:has( + .utterances)) {
+  min-height: 270px;
+}
