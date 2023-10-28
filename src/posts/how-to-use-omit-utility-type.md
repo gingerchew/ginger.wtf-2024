@@ -10,7 +10,11 @@ id: 'omit-utility-type'
 
 ## Checking the inputs that matter
 
-I needed to check whether an input was valid. I could check just the old faithful `input.validity.valid === true`. Problem is I needed to check this input alongside inputs I'd really rather ignore. For example, `[type="hidden"]`, `[type="password"]`, `[type="search"]`. I'd rather just ignore these entirely.
+I needed to check whether an input was valid. I could check just the old faithful:
+```js
+input.validity.valid === true
+```
+Problem is I needed to check this input alongside inputs I'd really rather ignore. Those types being hidden, password, and search. I'd rather just ignore these entirely.
 
 If I was using just Vanilla JavaScript, I would just add a property to the `input` element;
 
@@ -40,7 +44,7 @@ interface ValidityState {
 }
 ```
 
-This is exactly what I need *(and some of what I don't)*. I still have my problem of "I need to set some inputs as "ignore" as well as valid/invalid.
+This is exactly what I need *(and some of what I don't)*.
 
 Looking through the [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html), I found what I was looking for with the utility type [Omit](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys).
 
@@ -83,7 +87,7 @@ interface Validity extends Omit<ValidityState, 'valid'>;
 
 ### Building on top of Omit
 
-The second feature of `Omit` is that you can just append an object with properties to build onto it.
+We can add the omitted interface by appending an object with our extra property.
 
 ```ts
 interface Validity extends Omit<ValidityState, 'valid'>{

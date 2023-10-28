@@ -59,7 +59,7 @@ article.post {
     
     :is(aside, blockquote) {
         font-size: var(--fluid-1);
-        background-color: rgba(var(--complementColorRGB), 0.3);
+        background-color: var(--accentColorTransparent);
         padding: 1ch 1.25ch;
         border-radius: 0.5ch;
         margin-block: 1em;
@@ -71,7 +71,7 @@ article.post {
     details {
         margin-block: 1rem;
         font-size: 0.9rem;
-        background-color: rgba(var(--complementColorRGB), 0.3);
+        background-color: var(--accentColorTransparent);
         padding: 1rem 1.5rem;
         border-radius: 0.5ch;
     }

@@ -3,7 +3,9 @@ pre:has(> code) {
     padding: 1ch;
     border-radius: 4px;
 }
-
+p > code {
+    font-size: 0.85em;
+}
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
