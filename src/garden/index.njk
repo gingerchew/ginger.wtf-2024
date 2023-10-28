@@ -15,7 +15,7 @@ eleventyNavigation:
                 <article>
                     <h3 style="font-size: var(--fluid-1);">{{ flower.title }}</h3>
                     <p>{{ flower.description }}</p>
-                    <a href="{{ flower.link }}">Visit <span class="visually-hidden">the linked post: {{ flower.title }}</span></a>
+                    <a href="{{ flower.link }}" class="link">Visit <span class="visually-hidden">the linked post: {{ flower.title }}</span></a>
                 </article>
             </li>
             {% endfor %}
