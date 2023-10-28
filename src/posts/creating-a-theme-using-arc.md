@@ -7,7 +7,7 @@ id: 'arc-browser-theme'
 date: 2023-10-25
 ---
 
-I'm in the process of making a theme switcher for my site, this means messing with css custom properties. Checking and double checking contrast ratios, thinking up worth-while themes.
+I'm in the process of making a theme switcher for my site, this means messing with CSS custom properties. Checking and double checking contrast ratios, thinking up worth-while themes.
 
 As I was flipping through different themes though, I noticed at the very end of the inspector stylesheet a series of custom properties.
 
@@ -36,9 +36,9 @@ As I was flipping through different themes though, I noticed at the very end of 
 
 Okay, now before I go messing with these custom properties, I have to remember some things.
 
-1 Color contrast is a very serious issue across the web
-2 *_YOU_* suffer from low contrast woes across the web
-3 This isn't necessarily something that will be here forever. Arc may decide to remove these down the rode, then you have a theme that does nothing.
+- 1 Color contrast is a very serious issue across the web
+- 2 **_YOU_** suffer from low contrast woes across the web
+- 3 You can't guarantee these custom properties will be here forever. Arc may decide to remove these down the rode, then you have a theme that does nothing.
 
 That in mind, lets fiddle. 
 
@@ -46,7 +46,7 @@ That in mind, lets fiddle.
 
 The code that is pasted above is for a color scheme that is a complementary triad in the green spectrum.
 
-You would think that `--arc-palette-background` would be mmy go to choice, but its not going to work with my light theme.
+You would think that `--arc-palette-background` would be my go to choice, but its not going to work with my light theme.
 
 If you can't read hex, the `--arc-palette-background` is essentially a very pretty black. No good.
 
@@ -105,7 +105,7 @@ So let's work it in. Right now my variable usage looks like this:
 }
 ```
 
-I want accent to really pop, so lets add in the `--arc-background-gradient-color1` as the `--accentColor`
+I want the accent to really pop, so lets add in the `--arc-background-gradient-color1` as the `--accentColor`
 
 ```css
 :root[data-theme=arc] {
@@ -117,7 +117,7 @@ If you speak hex, you know that `#D2EBF3FF` is essentially white. Not going to w
 
 I still want that pop though. Using the 3 complementary colors won't achieve that unfortunately.
 
-If I use assume the gradient has 1 primary with 2 secondary across from it, it works out better. But fiddling with it more, there isn't a way to _guarantee_ that `--arc-background-gradient-color1` will contrast with the background.
+If I assume the gradient has 1 primary with 2 secondary across from it, it works out better. But fiddling with it more, there isn't a way to _guarantee_ that `--arc-background-gradient-color1` will contrast with the background.
 
 Maybe when `color-contrast()` is better supported, I can revisit that idea.
 
@@ -134,7 +134,6 @@ This was actually really simple to implement. All the light colors become dark, 
     --backgroundColor: var(--arc-palette-background);
     --textColor: var(--arc-palette-title);
     --accentColor: var(--arc-palette-maxContrastColor);
-}
 }
 ```
 
