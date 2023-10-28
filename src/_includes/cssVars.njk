@@ -1,46 +1,56 @@
 :root {
-    --_textColor: #070901;
-    --_primaryColor: #765df4;
-    --_focusColor: #765df4;
-    --_backgroundColor: #ffffff;
-    --_complementColor: #e7c1fb;
-    --_complementColorRGB: 231, 193, 251;
-    --_accentColor: #7a10e5;
-    --textColor: var(--_textColor);
-    --primaryColor: var(--_primaryColor);
-    --focusColor: var(--_focusColor);
-    --backgroundColor: var(--_backgroundColor);
-    --complementColor: var(--_complementColor);
-    --complementColorRGB: var(--_complementColorRGB);
-    --accentColor: var(--_accentColor);
+    --backgroundColor: #f6ecf9;
+    --primaryColor: #86339f;
+    --textColor:  #070901;
+    --complementColor: #280f30;
+    --focusColor: #9c59b1ce;
+    --accentColor: #86339f;
+    --accentColorTransparent: #86339f22;
 }
 
 :root[data-mode="dark"] {
-    --_backgroundColor: #070901;
-    --_textColor: #fcfef6;
-    --_primaryColor: #240ba2;
-    --_complementColor: #2a043e;
-    --_complementColorRGB: 42, 4, 62;
-    --_accentColor: #1f64ef;
+    --backgroundColor: #280f30;
+    --textColor: #ece0f0;
+    --complementColor: #7b767d;
+    --accentColor: #f6ecf9;
+    --accentColorTransparent: #f6ecf922;
 }
-
 :root[data-theme="blue"]:not([data-mode="dark"]) {
-    --backgroundColor: #fdfdff;
-    --primaryColor: #56A1EB;
-    --focusColor: #56A1EB;
-    --complementColor: #c4def8;
-    --complementColorRGB: 196, 222, 248;
-    --accentColor: #156ec6;
+    --backgroundColor: #e7f2f7;
+    --primaryColor: #275e7a;
+    --complementColor: #071c25;
+    --focusColor: #477d94ce;
+    --textColor: #071c25;
+    --accentColor: #275e7a;
+    --accentColorTransparent: #275e7a22;
+    /* --complementColorRGB: var(--_complementColorRGB);*/
 }
 
 :root[data-theme="blue"][data-mode="dark"] {
-    --primaryColor: #2887e6;
-    --focusColor: #2887e6;
-    --complementColor: #07213b;
-    --complementColorRGB: 7, 33, 59;
-    --accentColor: #2887E6;
+    --backgroundColor: #071c25;
+    --textColor: #ebe7eb;
+    --complementColor: #73797c;
+    --accentColor: #e7f2f7;
+    --accentColorTransparent: #e7f2f722;
+}
+:root[data-theme="red"]:not([data-mode="dark"]) {
+    --backgroundColor: #FBEBECFF;
+    --primaryColor: #A72229FF;
+    --complementColor: #31040BFF;
+    --focusColor: #B53F4FCE;
+    --textColor: #31040BFF;
+    --accentColor: #A72229FF;
+    --accentColorTransparent: #A7222933;
+    /*--complementColorRGB: var(--_complementColorRGB);*/
 }
 
+:root[data-theme="red"][data-mode="dark"] {
+    --backgroundColor: #31040BFF;
+    --textColor: #F0DADEFF;
+    --complementColor: #7E7676FF;
+    --accentColor: #FBEBECFF;
+}
+/*
 :root[data-theme="red"]:not([data-mode="dark"]) {
     --backgroundColor: #FFFDFe;
     --primaryColor: #f88282;
@@ -56,7 +66,7 @@
     --complementColor: #530404;
     --complementColorRGB: 83, 4, 4;
     --accentColor: #f42f2f;
-}
+}*/
 
 :root[data-theme="green"]:not([data-mode="dark"]) {
     --textColor: #070901;
@@ -65,6 +75,7 @@
     --backgroundColor: #daf3ec;
     --complementColor: #011d18;
     --accentColor: #1f624f;
+    --accentColorTransparent: #1f624f22;
 }
 
 :root[data-theme="green"][data-mode="dark"] {
@@ -74,20 +85,24 @@
     --backgroundColor: #011d18;
     --complementColor: #6d7a76;
     --accentColor: #daf3ec;
+    --accentColorTransparent: #daf3ec22;
 }
 
 :root[data-theme="arc"]:not([data-mode="dark"]) {
-    --backgroundColor: var(--arc-palette-maxContrastColor, var(--_backgroundColor));
-    --primaryColor: var(--arc-palette-cutoutColor, var(--_primaryColor));
-    --complementColor: var(--arc-palette-background, var(--_complementColor));
-    --focusColor: var(--arc-palette-focus, var(--_focusColor));
-    --accentColor: var(--arc-palette-minContrastColor, var(--_accentColor));
+    --backgroundColor: var(--arc-palette-maxContrastColor);
+    --primaryColor: var(--arc-palette-cutoutColor);
+    --complementColor: var(--arc-palette-background);
+    --focusColor: var(--arc-palette-focus);
+    --textColor: var(--arc-palette-background);
+    --accentColor: var(--arc-palette-minContrastColor);
+    --accentColorTransparent: var(--arc-palette-focus);
     --complementColorRGB: var(--_complementColorRGB);
 }
 
 :root[data-theme="arc"][data-mode="dark"] {
-    --backgroundColor: var(--arc-palette-background, var(--_backgroundColor));
-    --textColor: var(--arc-palette-title, var(--_textColor));
-    --complementColor: var(--arc-palette-subtitle, var(--_complementColor));
-    --accentColor: var(--arc-palette-maxContrastColor, var(--_accentColor));
+    --backgroundColor: var(--arc-palette-background);
+    --textColor: var(--arc-palette-title);
+    --complementColor: var(--arc-palette-subtitle);
+    --accentColor: var(--arc-palette-maxContrastColor);
+    --accentColorTransparent: var(--arc-palette-focus);
 }

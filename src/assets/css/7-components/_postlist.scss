@@ -33,18 +33,22 @@
 
     .postlist-link {
         text-decoration-color: transparent;
+        color: currentColor;
         &:hover {
-            text-decoration-color: currentColor;
+            text-decoration-color: var(--accentColor);
         }
     }
 }
 
 .post-tag {
-    padding: 0.25ch 0.5ch;
-    background-color: rgba(var(--accentColorRGB), 0.3);
-    border-radius: 4px;
     min-width: 48px;
     min-height: 48px;
-    display: inline-block;
+    display: inline flex;
+    align-items: center;
+    > span {
+        background-color: var(--accentColorTransparent);
+        border-radius: 4px;
+        padding: 0.5ch 1ch;
+    }
 }
 
