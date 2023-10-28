@@ -1,5 +1,6 @@
 ---
 title: What is the difference between Array.from and the spread operator?
+description: Developers love nitpicking so lets get into the deep end of the newer spread operator and the static from method.
 date: 2023-10-25
 tags:
   - explainer

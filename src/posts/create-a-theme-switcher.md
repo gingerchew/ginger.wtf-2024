@@ -1,10 +1,13 @@
 ---
 title: Create a Theme Switcher
-subtitle: "I want to add color to my site, and give control to the reader"
+subtitle: I want to add color to my site, and give control to the reader
+description: How to create a theme switch component with custom elements.
 tags: 
     - tutorial
     - how-to
     - build-with-me
+    - web-components
+    - custom-elements
 id: 'theme-switcher-build-along'
 date: 2023-10-21
 ---

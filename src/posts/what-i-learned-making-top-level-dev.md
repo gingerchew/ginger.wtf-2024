@@ -1,5 +1,6 @@
 ---
 title: What I learned making top-level.dev
+description: A single purpose site that gives you all of the top level domains in one handy list.
 tags:
     - retrospectives
     - javascript
@@ -8,7 +9,7 @@ id: 'what-i-learned-topleveldev'
 date: 2023-10-18
 ---
 
-My name is ginger, and I have problem. Anytime someone says "Do you think there is a website {x}.com?" I have to look it up. What's worse is the number I end up registering. Instead of dealing with that issue, I've decided to enable all my fellow domain addicts.
+My name is Ginger, and I have problem. Anytime someone says "Do you think there is a website {x}.com?" I have to look it up. What's worse is the number I end up registering. Instead of dealing with that issue, I've decided to enable all my fellow domain addicts.
 
 ## So what is it?
 

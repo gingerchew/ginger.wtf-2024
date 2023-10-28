@@ -1,5 +1,6 @@
 ---
 title: We live in an opt out world
+description: Artificial intelligence is scraping the web and we are not better for it.
 date: 2023-08-10
 tags:
     - privacy

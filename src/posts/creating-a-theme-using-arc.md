@@ -1,8 +1,10 @@
 ---
 title: Using Arc Browser's exposed custom properties to theme my website
+description: Bringing back some of the old web style site, I'm building a theme with the help of Arc.
 tags: 
     - retrospectives
     - success
+    - css
 id: 'arc-browser-theme'
 date: 2023-10-25
 ---

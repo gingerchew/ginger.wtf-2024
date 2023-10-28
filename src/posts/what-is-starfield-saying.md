@@ -1,5 +1,6 @@
 ---
 title: What is Starfield saying?
+description: Bethesda's brand new space exploration game has a lot to do, but not much to say.
 date: 2023-09-03T02:07:06.340Z
 tags:
     - games
