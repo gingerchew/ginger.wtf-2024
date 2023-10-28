@@ -3,7 +3,11 @@
   <li>
     <article class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
       <a href="{{ post.url | url }}" class="postlist-link"><h2>{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</h2></a>
-      {%- if post.data.subtitle %}<p class="postlist-subtitle">{{ post.data.subtitle }}</p>{% endif %}
+      {%- if post.data.subtitle %}
+        <p class="postlist-subtitle">{{ post.data.subtitle }}</p>
+      {% elif post.data.description %}
+        <p class="postlist-subtitle">{{ post.data.description }}</p>
+      {% endif %}
       <time class="postlist-date" datetime="{{ post.date | dateToFormat('yyyy-MM-dd') }}">{{ post.date | dateToFormat('dd LLL yyyy') }}</time>
       {% for tag in post.data.tags | filterTagList %}
         {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
