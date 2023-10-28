@@ -2,6 +2,7 @@ h1 {
     font-size: var(--fluid-4);
     margin-bottom: 0.5em;
     font-family: var(--ravioli);
+    letter-spacing: 1px;
 
     &:first-child {
         margin-top: 0;
@@ -28,6 +29,7 @@ h1:has(.size-adjust) {
         font-family: 'Adjusted Ravioli';
         mix-blend-mode: multiply;
         color: red;
+        letter-spacing: 0;
     }
 }
 .garden-wrapper {

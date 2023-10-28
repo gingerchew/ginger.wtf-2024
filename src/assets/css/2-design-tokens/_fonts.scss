@@ -12,7 +12,6 @@
   font-weight: 700;
   font-display: swap;
   font-style: normal;
-  size-adjust: 103%;
   ascent-override: 75%;
   descent-override: 10%;
   src: url('/assets/fonts/VanillaRavioli_Demo.ttf');
@@ -35,7 +34,7 @@ body {
 }
 :is(h1,h2,h3) {
   line-height: 1.1;
-  word-spacing: 0px;
+  word-spacing: -1px;
   font-weight: 500;
   font-family: var(--ravioli);
   letter-spacing: calc(-0.01 * 1em);
