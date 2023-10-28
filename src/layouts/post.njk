@@ -9,12 +9,27 @@ layout: base
     <article class="post">
         {{ content | safe }}
         <div class="utterances"></div>
-        <script src="https://utteranc.es/client.js"
+        <script>
+            new IntersectionObserver(([{ isIntersecting, target }], io) => {
+                if (isIntersecting) {
+                    const s = document.createElement('script');
+                    s.setAttribute('repo', 'gingerchew/ginger.wtf-2024');
+                    s.setAttribute('issue-term', 'title');
+                    s.setAttribute('theme', 'preferred-color-scheme');
+                    s.setAttribute('crossorigin', 'anonymous');
+                    s.setAttribute('async', '');
+                    target.insertAdjacentElement('afterend', s);
+                    s.setAttribute('src',"https://utteranc.es/client.js");
+                    io.disconnect();
+                }
+            }).observe(document.querySelector('.utterances'))
+        </script>
+        <!--script 
             repo="gingerchew/ginger.wtf-2024"
             issue-term="title"
             theme="preferred-color-scheme"
             crossorigin="anonymous"
             async>
-        </script>
+        </script-->
     </article>
 </div>
