@@ -61,12 +61,12 @@ module.exports = function (eleventyConfig) {
 								inline: true,
 								dimensions: [
 									{
-									  height: 900,
-									  width: 375,
+										height: 900,
+										width: 375,
 									},
 									{
-									  height: 720,
-									  width: 1280,
+										height: 720,
+										width: 1280,
 									},
 									{
 										height: 1080,
