@@ -4,11 +4,27 @@ description: A quick learner on how each method is done and when to use them
 subtitle: Looping through arrays is easy when you know how
 date: 2023-10-30
 tags:
-    - explainer
-    - tutorial
+    - tutorials
+    - web-development
     - javascript
+    - javascript-tips
     - array-methods
-    - how-to
+    - foreach
+    - map
+    - reduce
+    - javascript
+    - callback-functions
+    - examples
+    - old-fashioned-for-loops
+    - advantages-of-.map
+    - advantages-of-.reduce
+    - complex-tasks-in-one-function
+    - filtering-and-mapping
+    - programming-techniques
+    - best-practices
+    - web-development-insights
+    - array-iteration
+    - javascript-methods
 id: 'using-foreach-map-and-reduce'
 ---
 
