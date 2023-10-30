@@ -16,6 +16,14 @@
     <!--meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}"-->
     <meta property="og:image" content="https://v1.screenshot.11ty.dev/{{ absolutePageUrl | urlencode }}/opengraph/_z202310_0/" >
     <meta property="og:type" content="image/png" />
+
+    {% if layout == 'post' %}
+    <meta name="twitter:card" content="summary_large_image" />
+    {% else %}
+    <meta name="twitter:card" content="summary" />
+    {% endif %}
+    <meta name="twitter:site" content="@gingercheww" />
+    <meta name="twitter:creator" content="@gingercheww" />
     
     {# Favicon #}
     <!--link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-touch-icon.png' | url }}">
