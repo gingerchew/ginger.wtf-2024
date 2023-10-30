@@ -5,6 +5,31 @@ tags:
     - retrospectives
     - success
     - css
+    - arc-browser
+    - custom-properties
+    - theme-website
+    - css-theming
+    - contrast-ratios
+    - css-variables
+    - color-schemes
+    - color-contrast
+    - web-theme-switcher
+    - performance-optimization
+    - web-design
+    - light-theme
+    - dark-theme
+    - complementary-colors
+    - color-contrast-requirements
+    - web-development
+    - css-theming-tips
+    - arc-colors
+    - custom-css-properties
+    - accessibility
+    - web-theme-creation
+    - theme-consistency
+    - custom-theme-creation
+    - flash-of-default-theme
+    - color-palette-expansion
 id: 'arc-browser-theme'
 date: 2023-10-25
 ---

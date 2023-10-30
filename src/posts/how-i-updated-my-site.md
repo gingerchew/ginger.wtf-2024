@@ -5,6 +5,24 @@ description: Updating your site can be easy when you use 11ty and a good templat
 tags: 
     - retrospectives
     - success
+    - web-development-insights
+    - accomplishing-the-unthinkable
+    - just-build-websites
+    - just-press-publish
+    - frameworks-in-web-development
+    - static-site-generation
+    - git-powered-hosting
+    - performance-optimization
+    - lighthouse-scores
+    - consistency-in-effort
+    - touring-artist-advice
+    - burnout-prevention
+    - making-it-to-the-last-gig
+    - ginger.wtf
+    - power-of-persistence
+    - achieving-goals
+    - website-development
+    - quality-content
 id: 'finished-website'
 date: 2023-10-25
 ---
