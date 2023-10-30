@@ -12,8 +12,8 @@
       {% set tagslist = post.data.tags | filterTagList | slice(3) %}
       {% for tag in tagslist %}
         {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-        {# If there isn't a tag, skip adding the html #}
-        {% if tagUrl != '/tags//' %}
+        {% if loop.index <= 3 and tagUrl != 'tags//' %}
+          {# If there isn't a tag, skip adding the html #}
           <a href="{{ tagUrl | url }}" class="post-tag">
             <span>
               {{ tag }}
