@@ -7,6 +7,8 @@ tags:
     - explainer
     - tutorial
     - javascript
+    - array-methods
+    - how-to
 id: 'using-foreach-map-and-reduce'
 ---
 
