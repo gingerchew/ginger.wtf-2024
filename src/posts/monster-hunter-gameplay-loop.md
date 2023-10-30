@@ -6,6 +6,26 @@ date: 2023-10-10
 tags:
     - games
     - opinion
+    - monster-hunter
+    - gameplay-loop
+    - video-games
+    - souls-like-game
+    - metroidvania
+    - call-of-duty
+    - shooter-games
+    - monster-hunting
+    - quests
+    - quest-hub
+    - story-driven-games
+    - legend-of-zelda
+    - last-of-us
+    - endless-loop
+    - game-satisfaction
+    - game-motivation
+    - game-progression
+    - weapons-and-armor
+    - monster-encounters
+    - game-addiction
 id: 'monster-hunter-loop'
 ---
 
