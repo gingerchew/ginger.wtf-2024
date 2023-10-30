@@ -9,8 +9,7 @@
         <p class="postlist-subtitle">{{ post.data.description }}</p>
       {% endif %}
       <time class="postlist-date" datetime="{{ post.date | dateToFormat('yyyy-MM-dd') }}">{{ post.date | dateToFormat('dd LLL yyyy') }}</time>
-      {% set tagslist = post.data.tags | filterTagList | slice(3) %}
-      {% for tag in tagslist %}
+      {% for tag in post.data.tags | filterTagList %}
         {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
         {% if loop.index <= 3 and tagUrl != 'tags//' %}
           {# If there isn't a tag, skip adding the html #}
