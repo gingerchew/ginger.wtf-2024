@@ -6,6 +6,31 @@ tags:
     - spicy
     - opinion
     - typescript
+    - typescript-enum
+    - vanilla-js
+    - vanilla
+    - vanilla-javascript
+    - vanilla-enum
+    - enum-vanilla
+    - enum-constants
+    - enum-usage
+    - constant-collection
+    - locking-constants
+    - implied-values
+    - typescript-javascript
+    - typescript-enum-compilation
+    - typescript-enum-vs-object
+    - smaller-packages
+    - mutable-enum
+    - proxy-object
+    - es6-features
+    - intellisense-benefits
+    - typescript-team
+    - battle-tested-code
+    - production-ready-code
+    - es6-arrow-function
+    - code-generation
+    - javascript-enums
 id: 'why-you-shouldnt-use-typescript-enums'
 ---
 
