@@ -1,5 +1,5 @@
 ---
-title: The super power that lets you tell TypeScript what is actually happening.
+title: The super power that lets you tell TypeScript what is actually happening
 subtitle: You know when you have a variable that *could* be `null`, but you know it won't ever be. Yeah, this is for that.
 id: 'the-non-null-operator-in-typescript'
 date: 2023-11-02
