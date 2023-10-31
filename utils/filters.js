@@ -43,13 +43,6 @@ module.exports = {
             el.insertAdjacentHTML('beforebegin', '\n');
             el.remove();
         });
-        /*
-        doc.window.document.querySelectorAll('pre[class] > code[class]').forEach(el => {
-            el.querySelectorAll(':scope > span').forEach(el => {
-                el.outerHTML = `<div>${el.outerHTML}</div>`;
-            })
-        })
-        */
        doc.window.document.querySelectorAll('pre[class] > code[class]').forEach(el => {
         el.style.whiteSpace = 'pre-wrap';
        })
