@@ -50,7 +50,7 @@ module.exports = {
             })
         })
         */
-       doc.window.document.querySelectorAll('pre[class > code[class]').forEach(el => {
+       doc.window.document.querySelectorAll('pre[class] > code[class]').forEach(el => {
         el.style.whiteSpace = 'pre-wrap';
        })
         const newContent = doc.window.document.body.innerHTML;
