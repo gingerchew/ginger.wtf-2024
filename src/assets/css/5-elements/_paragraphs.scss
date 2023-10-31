@@ -82,6 +82,10 @@ article.post {
     summary {
         font-family: 'Vanilla Ravioli', serif;
         font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        + * {
+            padding-top: 0.5em;
+        }
     }
 }
 
@@ -93,3 +97,8 @@ mark {
     color: var(--text-color);
 }
 
+*:not(pre) > code {
+    padding: 0.15ch 0.3ch;
+    background-color: var(--accentColorTransparent);
+    border-radius: 4px;
+}
