@@ -32,6 +32,7 @@ tags:
     - code-generation
     - javascript-enums
 id: 'why-you-shouldnt-use-typescript-enums'
+date: 2023-10-31
 ---
 
 If you're not familiar with what an `enum` looks like, here you go:
