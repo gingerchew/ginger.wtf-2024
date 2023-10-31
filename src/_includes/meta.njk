@@ -10,13 +10,15 @@
     {# Open Graph #}
     <meta property="og:site_name" content="{{ meta.title }}">
     <meta property="og:title" content="{{ title or meta.title }}">
-    <meta property="og:description" content="{{ description  or meta.description }}">
+    <meta property="og:description" content="{{ description or meta.description }}">
     <meta property="og:url" content="{{ absolutePageUrl }}">
     <meta property="og:locale" content="{{ meta.locale }}">
     <!--meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}"-->
     <meta property="og:image" content="https://v1.screenshot.11ty.dev/{{ absolutePageUrl | urlencode }}/opengraph/_z202310_0/" >
     <meta property="og:type" content="image/png" />
 
+    <meta name="twitter:title" content="{{ title or meta.title }}" />
+    <meta name="twitter:description" content="{{ description or meta.description }}" />
     {% if layout == 'post' %}
     <meta name="twitter:card" content="summary_large_image" />
     {% else %}
