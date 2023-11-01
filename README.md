@@ -11,3 +11,8 @@ This is the personal blog of one gingerchew. Visit [the home page](https://ginge
 - [ ] Theme chooser (in progress)
 - [ ] edge function to make theme color not flash on dark mode
 - [ ] Group/Consolidate the indie web things more sanely
+- [ ] Web mentions set up / plugin?
+- [ ] dynamic favicon using canvas and js
+    - idea being that when the theme is updated, the colors are grabbed from the `:root` and applied to the png favicon
+    - now the color/theme of the favicon can be dynamic, even with the arc theme select component
+    - *__PLEASE FOR THE LOVE OF GOD DOCUMENT THIS ITS SUCH A GOOD IDEA__*
