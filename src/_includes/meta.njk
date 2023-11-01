@@ -1,5 +1,8 @@
     {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(meta.url) }}{%- endset -%}
+
+    {# Web Mentions #}
     <link rel="me authn" href="https://github.com/gingerchew" />
+    <link rel="webmention" href="https://webmention.io/ginger.wtf/webmention" />
     {# General #}
     <meta name="description" content="{{ description or meta.description }}">
     <link rel="canonical" href="{{ absolutePageUrl }}">

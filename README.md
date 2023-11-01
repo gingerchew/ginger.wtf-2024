@@ -10,3 +10,4 @@ This is the personal blog of one gingerchew. Visit [the home page](https://ginge
 - [ ] Some sort of highlight component, ~~blockquote~~, side comment
 - [ ] Theme chooser (in progress)
 - [ ] edge function to make theme color not flash on dark mode
+- [ ] Group/Consolidate the indie web things more sanely
