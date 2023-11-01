@@ -4,15 +4,17 @@ export default async (request, context) => {
     const t = 'theme';
     const m = 'mode';
 
-    const tCookies = context.cookies.get(t);
-    const mCookies = context.cookies.get(m);
+    let tCookies = context.cookies.get(t);
+    let mCookies = context.cookies.get(m);
     
     if (!tCookies) {
-        context.cookies.set(t, 'light');
+        context.cookies.set({ name: t, value: 'light' });
+        tCookies = context.cookies.get(t);
     }
 
     if (!mCookies) {
-        context.cookies.set(m, 'default');
+        context.cookies.set({ name: m, value: 'default' });
+        mCookies = context.cookies.get(m);
     }
 
     console.log(tCookies, mCookies);
