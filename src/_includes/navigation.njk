@@ -1,5 +1,5 @@
 <nav class="nav nav--primary" role="navigation" tabindex="-1">
-    {% edge "njk" %}{{ mode }}{% endedge %}
+    {% edge "njk" %}{{ mode | safe }}{% endedge %}
     <button 
         class="toggle-dark-mode" 
         id="$toggleDarkMode"
