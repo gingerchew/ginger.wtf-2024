@@ -3,12 +3,11 @@ layout: base
 ---
 <div class="container h-entry">
     <div class="title-container">
-        <a href="/posts/">Back</a>
+        <a href="/posts/"><span aria-hidden="true">Back</span> <span class="visually-hidden">Go to all posts</span></a>
         <h1 class="p-name">{{ title }}</h1>
-        <a href="{{ page.url }}" class="u-url" aria-label="Published date and canonical url">Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></span>
+        <a href="{{ page.url }}" class="u-url" aria-label="Published date and canonical url">Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></a>
     </div>
     <a href="{{ meta.url }}" class="visually-hidden p-author h-card" rel="author">Ginger</a>
-    <a href="{{ page.url }}" class="visually-hidden u-url">Permalink to this article</a>
     <span class="visually-hidden p-summary">
         {{ subtitle }}
     </span>

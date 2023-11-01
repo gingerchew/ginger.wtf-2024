@@ -1,4 +1,5 @@
 <nav class="nav nav--primary" role="navigation" tabindex="-1">
+    {% edge "njk" %}{{ mode }}{% endedge %}
     <button 
         class="toggle-dark-mode" 
         id="$toggleDarkMode"
@@ -12,7 +13,8 @@
     {# Nav Links  #}
     <ul class="nav__menu">
         {%- for item in collections.all | eleventyNavigation -%}
-            {%- if item.url -%}
+        
+            {%- if item.url and item.order -%}
                 {%- set isCurrent = (item.url == page.url) -%}
                 {%- set isParent = item.url != '/' and item.url in page.url -%}
                 <li class="nav__item{% if isCurrent or isParent %} nav__item--active{% endif %}">
