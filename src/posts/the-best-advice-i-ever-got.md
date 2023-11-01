@@ -1,5 +1,5 @@
 ---
-title: The advice single best piece of advice I've ever received
+title: The single best piece of advice I've ever received
 subtitle: How 3 simple questions can reduce stress, prevent migraines, lower blood pressure, and give hours of free time back to you.
 description: These 3 simple questions can change your life online, keep you happy, and live a more stress free life.
 id: 'the-best-advice-i-ever-received'
@@ -46,7 +46,7 @@ Now, we've got something that _needs_ to be said. It is _urgent_ that someone sa
 
 Either that or you realized that you're probably out of your depth, and need to learn a bit more before you toss your hat in the ring. 
 
-It could be clear that, while it is important, the weekly standup isn't the time to bring it. Instead you're going to find a place where it makes more sense.
+It could be clear that, while it is important, the weekly standup isn't the time to bring it up. Instead you're going to find a place where it makes more sense.
 
 What if everyone also felt the air get sucked out of the room because of what *Clint* said? Maybe it is understood, and you don't need to bring the hammer down.
 
