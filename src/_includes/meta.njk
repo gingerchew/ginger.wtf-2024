@@ -14,7 +14,7 @@
     {%- set schemaType -%}
         {%- if layout == 'post' %}BlogPosting{% else %}WebSite{% endif -%}
     {%- endset -%}
-    <script type="application/json+ld">
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
             "@type": "{{ schemaType }}",
