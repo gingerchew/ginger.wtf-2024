@@ -7,9 +7,8 @@ layout: base
         <h1 class="p-name">{{ title }}</h1>
         <span>Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></span>
     </div>
-    <span class="visually-hidden h-card">
-        By <span class="p-author">Ginger</span>
-    </span>
+    <a href="{{ meta.url }}" class="visually-hidden p-author h-card" rel="author">Ginger</a>
+    <a href="{{ page.url }}" class="visually-hidden u-url">Permalink to this article</a>
     <span class="visually-hidden p-summary">
         {{ subtitle }}
     </span>
