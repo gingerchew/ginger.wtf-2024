@@ -14,17 +14,18 @@ const plausibleEnd = new Date().toISOString().split('T')[0]
 
 module.exports = async function() {
     
-    const requestUrl = `${endpoint}?site_id=${siteId}&period=custom&date=${plausibleStart},${plausibleEnd}&metrics=pageviews`;
-
-    const fetchObj = await EleventyFetch(requestUrl, {
+    const requestUrl = encodeURIComponent(`${endpoint}?site_id=${siteId}&period=custom&date=${plausibleStart},${plausibleEnd}&metrics=pageviews`);
+    const eleventyFetchOptions = {
         type: 'json',
         duration: '1d',
         fetchOptions: {
             headers: {
-                Authorization: 'Bearer '+token,
+                Authorization: 'Bearer '+token
             }
         }
-    });
+    };
+    console.log(eleventyFetchOptions)
+    const fetchObj = await EleventyFetch(requestUrl, eleventyFetchOptions);
 
     return fetchObj.results
 }
