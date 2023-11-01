@@ -71,3 +71,82 @@
     top: 8px;
     left: 2px
 }
+
+.rss-icon {
+    --curve-width: 5px;
+    --size: 75px;
+    display: inline-block;
+    height: var(--size);
+    width: var(--size);
+    border-top: var(--curve-width) solid;
+    border-right: var(--curve-width) solid;
+    border-top-right-radius: 500000rem;
+    position: relative;
+}
+
+.rss-icon::before {
+    width: calc(var(--size) * .65);
+    height: calc(var(--size) * .65);
+    content: '';
+    border-top: var(--curve-width) solid;
+    border-right: var(--curve-width) solid;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    border-top-right-radius: 500000rem;
+}
+
+.rss-icon::after {
+    width: calc(var(--size) * .325);
+    height: calc(var(--size) * .325);
+    position: absolute;
+    bottom: 0;
+    content: '';
+    border-top: var(--curve-width) solid;
+    border-right: var(--curve-width) solid;
+    border-top-right-radius: 500000rem;
+}
+
+/** Maybe implement another time when the colors are figured out */
+.star-icon {
+    --size: 1em;
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--accentColorTransparent);
+    position: relative;
+    display: block;
+    mix-blend-mode: darken;
+
+    .corner {
+        background-color: transparent;
+        width: calc(var(--size) / 2 + 1px);
+        height: calc(var(--size) / 2 + 1px);
+        display: block;
+        position: absolute;
+
+        &.--top-left {
+            top: -1px;
+            left: -1px;
+            border-bottom-right-radius: 50000rem;
+        }
+        &.--top-right {
+            right: -1px;
+            top: -1px;
+            border-bottom-left-radius: 5000000rem;
+        }
+        &.--bottom-right {
+            bottom: -1px;
+            right: -1px;
+            border-top-left-radius: 5000000rem;
+        }
+        &.--bottom-left {
+            bottom: -1px;
+            left: -1px;
+            border-top-right-radius: 5000000rem;
+        }
+    }
+}
+
+
+
+

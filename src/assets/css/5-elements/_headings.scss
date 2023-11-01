@@ -32,6 +32,14 @@ h1:has(.size-adjust) {
         letter-spacing: 0;
     }
 }
+h1:has( + *:last-child) {
+    margin-bottom: 0.1em;
+    // pass the margin bottom from h1 to the next element
+    + *:last-child {
+        display: block;
+        margin-bottom: calc(var(--fluid-4) * 0.5);
+    }
+}
 .garden-wrapper {
     .main-title {
         margin: 0;
@@ -63,4 +71,73 @@ h2 {
 h3 {
     font-size: var(--fluid-3);
     margin-bottom: 1rem;
+}
+
+.postlist-item-featured {
+    .post-grid &:last-child .featured-label {
+        // copy and pasted from below
+        // refactor later
+        font-size: 1em;
+        position: absolute;
+        top: -10%;
+        right: -0.5em;
+        left: unset;
+        rotate: 35deg;
+        background-color: var(--accentColor);
+        color: var(--backgroundColor);
+        padding: 0.25ch 0.5ch;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        gap: 0.5ch;
+    }
+    .postlist-link {
+        position: relative;
+
+        .featured-label {
+            font-size: 1em;
+            position: absolute;
+            top: -10%;
+            right: -0.5em;
+            rotate: 35deg;
+            background-color: var(--accentColor);
+            color: var(--backgroundColor);
+            padding: 0.25ch 0.5ch;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 0.5ch;
+            // font-size: calc(var(--fluid-0) - 5px);
+        }
+        .featured-label-1 {
+            rotate: 40deg;
+        }
+
+        .featured-label-2 {
+            rotate: 35deg
+        }
+
+        .featured-label-3 {
+            rotate: 30deg;
+        }
+        @media (min-width: 1400px) {
+            .featured-label {
+                left: -2.25em;
+                top: -1.5em;
+                right: revert;
+                rotate: -25deg;
+            }
+            .featured-label-1 {
+                rotate: -20deg;
+            }
+        
+            .featured-label-2 {
+                rotate: -30deg
+            }
+        
+            .featured-label-3 {
+                rotate: -15deg;
+            }
+        }
+    }
 }

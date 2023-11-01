@@ -1,4 +1,7 @@
-<article class="postlist-item{% if post.data.featured %} postlist-item-featured {% endif %}{% if post.url == url %} postlist-item-active{% endif %}">
+{% set isFeatured = post.data.featured %}
+{% set featuredLabels = [ 'Spicyyy!', 'Hot Dog!', 'Woah!', 'Read this', 'Yowza!', 'Featured', 'Oh Boy!'] %}
+{% set variants = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3] %}
+<article class="postlist-item{% if isFeatured %} postlist-item-featured {% endif %}{% if post.url == url %} postlist-item-active{% endif %}">
     <a href="{{ post.url | url }}" class="postlist-link">
         <h2>
             {% if post.data.title %}{{ post.data.title }}
@@ -6,9 +9,9 @@
                 <code>{{ post.url }}</code>
             {% endif %}
         </h2>
-        {% if post.data.featured %}
-        <span class="star">
-            <span class="visually-hidden">Featured!</span>
+        {% if isFeatured %}
+        <span class="featured-label featured-label-{{ variants | random }}">
+            {{ featuredLabels | random }}
         </span>
         {% endif %}
     </a>
@@ -17,7 +20,6 @@
     {% elif post.data.description %}
         <p class="postlist-subtitle">{{ post.data.description }}</p>
     {% endif %}
-    <time class="postlist-date" datetime="{{ post.date | dateToFormat('yyyy-MM-dd') }}">{{ post.date | dateToFormat('dd LLL yyyy') }}</time>
     {% for tag in post.data.tags | filterTagList %}
         {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
         {% if loop.index <= 3 and tagUrl != 'tags//' %}
