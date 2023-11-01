@@ -16,7 +16,11 @@ _site/
 
 # Local Netlify folder
 .netlify
+netlify/edge-functions/_generated
 
 drafts
 
 .unlighthouse
+
+# 11ty-fetch 
+.cache
