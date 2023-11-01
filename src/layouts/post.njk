@@ -5,7 +5,7 @@ layout: base
     <div class="title-container">
         <a href="/posts/">Back</a>
         <h1 class="p-name">{{ title }}</h1>
-        <span>Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></span>
+        <a href="{{ page.url }}" class="u-url" aria-label="Published date and canonical url">Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></span>
     </div>
     <a href="{{ meta.url }}" class="visually-hidden p-author h-card" rel="author">Ginger</a>
     <a href="{{ page.url }}" class="visually-hidden u-url">Permalink to this article</a>
