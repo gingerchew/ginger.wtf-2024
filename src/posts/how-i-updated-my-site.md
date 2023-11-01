@@ -25,6 +25,7 @@ tags:
     - quality-content
 id: 'finished-website'
 date: 2023-10-25
+featured: true
 ---
 
 ## It can be done.
