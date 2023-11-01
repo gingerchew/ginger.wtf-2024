@@ -173,7 +173,7 @@ module.exports = async function() {
         }
     });
 
-    + return fetchObj.results
+    return fetchObj.results
 }
 ```
 
