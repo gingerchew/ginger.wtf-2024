@@ -132,7 +132,7 @@ pre[class*="language-"] {
 
 /** Diff css */
 .token.deleted {
-    background-color: hsl(350deg 100% 88% / 47%);
+    background-color: hsla(350, 100%, 88%, 0.102)
 }
 .token.inserted {
     background-color: hsl(92deg, 15%, 23%)
