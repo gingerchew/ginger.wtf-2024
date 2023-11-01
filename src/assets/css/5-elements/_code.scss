@@ -145,6 +145,10 @@ pre[class*="language-"] {
     -webkit-user-select: none;
     user-select: none;
 }
+.token.prefix:is(.deleted, .inserted) {
+    background-color: transparent;
+    padding-left: 0.5ch;
+}
   
 /* Optional: full-width background color */
 .token.inserted:not(.prefix),
