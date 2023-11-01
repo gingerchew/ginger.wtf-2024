@@ -21,6 +21,11 @@
 @media (min-width: 768px) {
     .post-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 2.5rem 5rem;
+
+        &-title {
+            font-size: var(--fluid-0);
+        }
     }
 }
 .postlist-item {
