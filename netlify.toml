@@ -1,6 +1,11 @@
+[dev]
+  targetPort = 8083
 [build]
   command = "npm run build"
   publish = "_site"
+[redirects]
+  "/js/scripts.js" = "https://plausible.io/js/script.js"
+  "/api/event" = "https://plausible.io/api/event"
 
 [[plugins]]
   package = "netlify-plugin-mastodon-alias"
