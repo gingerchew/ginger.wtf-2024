@@ -15,10 +15,26 @@
         gap: 2rem;
     }
 }
-
+.post-grid {
+    display: grid;
+}
+@media (min-width: 768px) {
+    .post-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 .postlist-item {
     h2 {
         font-size: var(--fluid-2);
+    }
+    // if .postlist-item is a child of post grid, update h2 styles
+    .post-grid & h2 {
+        font-size: var(--fluid-0);
+        letter-spacing: 0.5px;
+    }
+    .post-grid & .postlist-subtitle {
+        // An extra clamp just to be safe the font isn't going smaller than 16px
+        font-size: clamp(16px, var(--fluid-0) - 5px, 24px);
     }
     &:has(a + time) h2 {
         margin-bottom: 1rem;
