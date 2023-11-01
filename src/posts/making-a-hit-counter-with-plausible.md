@@ -13,7 +13,7 @@ featured: true
 
 <details>
     <summary>Quick notice before you continue</summary>
-    <p>As of <code>11-1-2023</code> the following code seems to only work when run on local. Will update this post when I have a solution figured out</p>
+    <p>As of <code>11-1-2023</code> the following code seems to only work when run on local. Will update this post when I have a solution figured out.</p>
 </details>
 
 Remember Neocities? Remember _Geocities_?? I missed out on that craze, but I love looking back on that style of website. 

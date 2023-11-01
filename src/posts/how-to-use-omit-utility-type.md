@@ -1,7 +1,7 @@
 ---
 title: How to use the Omit utility type to enhance existing DOM Interfaces
 description: Typescript's utility types are a powerful tool that every developer should be familiar with.
-date: '2021-10-31'
+date: 2021-10-31
 tags:
     - typescript
     - validity-state
