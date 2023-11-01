@@ -6,10 +6,11 @@ tags:
     - tutorial
     - how-to
     - build-with-me
-    - web-components
-    - custom-elements
 id: 'theme-switcher-build-along'
 date: 2023-10-21
+eleventyNavigation:
+    key: 'create-theme-switcher'
+    permalink: false
 ---
 
 ## Plan

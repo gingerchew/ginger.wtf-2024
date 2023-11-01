@@ -7,24 +7,6 @@ tags:
     - tutorials
     - web-development
     - javascript
-    - javascript-tips
-    - array-methods
-    - foreach
-    - map
-    - reduce
-    - javascript
-    - callback-functions
-    - examples
-    - old-fashioned-for-loops
-    - advantages-of-.map
-    - advantages-of-.reduce
-    - complex-tasks-in-one-function
-    - filtering-and-mapping
-    - programming-techniques
-    - best-practices
-    - web-development-insights
-    - array-iteration
-    - javascript-methods
 id: 'using-foreach-map-and-reduce'
 ---
 

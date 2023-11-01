@@ -6,21 +6,6 @@ tags:
     - typescript
     - validity-state
     - utility-types
-    - checking-the-inputs-that-matter
-    - validitystate
-    - javascript-validation
-    - vanilla-javascript
-    - omit-utility-type
-    - building-on-top-of-omit
-    - custom-validation
-    - javascript-interfaces
-    - javascript-interface-modification
-    - validitystate-interface
-    - utility-types-in-typescript
-    - omitting-properties-in-typescript
-    - extending-interfaces-in-typescript
-    - custom-interface-properties
-    - modifying-javascript-interfaces
 id: 'omit-utility-type'
 ---
 
