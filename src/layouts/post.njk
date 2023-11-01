@@ -1,13 +1,19 @@
 ---
 layout: base
 ---
-<div class="container">
+<div class="container h-entry">
     <div class="title-container">
         <a href="/posts/">Back</a>
-        <h1>{{ title }}</h1>
-        <span>Published: <time class="postlist-date" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></span>
+        <h1 class="p-name">{{ title }}</h1>
+        <span>Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></span>
     </div>
-    <article class="post">
+    <span class="visually-hidden h-card">
+        By <span class="p-author">Ginger</span>
+    </span>
+    <span class="visually-hidden p-summary">
+        {{ subtitle }}
+    </span>
+    <article class="post e-content">
         {{ content | safe }}
         <div class="utterances"></div>
         <script>
