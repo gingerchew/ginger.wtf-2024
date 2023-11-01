@@ -32,7 +32,7 @@
             font-size: var(--fluid-1);
             margin: 0.75rem 0;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767.99999px) {
             ul, 
             .toggle-dark-mode {
                 grid-row: 1;
@@ -65,7 +65,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.99999px) {
     .site-header-container {
         flex-wrap: wrap;
     }
