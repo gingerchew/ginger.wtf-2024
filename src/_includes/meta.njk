@@ -10,6 +10,23 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     <link rel="icon" href="/assets/icons/ginger_wtf-favicon.png">
 
+
+    {%- set schemaType -%}
+        {%- if layout == 'post' %}BlogPosting{% else %}WebSite{% endif -%}
+    {%- endset -%}
+    <script type="application/json+ld">
+        {
+            "@context": "https://schema.org/",
+            "@type": "{{ schemaType }}",
+            "name": "{{ title or meta.title }}",
+            "author": {
+                "@type": "Person",
+                "name": "{{ meta.author }}"
+            },
+            "description": "{{ description or meta.description }}",
+        }
+    </script>
+
     {# Open Graph #}
     <meta property="og:site_name" content="{{ meta.title }}">
     <meta property="og:title" content="{{ title or meta.title }}">
