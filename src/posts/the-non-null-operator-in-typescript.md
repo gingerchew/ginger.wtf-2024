@@ -1,6 +1,7 @@
 ---
 title: The super power that lets you tell TypeScript what is actually happening
-subtitle: You know when you have a variable that *could* be `null`, but you know it won't ever be. Yeah, this is for that.
+subtitle: You know when you have a variable that could be null, but you know it won't ever be. Yeah, this is for that.
+description: How the non-null operator can transform your TypeScript
 id: 'the-non-null-operator-in-typescript'
 date: 2023-11-02
 tags:
@@ -39,6 +40,7 @@ tags:
     - typescript-compiler-optimization
     - writing-safe-code
     - typescript-compiler-rules
+featured: true
 ---
 
 I wrote something like this the other day:
