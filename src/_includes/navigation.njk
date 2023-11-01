@@ -12,6 +12,7 @@
     </button>
     {# Nav Links  #}
     <ul class="nav__menu">
+        {% edge %}{{ eleventy.edge.cookies.mode | safe }}{% endedge %}
         {%- for item in collections.all | eleventyNavigation -%}
         
             {%- if item.url and item.order -%}
