@@ -9,3 +9,4 @@ This is the personal blog of one gingerchew. Visit [the home page](https://ginge
 - [x] fix tag urls https://www.11ty.dev/docs/collections/
 - [ ] Some sort of highlight component, ~~blockquote~~, side comment
 - [ ] Theme chooser (in progress)
+- [ ] edge function to make theme color not flash on dark mode

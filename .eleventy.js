@@ -102,7 +102,7 @@ module.exports = function (eleventyConfig) {
 		eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
 	})
 	
-	eleventyConfig.addShortcode('serifName', () => `<span class="serif">Ginger</span>`)
+	eleventyConfig.addShortcode('serifName', () => `<span class="h-card serif">Ginger</span>`)
 	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`)
 
 	// Customize Markdown library and settings:
