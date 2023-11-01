@@ -17,9 +17,3 @@ I work at an advertising agency building websites for multiple sectors, from fin
 ## How do you do it?
 
 I have experience with a variety of frameworks, from Bootstrap to Vue and Astro, but am familiar with PHP, Shopify, MODX, and WordPress.
-
-### My IndieWeb H-Card
-
-<div class="h-card">
-    <a rel="me" class="u-url" href="{{ meta.url }}">Ginger</a>
-</div>
