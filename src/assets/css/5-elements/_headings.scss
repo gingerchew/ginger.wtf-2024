@@ -74,23 +74,6 @@ h3 {
 }
 
 .postlist-item-featured {
-    .post-grid &:last-child .featured-label {
-        // copy and pasted from below
-        // refactor later
-        font-size: 1em;
-        position: absolute;
-        top: -10%;
-        right: -0.5em;
-        left: unset;
-        rotate: 35deg;
-        background-color: var(--accentColor);
-        color: var(--backgroundColor);
-        padding: 0.25ch 0.5ch;
-        border-radius: 6px;
-        display: flex;
-        align-items: center;
-        gap: 0.5ch;
-    }
     .postlist-link {
         position: relative;
 
