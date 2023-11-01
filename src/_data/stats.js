@@ -3,7 +3,7 @@ require('dotenv').config();
 
 
 const siteId = 'ginger.wtf';
-const token = process.env.AUTHORIZATION;
+const token = process.env.PLAUSIBLE_AUTH_TOKEN;
 const endpoint = 'https://plausible.io/api/v1/stats/aggregate';
 
 const plausibleStart = '2022-11-01';
