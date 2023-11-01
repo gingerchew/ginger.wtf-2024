@@ -3,9 +3,14 @@
 [build]
   command = "npm run build"
   publish = "_site"
-[redirects]
-  "/js/scripts.js" = "https://plausible.io/js/script.js"
-  "/api/event" = "https://plausible.io/api/event"
+[[redirects]]
+  from = "/js/script.js"
+  to = "https://plausible.io/js/script.js"
+  status = 200
+[[redirects]]
+  from = "/api/event"
+  to = "https://plausible.io/api/event"
+  status = 200
 
 [[plugins]]
   package = "netlify-plugin-mastodon-alias"
