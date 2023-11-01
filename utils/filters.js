@@ -22,7 +22,7 @@ module.exports = {
         return chars.join('')
     },
 
-    filterTagList (tags) {
+    filterTagList(tags) {
         return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
     },
     /**
@@ -43,12 +43,11 @@ module.exports = {
             el.insertAdjacentHTML('beforebegin', '\n');
             el.remove();
         });
-       doc.window.document.querySelectorAll('pre[class] > code[class]').forEach(el => {
-        el.style.whiteSpace = 'pre-wrap';
-       })
+        doc.window.document.querySelectorAll('pre[class] > code[class]').forEach(el => {
+            el.style.whiteSpace = 'pre-wrap';
+        })
         const newContent = doc.window.document.body.innerHTML;
 
-        console.log(newContent);
         return newContent;
     }
 }
