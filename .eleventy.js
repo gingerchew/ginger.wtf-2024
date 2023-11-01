@@ -1,7 +1,9 @@
+// const schema = require("@quasibit/eleventy-plugin-schema");
+
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 
-
+const { EleventyEdgePlugin } = require('@11ty/eleventy');
 const EleventyPluginNavigation = require('@11ty/eleventy-navigation')
 const EleventyPluginRss = require('@11ty/eleventy-plugin-rss')
 const EleventyPluginSyntaxhighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
@@ -20,10 +22,11 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("public");
 
 	// Plugins
+	// eleventyConfig.addPlugin(schema)
 	eleventyConfig.addPlugin(EleventyPluginNavigation)
 	eleventyConfig.addPlugin(EleventyPluginRss)
 	eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight)
-
+	eleventyConfig.addPlugin(EleventyEdgePlugin)
 	eleventyConfig.addPlugin(EleventyVitePlugin, {
 		tempFolderName: '.11ty-vite', // Default name of the temp folder
 
