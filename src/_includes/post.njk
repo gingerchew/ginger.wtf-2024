@@ -1,6 +1,6 @@
 {% set isFeatured = post.data.featured %}
-{% set featuredLabels = [ 'Spicyyy!', 'Hot Dog!', 'Woah!', 'Read this', 'Yowza!', 'Featured', 'Oh Boy!'] %}
-{% set variants = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3] %}
+{% set featuredLabels = [ 'Spicyyy!', 'Hot Dog!', 'Woah!', 'Read Me!', 'Yowza!', 'Featured', 'Oh Boy!', 'Gold Star!', 'Whoopee!'] %}
+{% set variants = [0, 1, 2, 3] %}
 <article class="postlist-item{% if isFeatured %} postlist-item-featured {% endif %}{% if post.url == url %} postlist-item-active{% endif %}">
     <a href="{{ post.url | url }}" class="postlist-link">
         <h2>
@@ -9,11 +9,11 @@
                 <code>{{ post.url }}</code>
             {% endif %}
         </h2>
-        {% if isFeatured %}
-        <span class="featured-label featured-label-{{ variants | random }}">
-            {{ featuredLabels | random }}
+        {%- if isFeatured -%}
+        <span class="featured-label featured-label-{{ variants | random }}" aria-hidden="true">
+            {{- featuredLabels | random -}}
         </span>
-        {% endif %}
+        {%- endif -%}
     </a>
     {%- if post.data.subtitle %}
         <p class="postlist-subtitle">{{ post.data.subtitle }}</p>
