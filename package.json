@@ -14,6 +14,7 @@
     "build": "npx @11ty/eleventy",
     "clean": "del-cli _site",
     "perf": "npx unlighthouse --site localhost:8080",
+    "perf:live": "npx unlighthouse --site ginger.wtf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
