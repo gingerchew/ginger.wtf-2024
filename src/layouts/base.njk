@@ -8,8 +8,6 @@
         {% include 'cssVars.njk' %}
     {% endset -%}
     <style>{{ cssVars | safe }}</style>
-    <link rel="me" href="https://queer.party/@gingerchew" />
-	<meta name="view-transition" content="same-origin" />
     {% include "meta.njk" %}
 
     <style>
@@ -43,6 +41,6 @@
     </div>
 
     <script type="module" src="{{ '/assets/js/main.js' | url }}"></script>
-    <script defer data-domain="ginger.wtf" src="https://plausible.io/js/script.js"></script>
+    <script defer data-domain="ginger.wtf" src="/js/script.js"></script>
 </body>
 </html>
