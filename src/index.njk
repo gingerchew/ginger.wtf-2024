@@ -17,14 +17,14 @@ eleventyNavigation:
         </h2>
         <br/>
         <div class="post-grid">
-            <h3 class="post-grid-title" style="font-size: var(--fluid-1);grid-column: span 2;">Here's some posts that I think you should check out!</h3>
-        {% set numberOfFeaturedPosts = 0 %}
-        {% for post in collections.posts | reverse %}
-            {% if post.data.featured and numberOfFeaturedPosts < 2%}
-                {% set numberOfFeaturedPosts = numberOfFeaturedPosts + 1 %}
-                {% include 'post.njk' %}
-            {% endif %}
-        {% endfor %}
+            <h3 class="post-grid-title" style="font-size: var(--fluid-1);">Here's some posts that I think you should check out!</h3>
+            {% set numberOfFeaturedPosts = 0 %}
+            {% for post in collections.posts | reverse %}
+                {% if post.data.featured and numberOfFeaturedPosts < 2%}
+                    {% set numberOfFeaturedPosts = numberOfFeaturedPosts + 1 %}
+                    {% include 'post.njk' %}
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </div>
