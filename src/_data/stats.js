@@ -24,8 +24,17 @@ module.exports = async function() {
             }
         }
     };
-    console.log(eleventyFetchOptions)
-    const fetchObj = await EleventyFetch(requestUrl, eleventyFetchOptions);
+    let fetchObj = {
+        results: {
+            pageviews: {
+                value: ':('
+            }
+        }
+    }
+    try {
+        fetchObj = await EleventyFetch(requestUrl, eleventyFetchOptions);
+    } finally {
+        return fetchObj.results
+    }
 
-    return fetchObj.results
 }
