@@ -71,7 +71,7 @@
     --accentColorTransparent: #daf3ec22;
 }
 
-:root[data-theme="arc"]:not(:has([data-mode="dark"])) {
+:root:has([data-theme="arc"]):not(:has([data-mode="dark"])) {
     --backgroundColor: var(--arc-palette-maxContrastColor);
     --primaryColor: var(--arc-palette-cutoutColor);
     --complementColor: var(--arc-palette-background);
@@ -82,7 +82,7 @@
     --complementColorRGB: var(--_complementColorRGB);
 }
 
-:root[data-theme="arc"]:has([data-mode="dark"]) {
+:root:has([data-theme="arc"]):has([data-mode="dark"]) {
     --backgroundColor: var(--arc-palette-background);
     --textColor: var(--arc-palette-title);
     --complementColor: var(--arc-palette-subtitle);
