@@ -2,20 +2,16 @@
     
     <div class="site-header__container">
         <div class="site-header__left">
-            {% if layout != 'base' %}
             <div class="site-brand">
                 <div class="h-card">
                     <a href="{{ meta.url }}" rel="me">
-                        {% serifName %}
+                        {% serifName %}.wtf
                     </a>
                     <p class="visually-hidden p-note">
                         I am a <span class="p-gender-identity">trans</span> web developer that likes playing video games, writing, and building websites.
                     </p>
                 </div>
             </div>
-            {% else %}
-            <a href="{{ meta.url }}" rel="me" class="visually-hidden">{% serifName %}</a>
-            {% endif %}
         </div>
         <div class="site-header__right">
             {% include "navigation.njk" %}
