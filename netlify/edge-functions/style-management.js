@@ -24,9 +24,7 @@ export default async (request, context) => {
     const next = _next(context);
     const cookie = _cookie(context)
 
-    if (url.pathname !== '/style/' || request.method !== 'POST') return next();
-    
-    if (request.headers.get("content-type") !== 'application/x-www-form-urlencoded') return next();
+    if (url.pathname !== '/style/') return next();
 
     const body = await request.text();
 
@@ -35,7 +33,8 @@ export default async (request, context) => {
     postData.theme && cookie.set("theme", postData.theme);
     postData.mode && cookie.set("mode", postData.mode);
 
-    return new Response(null, {
+    return new Response('success', {
         status: 200,
+
     });
 }
