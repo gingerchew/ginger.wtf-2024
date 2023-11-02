@@ -16,11 +16,15 @@
     <script type="module">
         $toggleDarkMode.onclick = async ({ target }) => {
             const nextMode = target.dataset.mode === 'light' ? 'dark' : 'light';
-            navigator.sendBeacon('{{ meta.url }}/style/', new URLSearchParams({
-                mode: nextMode,
-                src: "{{ page.url }}"
-            }));
-            document.cookie = `mode=${nextMode}; SameSite=Lax; HTTPOnly=true; Secure=true;`;
+            try {
+                navigator.sendBeacon('{{ meta.url }}/style/', new URLSearchParams({
+                    mode: nextMode,
+                    src: "{{ page.url }}"
+                }));
+                document.cookie = `mode=${nextMode}; SameSite=Lax; HTTPOnly=true; Secure=true;`;
+            } catch(e) {
+                console.log('Error: ', e.message);
+            }
         }
     </script>
 {% endedge %}
