@@ -7,16 +7,16 @@
     "not IE 11"
   ],
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "watch": "npx @11ty/eleventy --watch",
-    "serve": "npx @11ty/eleventy --serve",
+    "start": "npx @11ty/eleventy --serve --incremental",
+    "watch": "npx @11ty/eleventy --watch --incremental",
+    "serve": "npx @11ty/eleventy --serve --incremental",
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "build": "npx @11ty/eleventy",
     "clean": "del-cli _site",
     "perf": "npx unlighthouse --site localhost:8080",
     "perf:live": "npx unlighthouse --site ginger.wtf",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cms":"npx agitcms"
+    "cms": "npx agitcms"
   },
   "repository": {
     "type": "git",
@@ -58,6 +58,7 @@
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-plugin-webc": "^0.11.1",
     "@quasibit/eleventy-plugin-schema": "^1.11.0",
+    "agitcms": "^2.0.6",
     "dotenv": "^16.3.1",
     "jsdom": "^22.1.0",
     "netlify-cli": "^17.0.0",
