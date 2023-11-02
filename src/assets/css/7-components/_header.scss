@@ -20,13 +20,13 @@
         display: grid;
         grid-template-columns: 1fr min-content;
         column-gap: 2ch;
-        justify-items: left;
+        justify-items: start;
         align-items: center;
         
         @media (min-width: 768px) {
             grid-template-columns: 1fr;
+            align-items: center;
             justify-items: end;
-            place-items: center;
         }
         ul {
             grid-column: 1;
