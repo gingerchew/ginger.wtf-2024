@@ -13,7 +13,7 @@
     {# Nav Links  #}
     <ul class="nav__menu">
 
-            {{ eleventy.edge.cookies.mode | dump | safe }}
+        {{ eleventy.edge.cookies.mode | dump | safe }}
         
         {%- for item in collections.all | eleventyNavigation -%}
         
