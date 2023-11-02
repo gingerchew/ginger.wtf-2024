@@ -1,0 +1,21 @@
+{% edge "njk", page.url %}
+{% set theme = eleventy.edge.cookies.theme %}
+<div>
+    <form action="/style/" method="POST">
+        <input type="hidden" name="src" value="{{ _ }}" />
+        <theme-select>
+            <label for="$themeSelect">Theme</label>
+            <select id="$themeSelect" 
+                data-theme="{{ eleventy.edge.cookies.theme }}" 
+                onchange="umtc()"
+            >
+                <option value="default" {% if theme == 'default' %}selected{% endif %}>Default</option>
+                <option value="red" {% if theme == 'red' %}selected{% endif %}>Red</option>
+                <option value="blue" {% if theme == 'blue' %}selected{% endif %}>Blue</option>
+                <option value="green" {% if theme == 'green' %}selected{% endif %}>Green</option>
+                <option value="arc" {% if theme == 'arc' %}selected{% endif %}>Arc (Experimental)</option>
+            </select>
+        </theme-select>
+    </form>
+</div>
+{% endedge %}

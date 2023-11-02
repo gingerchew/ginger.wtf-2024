@@ -8,17 +8,6 @@
                 <span class="rss-icon" aria-hidden="true" style="--size: 1.25rem;--curve-width: 1px;"></span>
             </a>
         </p>
-        <div>
-            <theme-select>
-                <label for="$themeSelect">Theme</label>
-                <select ref="select" id="$themeSelect" data-theme="default" onchange="localStorage.t=this.dataset.theme=this.value;umtc()">
-                    <option value="default" ref="default">Default</option>
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                    <option value="arc">Arc (Experimental)</option>
-                </select>
-            </theme-select>
-        </div>
+        {% include "themeSelect.njk" %}
     </div>
 </footer>

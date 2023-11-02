@@ -1,6 +1,6 @@
 {% edge "njk", page.url %}
     {#% set mode = eleventy.edge.cookies.mode | default('light') | escape | safe %#}
-    <form action="/style/" method="POST">
+    <form action="/style/" method="POST" onsubmit="umtc">
         <input type="hidden" id="$toggleDarkModeSrc" name="src" value="{{ _ }}" />
         <input type="hidden" id="$toggleDarkModeInput" name="mode" value="{{ 'light' if mode === 'dark' else 'dark' }}" />
         <button 
