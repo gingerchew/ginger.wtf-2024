@@ -1,8 +1,7 @@
 {% edge "njk", page.url %}
-    {#% set mode = eleventy.edge.cookies.mode | default('light') | escape | safe %#}
-    <form action="/style/" method="POST" onsubmit="umtc">
+    {#<form action="/style/" method="POST" onsubmit="umtc">
         <input type="hidden" id="$toggleDarkModeSrc" name="src" value="{{ _ }}" />
-        <input type="hidden" id="$toggleDarkModeInput" name="mode" value="{{ 'light' if mode === 'dark' else 'dark' }}" />
+        <input type="hidden" id="$toggleDarkModeInput" name="mode" value="{{ 'light' if mode === 'dark' else 'dark' }}" />#}
         <button 
             class="toggle-dark-mode" 
             id="$toggleDarkMode"
@@ -12,5 +11,16 @@
             <span class="show-dark"><span class="gg-moon"></span></span>
             <span class="show-light"><span class="gg-sun"></span></span>
         </button>
-    </form>
+
+    {#</form>#}
+    <script type="module">
+        $toggleDarkMode.onclick = async ({ target }) => {
+            const nextMode = target.dataset.mode === 'light' ? 'dark' : 'light';
+            navigator.sendBeacon('/style/', new URLSearchParams({
+                mode: nextMode,
+                src: "{{ page.url }}"
+            }));
+            document.cookie = `mode=${nextMode}; SameSite=Lax; HTTPOnly=true; Secure=true;`;
+        }
+    </script>
 {% endedge %}
