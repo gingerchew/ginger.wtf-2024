@@ -1,12 +1,9 @@
 {% edge "njk", page.url %}
-{% set theme = eleventy.edge.cookies.theme | default('default') | escape | safe %}
 {% set themeColors = ['default', 'red', 'blue', 'green', 'arc'] %}
+{% set theme = eleventy.edge.cookies.theme | default('default') | escape | safe %}
 <div>
     <label for="$themeSelect">Theme</label>
-    <select id="$themeSelect" 
-        data-theme="{{ theme }}" 
-        onchange="this.form.submit()"
-    >
+    <select id="$themeSelect" data-theme="{{ theme }}">
         {% for color in themeColors %}
         <option value="{{ color }}" {% if theme == color %}selected{% endif %}>{{ color }}</option>
         {% endfor %}
