@@ -2,6 +2,7 @@
     
     &__container {
         position: relative;
+        container-type: inline-size;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -77,4 +78,8 @@
             gap: 1ch;
         }
     }
+}
+
+.site-brand {
+    font-size: clamp(1rem, 5cqi, 4rem);
 }
