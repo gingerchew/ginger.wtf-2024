@@ -81,5 +81,8 @@
 }
 
 .site-brand {
-    font-size: clamp(1rem, 5cqi, 4rem);
+    font-size: clamp(1rem, 3cqi, 3rem);
+    &--home {
+        font-size: clamp(1rem, 3.5cqi, 4rem);
+    }
 }
