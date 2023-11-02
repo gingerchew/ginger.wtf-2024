@@ -1,5 +1,16 @@
 import { EleventyEdge, precompiledAppData } from './_generated/eleventy-edge-app.js';
 
+const setCookie = (context, name, value) => {
+    context.cookies.set({
+        name,
+        value,
+        path: '/',
+        httpOnly: true,
+        secure: true,
+        sameSite: 'Lax'
+    });
+}
+
 export default async (request, context) => {
     const t = 'theme';
     const m = 'mode';
@@ -8,26 +19,26 @@ export default async (request, context) => {
     let mCookies = context.cookies.get(m);
     
     if (!tCookies) {
-        context.cookies.set({ name: t, value: 'light' });
+        setCookie(context, t, 'light');
         tCookies = context.cookies.get(t);
     }
 
     if (!mCookies) {
-        context.cookies.set({ name: m, value: 'default' });
+        setCookie(context, m, 'default');
         mCookies = context.cookies.get(m);
     }
 
-    console.log(tCookies, mCookies);
     try {
+        /*
         const edge = new EleventyEdge('edge', {
             request,
             context,
             precompiled: precompiledAppData,
             cookies: []
         });
+        */
 
         edge.config(eleventyConfig => {
-            console.log('Inside of config');
             eleventyConfig.addGlobalData('theme', tCookies);
             eleventyConfig.addGlobalData('mode', mCookies);
         })
