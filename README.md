@@ -9,9 +9,11 @@ This is the personal blog of one gingerchew. Visit [the home page](https://ginge
 - [x] fix tag urls https://www.11ty.dev/docs/collections/
 - [ ] Some sort of highlight component, ~~blockquote~~, side comment
 - [ ] Theme chooser (in progress)
-- [ ] edge function to make theme color not flash on dark mode
+- [ ] edge function to make theme color not flash on dark mode (in progress)
 - [ ] Group/Consolidate the indie web things more sanely
 - [ ] Web mentions set up / plugin?
+- [ ] style rss feed
+    - https://jonchristopher.us/blog/beginning-to-style-your-rss-feed/
 - [ ] dynamic favicon using canvas and js
     - idea being that when the theme is updated, the colors are grabbed from the `:root` and applied to the png favicon
     - now the color/theme of the favicon can be dynamic, even with the arc theme select component
