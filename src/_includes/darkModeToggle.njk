@@ -20,8 +20,8 @@
                 const result = await navigator.sendBeacon('{{ meta.url }}/style/', new URLSearchParams({
                     mode: nextMode,
                 }));
-                console.log({ result });
                 document.cookie = `mode=${nextMode}; SameSite=Lax; HTTPOnly=true; Secure=true;`;
+                target.dataset.mode = nextMode
             } catch(e) {
                 console.log('Error: ', e.message);
             }
