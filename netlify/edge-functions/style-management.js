@@ -36,9 +36,6 @@ export default async (request, context) => {
     postData.mode && cookie.set("mode", postData.mode);
 
     return new Response(null, {
-        status: 302,
-        headers: {
-            location: postData.src
-        }
+        status: 200,
     });
 }

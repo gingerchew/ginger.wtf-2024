@@ -19,7 +19,6 @@
             try {
                 navigator.sendBeacon('{{ meta.url }}/style/', new URLSearchParams({
                     mode: nextMode,
-                    src: "{{ page.url }}"
                 }));
                 document.cookie = `mode=${nextMode}; SameSite=Lax; HTTPOnly=true; Secure=true;`;
             } catch(e) {
