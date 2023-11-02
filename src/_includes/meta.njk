@@ -1,8 +1,12 @@
     {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(meta.url) }}{%- endset -%}
 
+    <meta name="google-site-verification" content="urgSCv6XMTe_wjVzYAPxLK9NVyZnMcvZ5-c4iRntYaU" />
+
     {# Web Mentions #}
+    <link rel="me" href="https://queer.party/@gingerchew" />
     <link rel="me authn" href="https://github.com/gingerchew" />
     <link rel="webmention" href="https://webmention.io/ginger.wtf/webmention" />
+
     {# General #}
     <meta name="description" content="{{ description or meta.description }}">
     <link rel="canonical" href="{{ absolutePageUrl }}">
@@ -10,22 +14,11 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     <link rel="icon" href="/assets/icons/ginger_wtf-favicon.png">
 
+	<meta name="view-transition" content="same-origin" />
 
     {%- set schemaType -%}
         {%- if layout == 'post' %}BlogPosting{% else %}WebSite{% endif -%}
     {%- endset -%}
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@type": "{{ schemaType }}",
-            "name": "{{ title or meta.title }}",
-            "author": {
-                "@type": "Person",
-                "name": "{{ meta.author }}"
-            },
-            "description": "{{ description or meta.description }}"
-        }
-    </script>
 
     {# Open Graph #}
     <meta property="og:site_name" content="{{ meta.title }}">
