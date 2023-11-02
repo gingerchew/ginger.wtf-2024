@@ -16,7 +16,7 @@
     <script type="module">
         $toggleDarkMode.onclick = async ({ target }) => {
             const nextMode = target.dataset.mode === 'light' ? 'dark' : 'light';
-            navigator.sendBeacon('/style/', new URLSearchParams({
+            navigator.sendBeacon('{{ meta.url }}/style/', new URLSearchParams({
                 mode: nextMode,
                 src: "{{ page.url }}"
             }));
