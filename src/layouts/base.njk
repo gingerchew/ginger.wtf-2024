@@ -22,12 +22,12 @@
 </head>
 <body class="layout-{{layout}}">
 	<script type="module">
-        var { m, t } = localStorage;
+        /* var { m, t } = localStorage;
         if (m) document.getElementById('$toggleDarkMode').dataset.mode = m;
         if (t) {
             var select = document.getElementById('$themeSelect');
             select.dataset.theme = select.value = t;
-        }
+        }*/
         window.umtc = () => document.getElementById('$themeColor').content = getComputedStyle(document.documentElement).getPropertyValue('--backgroundColor');
 	</script>
     <a href="#main" class="skiplink">Skip to main content</a>
