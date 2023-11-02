@@ -1,5 +1,5 @@
 {% edge "njk", page.url %}
-{% set theme = eleventy.edge.cookies.theme %}
+{% set theme = eleventy.edge.cookies.theme | default('default') | escape | safe %}
 <div>
     <form action="/style/" method="POST">
         <input type="hidden" name="src" value="{{ _ }}" />
