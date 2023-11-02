@@ -13,11 +13,11 @@
   status = 200
   
 [[edge_functions]]
-functions = "eleventy-edge"
+function = "eleventy-edge"
 path = "/*"
 
 [[edge_functions]]
-functions = "style-management"
+function = "style-management"
 path = "/style/"
 
 [[plugins]]
