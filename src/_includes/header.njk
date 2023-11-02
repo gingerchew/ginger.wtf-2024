@@ -1,7 +1,8 @@
 <header class="site-header" role="banner">
     
-    <div class="site-header__container {% if layout == 'base' %}visually-hidden{% endif %}">
+    <div class="site-header__container">
         <div class="site-header__left">
+            {% if layout == 'base' %}
             <div class="site-brand">
                 <div class="h-card">
                     <a href="{{ meta.url }}" rel="me">
@@ -12,6 +13,9 @@
                     </p>
                 </div>
             </div>
+            {% else %}
+            <a href="{{ meta.url }}" rel="me" class="visually-hidden">{% serifName %}</a>
+            {% endif %}
         </div>
         <div class="site-header__right">
             {% include "navigation.njk" %}
