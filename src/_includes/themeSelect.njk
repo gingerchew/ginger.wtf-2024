@@ -7,7 +7,7 @@
             <label for="$themeSelect">Theme</label>
             <select id="$themeSelect" 
                 data-theme="{{ eleventy.edge.cookies.theme }}" 
-                onchange="umtc()"
+                onchange="this.form.submit()"
             >
                 <option value="default" {% if theme == 'default' %}selected{% endif %}>Default</option>
                 <option value="red" {% if theme == 'red' %}selected{% endif %}>Red</option>
