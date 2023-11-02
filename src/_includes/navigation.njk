@@ -1,21 +1,20 @@
 <nav class="nav nav--primary" role="navigation" tabindex="-1">
 {% edge "njk" %}
     {% set mode = eleventy.edge.cookies.mode | default('light') | escape | safe %}
-    {{ mode }}
     <form action="{{ page.url }}" method="POST">
-        <input
+        <input type="hidden" name="mode" value="{{ mode }}" />
+        <button 
             class="toggle-dark-mode" 
-            value="{{ mode }}"
-            name="mode"
             id="$toggleDarkMode"
             data-mode="light"
-            onsubmit="this.dataset.mode = {{ mode }} === 'light' ? 'dark' : 'light'; umtc()";
+            onsubmit="this.form.dataset.mode = {{ mode }} === 'light' ? 'dark' : 'light'; umtc()"
         >
             <span class="visually-hidden">Toggle dark mode</span>
             <span class="show-dark"><span class="gg-moon"></span></span>
             <span class="show-light"><span class="gg-sun"></span></span>
         </button>
     </form>
+    {{ eleventy.edge.cookies.mode }}
 {% endedge %}
     {# Nav Links  #}
     <ul class="nav__menu">
