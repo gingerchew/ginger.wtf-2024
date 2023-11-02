@@ -1,5 +1,5 @@
+{% edge "njk" %}
 <nav class="nav nav--primary" role="navigation" tabindex="-1">
-    {% edge "njk" %}{{ mode | safe }}{% endedge %}
     <button 
         class="toggle-dark-mode" 
         id="$toggleDarkMode"
@@ -12,7 +12,9 @@
     </button>
     {# Nav Links  #}
     <ul class="nav__menu">
-        {% edge %}{{ eleventy.edge.cookies.mode | safe }}{% endedge %}
+
+            {{ eleventy.edge.cookies.mode | dump | safe }}
+        
         {%- for item in collections.all | eleventyNavigation -%}
         
             {%- if item.url and item.order -%}
@@ -27,3 +29,4 @@
         {%- endfor -%}
     </ul>
 </nav>
+{% endedge %}
