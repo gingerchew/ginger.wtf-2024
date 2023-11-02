@@ -17,9 +17,10 @@
         $toggleDarkMode.onclick = async ({ target }) => {
             const nextMode = target.dataset.mode === 'light' ? 'dark' : 'light';
             try {
-                navigator.sendBeacon('{{ meta.url }}/style/', new URLSearchParams({
+                const result = await navigator.sendBeacon('{{ meta.url }}/style/', new URLSearchParams({
                     mode: nextMode,
                 }));
+                console.log({ result });
                 document.cookie = `mode=${nextMode}; SameSite=Lax; HTTPOnly=true; Secure=true;`;
             } catch(e) {
                 console.log('Error: ', e.message);
