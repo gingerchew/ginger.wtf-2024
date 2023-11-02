@@ -10,7 +10,7 @@
                 data-theme="{{ theme }}" 
                 onchange="this.form.submit()"
             >
-                {% for color of themeColors %}
+                {% for color in themeColors %}
                 <option value="{{ color }}" {% if theme == color %}selected{% endif %}>{{ color }}</option>
                 {% endfor %}
                 {#<option value="default" {% if theme == 'default' %}selected{% endif %}>Default</option>
