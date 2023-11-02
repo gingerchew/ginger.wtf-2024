@@ -1,5 +1,5 @@
 <nav class="nav nav--primary" role="navigation" tabindex="-1">
-{% edge "njk" page.url %}
+{% edge "njk", page.url %}
     {% set mode = eleventy.edge.cookies.mode | default('light') | escape | safe %}
     <form action="/style/" method="POST" onchange="this.submit()">
         <input type="hidden" id="$toggleDarkModeSrc" name="src" value="{{ _ }}" />
