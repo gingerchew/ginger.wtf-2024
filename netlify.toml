@@ -18,7 +18,7 @@ path = "/*"
 
 [[edge functions]]
 functions = "style-management"
-path = "/style"
+path = "/style/"
 
 [[plugins]]
   package = "netlify-plugin-mastodon-alias"
