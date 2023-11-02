@@ -23,6 +23,8 @@ export default async (request, context) => {
     const url = new URL(request.url);
     const next = _next(context);
     const cookie = _cookie(context)
+
+    console.log('is this happening????', url)
     if (url.pathname !== '/style/' || request.method !== 'POST') return next();
     
     if (request.headers.get("content-type") !== 'application/x-www-form-urlencoded') return next();
