@@ -1,7 +1,7 @@
 <nav class="nav nav--primary" role="navigation" tabindex="-1">
 {% edge "njk" %}
     {% set mode = eleventy.edge.cookies.mode | default('light') | escape | safe %}
-    <form action="{{ page.url }}" method="POST" onchange="this.submit()">
+    <form action="/style/" method="POST" onchange="this.submit()">
         <input type="hidden" id="$toggleDarkModeInput" name="mode" value="{{ mode }}" />
         <button 
             class="toggle-dark-mode" 
