@@ -1,16 +1,21 @@
 <nav class="nav nav--primary" role="navigation" tabindex="-1">
 {% edge "njk" %}
-    <button 
-        class="toggle-dark-mode" 
-        id="$toggleDarkMode"
-        data-mode="light"
-        onclick="this.dataset.mode = localStorage.m = this.dataset.mode === 'light' ? 'dark' : 'light';umtc()"
-    >
-        <span class="visually-hidden">Toggle dark mode</span>
-        <span class="show-dark"><span class="gg-moon"></span></span>
-        <span class="show-light"><span class="gg-sun"></span></span>
-    </button>
-    {{ eleventy.edge.cookies.mode }}
+    {% set mode = eleventy.edge.cookies.mode | default('light') | escape | safe %}
+    {{ mode }}
+    <form action="{{ page.url }}" method="POST">
+        <input
+            class="toggle-dark-mode" 
+            value="{{ mode }}"
+            name="mode"
+            id="$toggleDarkMode"
+            data-mode="light"
+            onsubmit="this.dataset.mode = {{ mode }} === 'light' ? 'dark' : 'light'; umtc()";
+        >
+            <span class="visually-hidden">Toggle dark mode</span>
+            <span class="show-dark"><span class="gg-moon"></span></span>
+            <span class="show-light"><span class="gg-sun"></span></span>
+        </button>
+    </form>
 {% endedge %}
     {# Nav Links  #}
     <ul class="nav__menu">
