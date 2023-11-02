@@ -1,6 +1,7 @@
 // Focus Visible Polyfill
 // import 'focus-visible'
-const setCookie = (name) => document.cookie = `${name}; SameSite=Lax; HTTPOnly=true; Secure=true;`;
+const setCookie = (name) => document.cookie = `${name}; SameSite=Lax; HTTPOnly=true; Secure=true;`,
+    umtc = () => document.getElementById('$themeColor').content = getComputedStyle(document.documentElement).getPropertyValue('--backgroundColor');
 $toggleDarkMode.onclick = async ({ target }) => {
     const mode = target.dataset.mode === 'light' ? 'dark' : 'light';
     try {
@@ -12,6 +13,7 @@ $toggleDarkMode.onclick = async ({ target }) => {
     }
     setCookie('mode='+mode);
     target.dataset.mode = mode
+    umtc();
 }
 $themeSelect.onchange = ({ target }) => {
     const theme = target.value;
@@ -24,4 +26,5 @@ $themeSelect.onchange = ({ target }) => {
 
     target.dataset.theme = theme;
     setCookie('theme='+theme);
+    umtc();
 }
