@@ -1,13 +1,15 @@
 ---
 title: Why you shouldn't use TypeScript's Enums
-description: While Enums have benefits, especially in large codebases, they can honestly be a drag.
-subtitle: Enums have plenty of benefits, but they can honestly be a drag.
+description: >-
+  While Enums have benefits, especially in large codebases, they can honestly be
+  a drag.
+subtitle: 'Enums have plenty of benefits, but they can honestly be a drag.'
 tags:
-    - spicy
-    - opinion
-    - typescript
-id: 'why-you-shouldnt-use-typescript-enums'
-date: 2023-10-31
+  - spicy
+  - opinion
+  - typescript
+id: why-you-shouldnt-use-typescript-enums
+date: 2023-10-31T00:00:00.000Z
 ---
 
 If you're not familiar with what an `enum` looks like, here you go:
