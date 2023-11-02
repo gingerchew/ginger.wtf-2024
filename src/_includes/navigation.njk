@@ -1,4 +1,5 @@
 <nav class="nav nav--primary" role="navigation" tabindex="-1">
+{% edge "njk" %}
     <button 
         class="toggle-dark-mode" 
         id="$toggleDarkMode"
@@ -9,12 +10,11 @@
         <span class="show-dark"><span class="gg-moon"></span></span>
         <span class="show-light"><span class="gg-sun"></span></span>
     </button>
+    {{ eleventy.edge.cookies.mode }}
+{% endedge %}
     {# Nav Links  #}
     <ul class="nav__menu">
 
-{% edge "njk" %}
-    {{ eleventy.edge.cookies.mode }}
-{% endedge %}
         
         {%- for item in collections.all | eleventyNavigation -%}
         
