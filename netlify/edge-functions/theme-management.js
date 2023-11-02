@@ -1,51 +1,43 @@
-import { EleventyEdge, precompiledAppData } from './_generated/eleventy-edge-app.js';
 
-const setCookie = (context, name, value) => {
-    context.cookies.set({
-        name,
-        value,
-        path: '/',
-        httpOnly: true,
-        secure: true,
-        sameSite: 'Lax'
-    });
+const _cookie = ctx => {
+    return {
+        get(name) {
+            return ctx.cookies.get(name)
+        },
+        set(name, value) {
+            ctx.cookies.set({
+                name,
+                value,
+                path: '/',
+                httpOnly: true,
+                secure: true,
+                sameSite: 'Lax'
+            });
+        }
+    }
 }
 
+const _next = (ctx) => () => ctx.next();
+
 export default async (request, context) => {
-    const t = 'theme';
-    const m = 'mode';
-
-    let tCookies = context.cookies.get(t);
-    let mCookies = context.cookies.get(m);
+    const url = new URL(request.url);
+    const next = _next(context);
+    const cookie = _cookie(context)
+    if (url.pathname !== '/style' || request.method !== 'POST') return next();
     
-    if (!tCookies) {
-        setCookie(context, t, 'light');
-        tCookies = context.cookies.get(t);
-    }
+    if (request.headers.get("content-type") !== 'application/x-www-form-urlencoded') return next();
 
-    if (!mCookies) {
-        setCookie(context, m, 'default');
-        mCookies = context.cookies.get(m);
-    }
+    const body = await request.text();
 
-    try {
-        /*
-        const edge = new EleventyEdge('edge', {
-            request,
-            context,
-            precompiled: precompiledAppData,
-            cookies: []
-        });
-        */
+    const postData = Object.fromEntries(new URLSearchParams(body));
 
-        edge.config(eleventyConfig => {
-            eleventyConfig.addGlobalData('theme', tCookies);
-            eleventyConfig.addGlobalData('mode', mCookies);
-        })
+    postData.theme && cookie.set("theme", postData.theme);
+    postData.mode && cookie.set("mode", postData.mode);
 
-        return await edge.handleResponse();
-    } catch(e) {
-        console.log("ERROR", { e });
-        return context.next(e);
-    }
+    return new Response(null, {
+        status: 302,
+        headers: {
+            location: url.pathname
+        }
+    });
 }
