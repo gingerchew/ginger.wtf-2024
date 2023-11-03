@@ -73,6 +73,16 @@ h3 {
     margin-bottom: 1rem;
 }
 
+:is(h2,h3):has(.direct-link) {
+    position: relative;
+
+    .direct-link {
+        position: absolute;
+        left: -1em;
+        font-size: 0.8em;
+    }
+}
+
 .postlist-item-featured {
     .postlist-link {
         position: relative;
