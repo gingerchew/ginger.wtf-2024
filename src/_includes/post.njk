@@ -10,9 +10,9 @@
             {% endif %}
         </h2>
         {%- if isFeatured -%}
-        <span class="featured-label featured-label-{{ variants | random }}" aria-hidden="true">
+        <featured-label class="featured-label featured-label-{{ variants | random }}" aria-hidden="true">
             {{- featuredLabels | random -}}
-        </span>
+        </featured-label>
         {%- endif -%}
     </a>
     {%- if post.data.subtitle %}
