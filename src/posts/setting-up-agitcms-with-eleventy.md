@@ -8,7 +8,7 @@ description: >-
   content management to be a whole thing.
 date: 2023-11-02T16:13:28.000Z
 tags:
-  - 11ty
+  - eleventy
   - how-to
 id: agit-cms-eleventy-setup
 featured: false

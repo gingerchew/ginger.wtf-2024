@@ -5,7 +5,7 @@ description: Feedbin is removing the wrong elements, so let's make up for it on 
 date: 2023-10-31
 id: 'feedbin-rendering-wrong'
 tags:
-    - 11ty
+    - eleventy
     - rss
     - javascript
 ---
