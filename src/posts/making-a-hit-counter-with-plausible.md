@@ -3,7 +3,7 @@ title: Making a privacy respecting hit counter with Plausible analytics
 subtitle: Sometimes a bit of old Web 2.0 flavor is needed to add spice to life
 description: Adding a hit counter with Plausible is private and quick using their aggregate API
 tags:
-    - success
+    - privacy
     - eleventy
     - build-with-me
 id: making-hit-counter-plausible
