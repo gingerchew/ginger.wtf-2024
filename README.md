@@ -21,3 +21,5 @@ This is the personal blog of one gingerchew. Visit [the home page](https://ginge
     - *__PLEASE FOR THE LOVE OF GOD DOCUMENT THIS ITS SUCH A GOOD IDEA__*
     - https://blog.roomanna.com/09-24-2011/dynamically-coloring-a-favicon
     - https://remysharp.com/2010/08/24/dynamic-favicons
+- [x] emoji web component
+- [x] randomized featured label web component
