@@ -55,7 +55,7 @@ const element = document.querySelector('#aVerySpecificElement');
 + element!.addEventListener('click', doStuff);
 ```
 
-No longer do we need to add unnecessary `if` statements just to appease a compiler.
+No longer do we need to add unnecessary `if` statements to appease a compiler.
 
 ## What if it actually can be undefined?
 

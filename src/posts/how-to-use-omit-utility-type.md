@@ -11,19 +11,19 @@ id: 'omit-utility-type'
 
 ## Checking the inputs that matter
 
-I needed to check whether an input was valid. I could check just the old faithful:
+I needed to check whether an input was valid. I could check only the old faithful:
 ```js
 input.validity.valid === true
 ```
-Problem is I needed to check this input alongside inputs I'd really rather ignore. Those types being hidden, password, and search. I'd rather just ignore these entirely.
+Problem is I needed to check this input alongside inputs I need to ignore. Those types being hidden, password, and search.
 
-If I was using just Vanilla JavaScript, I would just add a property to the `input` element;
+If I was using Vanilla JavaScript, I would add a property to the `input` element;
 
 ```js
 input.__ignore = ['hidden','search','password'].includes(input.type);
 ```
 
-Then in my validation loop, just look for `input.__ignore` to be true, and `continue`.
+Then in my validation loop, look for `input.__ignore` to be true, and `continue`.
 
 Since I was using TypeScript, I couldn't do that so easily. I'd rather build on top of an existing interface than try and keep track of my own.
 
@@ -96,7 +96,7 @@ interface Validity extends Omit<ValidityState, 'valid'>{
 }
 ```
 
-This doesn't just apply to properties that already existed on the original interface either. The initial `ValidityState` interface doesn't let you get values using `ValidityState['key']`. We can fix this though!
+This doesn't apply only to properties that already existed on the original interface either. The initial `ValidityState` interface doesn't let you get values using `ValidityState['key']`. We can fix this though!
 
 ```ts
 interface Validity extends Omit<ValidityState, 'valid'>{
@@ -106,6 +106,6 @@ interface Validity extends Omit<ValidityState, 'valid'>{
 }
 ```
 
-*Note: If we weren't adding the `'ignore'` value as an option for `Validity.valid` or the callback function, then our index would just be `[index:string]: boolean;`*
+*Note: If we weren't adding the `'ignore'` value as an option for `Validity.valid` or the callback function, then our index would be `[index:string]: boolean;`*
 
 I had my dream `ValidityState` interface in 4 lines of code. With the added benefit that I was building **on top of** the existing JavaScript interfaces that exist.

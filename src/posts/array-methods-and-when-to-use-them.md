@@ -1,7 +1,7 @@
 ---
 title: Array methods, and when to use forEach, map, and reduce
 description: A quick learner on how each method is done and when to use them
-subtitle: Looping through arrays is easy when you know how
+subtitle: Oh the ways to loop through arrays
 date: 2023-10-30
 tags:
     - tutorials

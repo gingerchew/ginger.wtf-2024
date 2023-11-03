@@ -38,7 +38,7 @@ Okay, this time you are actually doing the right thing, and this is the time. Yo
 
 But are you the right person to say it?
 
-It's not like you aren't _allowed_ to say it. But are you going to be shutting someone else up, someone who might know better than you, just so _you_ can be the one to say it?
+It's not like you aren't _allowed_ to say it. But are you going to be shutting someone else up, someone who might know better than you, so _you_ can be the one to say it?
 
 ## The end result
 

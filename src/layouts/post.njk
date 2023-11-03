@@ -7,6 +7,7 @@ layout: base
         <h1 class="p-name">{{ title }}</h1>
         <span>
             <a href="{{ page.url }}" class="u-url" aria-label="Published date and canonical url">Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></a>
+            <span>{{ content | emojiReadTime }}
         </span>
     </div>
     <a href="{{ meta.url }}" class="visually-hidden p-author h-card" rel="author">Ginger</a>

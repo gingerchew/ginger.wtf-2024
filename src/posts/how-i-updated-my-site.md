@@ -1,7 +1,7 @@
 ---
 title: Accomplishing the unthinkable
 subtitle: I finished my website. That's right, anything is possible!
-description: Updating your site can be easy when you use 11ty and a good template.
+description: Updating your site is simplified when you use 11ty and a good template.
 tags: 
     - retrospectives
     - success

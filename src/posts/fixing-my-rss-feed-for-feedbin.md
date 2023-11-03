@@ -79,7 +79,7 @@ function fixForFeedbin(theContent) {
 
     directLinks.forEach(el => el.remove());
 
-    // The code blocks all have a language class, this just excludes ones that don't.
+    // The code blocks all have a language class, this excludes ones that don't.
     const preCodeBlocks = theDocument.window.document.querySelectorAll('pre[class] > code[class]');
 
     // Using CSS we tell the code to wrap when possible
@@ -95,7 +95,7 @@ JSDOM offers a `serialize` function on the JSDOM object, but since it serializes
 
 ## Any edgecases?
 
-I'm sure there will be, I'm already wrenching one together in this post. For now though, this works just fine.
+I'm sure there will be, I'm already wrenching one together in this post. For now though, this works fine.
 
 ### A thought about heading links
 

@@ -9,7 +9,7 @@ tags:
 id: 'what-is-starfield-saying'
 ---
 
-I am just about rounding the 10 hour mark on Starfield and I'm very much enjoying it. It is definitely a Bethesda game set in space, and not *"Skyrim In Space"*. A well polished set of yoinks and twists from their previous games. It is going to be a major contender for GOTY 2023.
+I am rounding the 10 hour mark on Starfield and I'm very much enjoying it. It is definitely a Bethesda game set in space, and not *"Skyrim In Space"*. A well polished set of yoinks and twists from their previous games. It is going to be a major contender for GOTY 2023.
 
 <details>
     <summary>Spoiler Warning</summary>
@@ -18,7 +18,7 @@ I am just about rounding the 10 hour mark on Starfield and I'm very much enjoyin
 
 ## The preface
 
-Fallout is a parody of capitalism with a veneer of 60s-70s aesthetic. The world was torn apart because of an evil corporations greed, toying with the contries of the world to start the nuclear holocaust. Millions of people died in the calamity to follow. You are tasked with living in a world whose remnants were wiped off the face of the earth. You must suffer the consequences, not because of who you are but because you are. Meanwhile the ultra rich elite live safely, just out of reach.
+Fallout is a parody of capitalism with a veneer of 60s-70s aesthetic. The world was torn apart because of an evil corporations greed, toying with the contries of the world to start the nuclear holocaust. Millions of people died in the calamity to follow. You are tasked with living in a world whose remnants were wiped off the face of the earth. You must suffer the consequences, not because of who you are but because you are. Meanwhile the ultra rich elite live safely out of reach.
 
 As the Dragonborn, greatness is thrust upon you, and you are immediately told to choose, are you a fascist or a xenophobe? The Empire has finally come kicking down the doors of the Nords, a campaign to unite the continent. The Empire outlaws their religion wading into the realm of cultural genocide. Forced assimilation into a world that will not try to understand your point of view. They are placing their foot firmly on the Throat of the World. The Nords are, well, zionist xenophobe assh*les. Skyrim belongs to the Nords, a justification for their treatment of the Dunmer, and anyone who isn't a Nord. It is bloody campaign. Families are torn apart as they fall for the Blue Cloak's nationalist propaganda of hate. It is time to pick sides in a war with no winners.
 
@@ -40,11 +40,11 @@ I don't want it to sound like I'm not having fun. It is fun, if you like Bethesd
 
 This is new territory, and I get that. I intend on playing more of it, to play multiple times, and to see what paths different choices will lead me down. Under no circumstances should your takeaway be "don't play this game." Play it. It *is* a good game. 
 
-As hard as they try, it is impossible to hide all of the seams that come with stitching together a game. There is no way to program infinite choices and still provide voice acting. You can't just kill everyone. You want to go explore the untameable wilderness of Tamriel? Great, but you have to wake up in the same cart for 15 years. Ready to explore the wastelands of The Commonwealth? Fantastic, but first here's an intro segment designed to endear you to this baby you just met. That's right, care about the baby!
+As hard as they try, it is impossible to hide all of the seams that come with stitching together a game. There is no way to program infinite choices and still provide voice acting. You can't kill everyone. You want to go explore the untameable wilderness of Tamriel? Great, but you have to wake up in the same cart for 15 years. Ready to explore the wastelands of The Commonwealth? Fantastic, but first here's an intro segment designed to endear you to this baby you met 5 minutes ago. That's right, care about the baby!
 
 These games will state their purpose, make their values known, right at the start of the story. The game was rigged from the start. War never changes. It doesn't matter what side you pick, they're all d*cks. 
 
-I am just not finding that in Starfield. The gist of the beginning 30 minutes is this:
+I am not finding that in Starfield. The gist of the beginning 30 minutes is this:
 
 Fade from black, you're in an elevator and your supervisor is explaining the job to you. You walk through a cave, and find a mysterious rock that knocks you flat on your ass, so hard you have to make your own character. Supervisor reports this find, and a mysterious but charismatic man comes in a spaceship and says "damn that's crazy, you should go to this planet on my spaceship, while I stay behind." Your next task is to take the weird rock to "The Constellation", a secret organization that does *stuff*. It doesn't seem like they're sole purpose is the weird rock, but it is the only thing they really seem to care about right now.
 
@@ -56,13 +56,13 @@ First off, not a game designer/developer. Second, I work a 40 hour job, buying a
 
 I don't think there is a solution. Not a reasonable one at least. I cannot imagine what it would take to rewrite the intro to your game, since the rest of the game depends on that block. You have to build the keystone and watch as the rest is built around it.
 
-A teacher once said to me "The most important thing you have to say should go at the beginning of a paragraph, and the main takeaway from that paragraph should be in the last sentence." It is cool. It is fun. It just isn't conveying the impetus very well. "You're in space" is not enough for me.
+A teacher once said to me "The most important thing you have to say should go at the beginning of a paragraph, and the main takeaway from that paragraph should be in the last sentence." It is cool. It is fun. It isn't conveying the impetus very well. "You're in space" is not enough for me.
 
 ### That's not fair
 
 You're right, it isn't. Maybe this feeling will change 40 hours in, or 30, or 20. Maybe by the time I finish writing this post, it will have changed. Self editing is a weird process. 
 
-Right now though, Starfield just isn't saying much of anything.
+Right now though, Starfield isn't saying much of anything.
 
 <details>
     <summary>Addendum</summary>

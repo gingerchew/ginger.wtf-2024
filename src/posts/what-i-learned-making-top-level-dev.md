@@ -21,11 +21,11 @@ First off, I built this in 11ty. If you only need HTML and a smidge of JavaScrip
 
 Keeping the development feedback loop as tight as possible is important to me. Waiting seconds for a page to reload, or a new build, can ruin anyone's flow.
 
-With the template set up, I set up the fetch for the official list of top level domains from IANA. Setting this up inside of my `_data` folder was easy. It was literally just a fetch call. It hit me that it would be a bad idea to over fetch the list. No need to anger the domain gods.
+With the template set up, it was time fetch the official list of top level domains from IANA. This means I create a file inside of my `_data` folder, and then fetch from the file. It hit me that it would be a bad idea to over fetch the list. No need to anger the domain gods.
 
-The solution was to just use `@11ty/eleventy-plugin-cache` to cache the list. When the site is built, check if `x` amount of time has passed, if it has, fetch again. Perfect! Again, exactly what I needed.
+The solution was to use `@11ty/eleventy-plugin-cache` to cache the list. When the site is built, check if `x` amount of time has passed, if it has, fetch again. Perfect! Again, exactly what I needed.
 
-Now how do I get the domains from the cache to the webpage. Just use the `_data` cascade and loop through it of course.
+Now how do I get the domains from the cache to the webpage. Use the `_data` cascade and loop through it.
 
 ```html
 <ul class="domains">
@@ -37,7 +37,7 @@ Now how do I get the domains from the cache to the webpage. Just use the `_data`
 
 Now that my domains are rendered on the page, I had to build up the features I needed. Search? Yes. Filtering by first letter? Yes.
 
-Again, these are not difficult problems to solve. First, I wanted to see what my Lighthouse score was. After all, there is no JavaScript on the page yet, should be an easy 100.
+Again, these are not difficult problems to solve. First, I wanted to see what my Lighthouse score was. After all, there is no JavaScript on the page yet, should be an one and done 100.
 
 *Family Feud Buzzer* Wrong, it wasn't.
 
@@ -226,6 +226,6 @@ I have some possible improvements in mind.
 
 ## Wait what was the lesson?
 
-Just do the simple solution. Less Javascript is better. HTML is your friend. 
+Always choose the simple solution. Less Javascript is better. HTML is your friend. 
 
 Let me know what you think!

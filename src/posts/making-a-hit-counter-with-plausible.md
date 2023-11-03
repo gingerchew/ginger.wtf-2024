@@ -1,7 +1,7 @@
 ---
 title: Making a privacy respecting hit counter with Plausible analytics
 subtitle: Sometimes a bit of old Web 2.0 flavor is needed to add spice to life
-description: Adding a hit counter is easy and private using Plausible's aggregate API
+description: Adding a hit counter with Plausible is private and quick using their aggregate API
 tags:
     - success
     - eleventy
@@ -24,7 +24,7 @@ So here's how I'm going to bring that back, using [Plausible](https://plausible.
 
 ## What is Plausible?
 
-Plausible is an analytics platform that respects user privacy. No IP Tracking, no persistent cookie, nothing skeezy. Just tracking how many people visit your site, where people come from, where people end up, and where people leave from. Simple as can be.
+Plausible is an analytics platform that respects user privacy. No IP tracking, no persistent cookie, nothing skeezy. It only shows me how many people visit your site, what site they came from, what pages they visit, which the leave from. Simple as can be.
 
 They also offer an API.
 

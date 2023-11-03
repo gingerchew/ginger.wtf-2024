@@ -13,7 +13,7 @@ tags:
 id: agit-cms-eleventy-setup
 featured: false
 ---
-I'm tired of writing my own front matter for my posts. It is just so boring and I'm always afraid I'm going to forget an attribute. I am always a sucker for consistency. There are plenty of Content Mangement Systems (CMS) out there, especially for the JAMStack group of websites. Contentful, NetlifyCMS, others, I've set them up before and they're all good. It just feels like too much when I'm the only one making the content.
+I'm tired of writing my own front matter for my posts. It is so boring and I'm always afraid I'm going to forget an attribute. I am always a sucker for consistency. There are plenty of Content Mangement Systems (CMS) out there, especially for the JAMStack group of websites. Contentful, NetlifyCMS, others, I've set them up before and they're all good. It feels like too much when I'm the only one making the content.
 
 ## In comes `Agit`
 
@@ -25,7 +25,7 @@ Possibly, I have been pronouncing it that way. On their GitHub repo they have a 
 
 ### Why use this CMS over others?
 
-Check out their [repo for a full answer](https://github.com/0xsuk/agitcms/tree/main#features), but what appeals to me is that I'm not uploading a whole CMS into my repo. It isn't accessible from the live site. It is just a little interface for me to access from my computer while I'm coding.
+Check out their [repo for a full answer](https://github.com/0xsuk/agitcms/tree/main#features), but what appeals to me is that I'm not uploading a whole CMS into my repo. It isn't accessible from the live site. It is a little interface for me to access from my computer while I'm coding.
 
 ## Setting it up
 
@@ -33,7 +33,7 @@ Follow along with me on the Agit [quick start guide](https://github.com/0xsuk/ag
 
 ### Step 1. Install `agitcms` with npm
 
-Easy enough, `npm install agitcms` or `npm i agitcms` for the true nerds out there.
+Install it like you would any other npm package, `npm install agitcms` or `npm i agitcms` for the true nerds out there.
 
 ### Step 2. Run `agitcms`
 
@@ -96,7 +96,7 @@ tags:
     - tags
 id: "an-entirely-unique-string"
 ```
-Agit offers what it calls "Type Aware" front matter. This just means that when you create the front matter template, you don't accidentally put a date where a string array should be. It also converts longer string values into mulitple lines.
+Agit offers what it calls "Type Aware" front matter. This means that when you create the front matter template, you don't accidentally put a date where a string array should be. It also converts longer string values into mulitple lines.
 
 ```yaml
 subtitle: >
@@ -112,11 +112,11 @@ Mine is very simple, so if you have a complex configuration, like some meta data
 
 Bish bash bosh, jobs done. Hit `Create New` at the top, select file, and get to writing. 
 
-You may notice if you're using 11ty serve, that everytime you type it tries to rebuild the site. That is normal for the way these two interact. You just need to update
+You may notice if you're using 11ty serve, that everytime you type it tries to rebuild the site. That is normal for the way these two interact. To fix it, you will need to update your build/serve command to add the `--incremental` flag.
 
 ## Finishing up
 
-I really like the editor. It's a step above IDE, but not some huge drag and drop, component based, API driven editor. It's like if Obsidian was for websites. No plugins. No huge list of extra dependencies. No React powered doo-dahs. Just a thin layer of content management. 
+I really like the editor. It's a step above IDE, but not some huge drag and drop, component based, API driven editor. It's like if Obsidian was for websites. No plugins. No huge list of extra dependencies. No React powered doo-dahs. It is a thin layer of content management. 
 
 My one gripe is that it puts markdown before front matter in editor navigation. I think it would be nice to be able to reorder those. But that is sincerely my one gripe.
 

@@ -18,13 +18,13 @@ eleventyNavigation:
 Here's what I want from my theme switcher:
 
 - Minimal Javascript
-- Easy to update CSS
+- CSS that is quick to update
 - Custom Properties
 - Local Storage
 
 ## How to achieve this?
 
-I have made a unilateral decision, it's going to be a web component. Why? Because they're useful, built in components, and I just like them gosh darn it.
+I have made a unilateral decision, it's going to be a web component. Why? Because they're useful, built in components, and I like them gosh darn it.
 
 Web components can get wordy though, looking at you `attributeChangedCallback`. Contemplating adding something like lit to make the process more streamlined, but I am not interested in adding more Javascript in a universal component like that.
 
@@ -68,7 +68,7 @@ class ThemeSelect extends HTMLElement {
 
         if (root.dataset.theme !== '') {
             const defaultValue = this.refs.default.value;
-            root.dataset.theme = defaultValue; // just use the default value if none has been set
+            root.dataset.theme = defaultValue; // use the default value if none has been set
             select.value = defaultValue;
         }
         // Add a listener to update the theme on change.
@@ -95,7 +95,7 @@ class ThemeSelect {
 const themeSelect = new ThemeSelect(element);
 ```
 
-It just *is* the element.
+It *is* the element.
 
 ## Let's talk about markup
 
@@ -191,7 +191,7 @@ class ThemeSelect extends HTMLElement {
 
         if (root.dataset.theme === '') {
             const defaultValue = this.refs.default.value;
-            root.dataset.theme = defaultValue; // just use the default value if none has been set
+            root.dataset.theme = defaultValue; // use the default value if none has been set
             select.value = defaultValue;
         }
         // Add a listener to update the theme on change.

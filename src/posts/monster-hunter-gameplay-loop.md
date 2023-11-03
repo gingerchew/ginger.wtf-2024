@@ -38,12 +38,12 @@ This loop is circular. Get a quest, go hunt a monster, return for rewards, impro
 
 ## Is that a bad thing?
 
-I don't think so, and they keep making the games so they must be doing well. The loop isn't a call to action, like Legend of Zelda, or story driven, like Last of Us, it is just an endless loop of hunting and questing.
+I don't think so, and they keep making the games so they must be doing well. The loop isn't a call to action, like Legend of Zelda, or story driven, like Last of Us, it is an endless loop of hunting and questing.
 
 It's in the title, so I'm not surprised. It isn't bad either, it's a good game!
 
 There is a satisfaction when you get wrecked by a monster and are forced to return. But you visit the black smith, review some stats, double check your skills, and find out you had serious weaknesses left unaddressed in your kit. Time to go hunting for that weird fire bird monster so you can make the dual blades you need.
 
-Then you get to the monster that beat you, and it is like atomic bomb vs. coughing baby. It is satisfying. I just don't get how that continues, what is bringing me back to the game.
+Then you get to the monster that beat you, and it is like atomic bomb vs. coughing baby. It is satisfying. I don't get how that continues, what is bringing me back to the game.
 
 Despite all of that, I'm going to play it again tonight. 

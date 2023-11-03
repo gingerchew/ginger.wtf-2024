@@ -32,6 +32,7 @@
     "@11ty/eleventy": "^2.0.0-canary.23",
     "@11ty/eleventy-img": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.3",
+    "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "@11ty/eleventy-plugin-vite": "^2.0.0-canary.2",
@@ -57,6 +58,7 @@
   "dependencies": {
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-plugin-webc": "^0.11.1",
+    "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
     "@quasibit/eleventy-plugin-schema": "^1.11.0",
     "agitcms": "^2.0.6",
     "dotenv": "^16.3.1",
