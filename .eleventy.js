@@ -118,7 +118,7 @@ module.exports = function (eleventyConfig) {
 		linkify: true
 	}).use(markdownItAnchor, {
 		permalink: markdownItAnchor.permalink.linkInsideHeader({
-			placement: 'after',
+			placement: 'before',
 			class: 'direct-link',
 			symbol: `<span aria-hidden="true">#</span>
 					<span class="visually-hidden">Jump to heading</span>`,
