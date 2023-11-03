@@ -8,7 +8,7 @@ tags:
     - build-with-me
 id: making-hit-counter-plausible
 date: 2023-11-10
-featured: true
+featured: false
 ---
 
 <details>
