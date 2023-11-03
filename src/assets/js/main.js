@@ -60,9 +60,6 @@ def('theme-select', class extends HTMLElement {
 let emoji = ['🌸','☠️','🤷','😵‍💫','🤡','🍋'],
     i = Math.floor(Math.random() * emoji.length)
 def('rand-emoji', class extends HTMLElement {
-    constructor() {
-        super()
-    }
     connectedCallback() {
         this.textContent = emoji[i];
     }
@@ -72,7 +69,6 @@ const labels = [
     'Spicyyy!', 'Hot Dog!', 'Woah!', 'Read Me!', 'Yowza!', 'Featured', 'Oh Boy!', 'Gold Star!', 'Whoopee!'
 ];
 def('featured-label', class extends HTMLElement {
-    constructor() { super() }
     connectedCallback() {
         let i = Math.floor(Math.random() * labels.length);
         this.textContent = labels[i];
