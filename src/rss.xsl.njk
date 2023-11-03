@@ -8,9 +8,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 xmlns:atom="https://www.w3.org/2005/Atom"
 >
 <xsl:template match="/">
-<html>
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en">
   <head>
     <title><xsl:value-of select="/atom:feed/atom:title"/> RSS Feed</title>
+    <link rel="stylesheet" href="/assets/css/main.scss" />
   </head>
   <body>
     <div>
