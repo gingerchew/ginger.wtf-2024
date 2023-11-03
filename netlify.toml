@@ -5,7 +5,7 @@
   publish = "_site"
 [[redirects]]
   from = "/js/script.js"
-  to = "https://plausible.io/js/script.js"
+  to = "https://plausible.io/js/script.exclusions.js"
   status = 200
 [[redirects]]
   from = "/api/event"
