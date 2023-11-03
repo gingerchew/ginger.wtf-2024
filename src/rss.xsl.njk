@@ -26,7 +26,7 @@ xmlns:atom="https://www.w3.org/2005/Atom"
       <xsl:for-each select="/atom:feed/atom:entry">
       <div class="article">
         <h2>
-            <a href="{link}" rel="bookmark"><
+            <a href="{link}" rel="bookmark">
             <xsl:attribute name="href">
                 <xsl:value-of select="atom:link/@href"/>
             </xsl:attribute>
