@@ -7,7 +7,7 @@
     "not IE 11"
   ],
   "scripts": {
-    "start": "npx @11ty/eleventy --serve --incremental",
+    "start": "npx @11ty/eleventy --serve",
     "watch": "npx @11ty/eleventy --watch --incremental",
     "serve": "npx @11ty/eleventy --serve --incremental",
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
@@ -62,8 +62,10 @@
     "@quasibit/eleventy-plugin-schema": "^1.11.0",
     "agitcms": "^2.0.6",
     "dotenv": "^16.3.1",
+    "html2canvas": "^1.4.1",
     "jsdom": "^22.1.0",
     "netlify-cli": "^17.0.0",
-    "netlify-plugin-mastodon-alias": "^1.0.1"
+    "netlify-plugin-mastodon-alias": "^1.0.1",
+    "playwright": "^1.39.0"
   }
 }

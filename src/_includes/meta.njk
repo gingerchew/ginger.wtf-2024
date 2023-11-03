@@ -1,5 +1,5 @@
     {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(meta.url) }}{%- endset -%}
-
+    {%- set ogImageUrl = "https://v1.opengraph.11ty.dev/{{ meta.url | urlencode }}/opengraph/{{ page.url | urlencode }}/small" -%}
     <meta name="google-site-verification" content="urgSCv6XMTe_wjVzYAPxLK9NVyZnMcvZ5-c4iRntYaU" />
 
     {# Web Mentions #}
@@ -26,8 +26,9 @@
     <meta property="og:description" content="{{ description or meta.description }}">
     <meta property="og:url" content="{{ absolutePageUrl }}">
     <meta property="og:locale" content="{{ meta.locale }}">
-    <!--meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}"-->
-    <meta property="og:image" content="https://v1.screenshot.11ty.dev/{{ absolutePageUrl | urlencode }}/opengraph/_z202310_0/" >
+    <!--meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}">
+    <meta property="og:image" content="https://v1.screenshot.11ty.dev/{{ absolutePageUrl | urlencode }}/opengraph/_z202310_0/" -->
+    <meta property="og:image" content= "https://v1.screenshot.11ty.dev/{{ meta.url | urlencode }}opengraph{{ page.url | urlencode }}/auto">
     <meta property="og:type" content="image/png" />
 
     <meta name="twitter:title" content="{{ title or meta.title }}" />

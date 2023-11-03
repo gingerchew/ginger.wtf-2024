@@ -1,0 +1,18 @@
+---
+pagination:
+    data: "collections.posts"
+    size: 1
+    alias: "post"
+layout: base.njk
+permalink: "/opengraph{{ post.url }}"
+eleventyComputed:
+    sourceUrl: "{{ meta.url }}{{ post.url }}"
+---
+<div class="og-frame">
+    <h1>{{ post.data.title }}</h1>
+    {% if post.data.subtitle %}
+    <h2>{{ post.data.subtitle }}</h2>
+    {% elif post.data.description %}
+    <h2>{{ post.data.description }}</h2>
+    {% endif %}
+</div>
