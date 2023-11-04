@@ -1,5 +1,7 @@
 const { DateTime } = require('luxon')
 const { JSDOM } = require('jsdom')
+const { uid } = require('uid');
+
 module.exports = {
     dateToFormat: function (date, format) {
         return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(
@@ -12,6 +14,12 @@ module.exports = {
             includeOffset: false,
             suppressMilliseconds: true
         })
+    },
+
+    getCacheBust(date) {
+        const seed = date + Math.random();
+
+        return uid(seed.length);
     },
 
     obfuscate: function (str) {

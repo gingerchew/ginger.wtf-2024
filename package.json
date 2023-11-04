@@ -66,6 +66,7 @@
     "jsdom": "^22.1.0",
     "netlify-cli": "^17.0.0",
     "netlify-plugin-mastodon-alias": "^1.0.1",
-    "playwright": "^1.39.0"
+    "playwright": "^1.39.0",
+    "uid": "^2.0.2"
   }
 }
