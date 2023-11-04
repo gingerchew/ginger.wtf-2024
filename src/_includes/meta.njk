@@ -26,7 +26,7 @@
     <meta property="og:description" content="{{ description or meta.description }}">
     <meta property="og:url" content="{{ absolutePageUrl }}">
     <meta property="og:locale" content="{{ meta.locale }}">
-    <meta property="og:image" content= "https://v1.screenshot.11ty.dev/{{ meta.url | urlencode }}opengraph{{ page.url | urlencode }}/_wait:1/opengraph/_{{ date | dateToISO }}">
+    <meta property="og:image" content= "https://v1.screenshot.11ty.dev/{{ meta.url | urlencode }}opengraph{{ page.url | urlencode }}/opengraph/_{{ date | dateToISO }}_wait:1/">
     <meta property="og:type" content="image/png" />
 
     <meta name="twitter:title" content="{{ title or meta.title }}" />
