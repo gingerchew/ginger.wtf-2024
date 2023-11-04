@@ -8,6 +8,7 @@ permalink: "/opengraph{{ post.url }}"
 eleventyComputed:
     sourceUrl: "{{ meta.url }}{{ post.url }}"
 ---
+<!--
 <div class="og-frame">
     <h1><span>{{ post.data.title }}</span></h1>
     <div class="attr">
@@ -18,7 +19,56 @@ eleventyComputed:
     {% endif %}
         <h3>by {% serifName %}
     </div>
-</div>
+</div>-->
+<script type="module">
+import "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";
+import { createApp } from 'https://unpkg.com/petite-vue?module';
+
+createApp({
+  isSquare:false,
+  editMode: false,
+  get year() {
+    return new Date().getFullYear();
+  },
+  mounted() {
+    this.saveDown();
+    //there's a weird bug with html2canvas where the layout isn't quite right the first time
+    setTimeout( this.saveDown, 0 );
+  },
+  toggleEditMode() {
+    if( this.editMode ) {
+      this.editMode = false;
+      setTimeout( this.saveDown, 0 );
+    } else {
+      this.editMode = true;
+    }
+  },
+  saveDown() {
+    const containerToRender = document.querySelector('.featured-image');
+    html2canvas(
+      containerToRender,
+      { 
+        allowTaint: true, 
+        useCORS: true, 
+        backgroundColor: "transparent",  
+        width: containerToRender.offsetWidth, 
+        height: containerToRender.offsetHeight,
+      }
+    ).then(canvas => {
+      const previewArea = document.querySelector('.preview-area');
+      previewArea.innerHTML = "";
+      previewArea.appendChild(canvas);
+    });
+  },
+  download() {
+    const canvas = document.querySelector('.preview-area canvas');
+    const link = document.createElement('a');
+    link.setAttribute('download', 'featured.png');
+    link.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+    link.click();
+  }
+}).mount();
+</script>
 <style>
     main {
         --gap: 3ch;
