@@ -10,12 +10,14 @@ eleventyComputed:
 ---
 <div class="og-frame">
     <h1><span>{{ post.data.title }}</span></h1>
-{% if post.data.subtitle %}
-    <h2>{{ post.data.subtitle }}</h2>
-{% else %}
-    <h2>{{ post.data.description }}</h2>
-{% endif %}
-    <h3>by {% serifName %}
+    <div class="attr">
+    {% if post.data.subtitle %}
+        <h2>{{ post.data.subtitle }}</h2>
+    {% else %}
+        <h2>{{ post.data.description }}</h2>
+    {% endif %}
+        <h3>by {% serifName %}
+    </div>
 </div>
 <style>
     main {
@@ -23,13 +25,15 @@ eleventyComputed:
         padding: var(--gap)
     }
     h1 {
-        font-size: calc(var(--fluid-5) + 1rem);
         color: white;
         grid-area: title;
         line-height: 1.2;
         margin-bottom: 0;
+        container-type: inline-size;
     }
     h1 > span {
+        font-size: var(--fluid-5);
+        font-size: clamp(2.5rem, 7.5cqi, 4rem);
         background-color: var(--textColor);
         color: var(--backgroundColor);
         padding: 0.35ch 0.5ch;
@@ -37,14 +41,14 @@ eleventyComputed:
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
     }
-    h1+h2 {
-        font-size: var(--fluid-4);
+    h2 {
+        font-size: var(--fluid-2);
         font-family: var(--sans);
         grid-area: subtitle;
+        align-self: end;
     }
-    h3 {
-        grid-area: author;
-        align-self: center;
+    .attr {
+        grid-area: subtitle;
     }
     .og-frame {
         height: calc(100vh - var(--gap) * 2);
@@ -52,7 +56,7 @@ eleventyComputed:
         grid-template-columns: 1fr 1fr auto;
         grid-template-areas: 
             'title title title'
-            'subtitle subtitle author';
+            'subtitle subtitle .';
         align-content: space-around;
         container-type: inline-size;
     }
