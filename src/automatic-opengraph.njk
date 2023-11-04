@@ -1,6 +1,9 @@
 ---
-layout: og
+layout: base
 ---
-{% for post in collections.posts %}
+{% for post in collections.all %}
+
+    
+{{ post.url }}
 <a href="/opengraph{{ post.url }}"><iframe loading="lazy" width="1200" height="630" src="/opengraph{{ post.url }}"></iframe></a>
 {% endfor %}

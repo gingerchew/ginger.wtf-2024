@@ -13,7 +13,7 @@
     <meta name="author" content="{{ meta.author }}">
     <meta name="generator" content="{{ eleventy.generator }}">
     <link rel="icon" href="/assets/icons/ginger_wtf-favicon.png">
-
+    <link rel="shortcut icon" href="#">{# Appease puppeteer #}
 	<meta name="view-transition" content="same-origin" />
 
     {%- set schemaType -%}
@@ -26,7 +26,7 @@
     <meta property="og:description" content="{{ description or meta.description }}">
     <meta property="og:url" content="{{ absolutePageUrl }}">
     <meta property="og:locale" content="{{ meta.locale }}">
-    <meta property="og:image" content= "https://v1.screenshot.11ty.dev/{{ meta.url | urlencode }}opengraph{{ page.url | urlencode }}/opengraph/_{{ page.title | getCacheBust }}_wait:2/">
+    <meta property="og:image" content= "https://gingershot.netlify.app/{{ meta.url | urlencode }}opengraph{{ page.url | urlencode }}/opengraph/_{{ page.title | getCacheBust }}_wait:2/">
     <meta property="og:type" content="image/png" />
 
     <meta name="twitter:title" content="{{ title or meta.title }}" />
