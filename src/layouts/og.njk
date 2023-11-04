@@ -3,16 +3,57 @@ pagination:
     data: "collections.posts"
     size: 1
     alias: "post"
-layout: base.njk
+layout: og-base
 permalink: "/opengraph{{ post.url }}"
 eleventyComputed:
     sourceUrl: "{{ meta.url }}{{ post.url }}"
 ---
 <div class="og-frame">
-    <h1>{{ post.data.title }}</h1>
-    {% if post.data.subtitle %}
+    <h1><span>{{ post.data.title }}</span></h1>
+{% if post.data.subtitle %}
     <h2>{{ post.data.subtitle }}</h2>
-    {% elif post.data.description %}
+{% else %}
     <h2>{{ post.data.description }}</h2>
-    {% endif %}
+{% endif %}
+    <h3>by {% serifName %}
 </div>
+<style>
+    main {
+        --gap: 3ch;
+        padding: var(--gap)
+    }
+    h1 {
+        font-size: calc(var(--fluid-5) + 1rem);
+        color: white;
+        grid-area: title;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+    h1 > span {
+        background-color: var(--textColor);
+        color: var(--backgroundColor);
+        padding: 0.35ch 0.5ch;
+        display: inline;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+    }
+    h1+h2 {
+        font-size: var(--fluid-4);
+        font-family: var(--sans);
+        grid-area: subtitle;
+    }
+    h3 {
+        grid-area: author;
+        align-self: center;
+    }
+    .og-frame {
+        height: calc(100vh - var(--gap) * 2);
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        grid-template-areas: 
+            'title title title'
+            'subtitle subtitle author';
+        align-content: space-around;
+        container-type: inline-size;
+    }
+</style>

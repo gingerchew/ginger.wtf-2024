@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ meta.title }}</title>
+    {%- set cssVars %}
+        {% include 'cssVars.njk' %}
+    {% endset -%}
+    <style>{{ cssVars | safe }}</style>
+    {% include "meta.njk" %}
+
+    <style>
+		p {
+			text-wrap: pretty;
+		}
+		:is(h1,h2,h3,.h1,.h2,.h3) {
+			text-wrap: balance;
+		}
+	</style>
+	<link rel="stylesheet" href="/assets/css/main.scss">
+</head>
+<body class="layout-{{layout}}">
+    <a href="#main" class="skiplink">Skip to main content</a>
+
+    <div class="layout" role="document">
+        <main id="main" class="main">
+            {{ content | safe }}
+        </main>
+    </div>
+</body>
+</html>
