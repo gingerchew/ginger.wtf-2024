@@ -57,7 +57,7 @@ def('theme-select', class extends HTMLElement {
 
 
 
-let emoji = ['🌸','☠️','🤷','😵‍💫','🤡','🍋'],
+let emoji = ['🌸','🍋', '✨','🏳️‍⚧️','🫀','🧠','🌼','🛸','💻','❤️'],
     i = Math.floor(Math.random() * emoji.length)
 def('rand-emoji', class extends HTMLElement {
     connectedCallback() {
