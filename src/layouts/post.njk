@@ -9,9 +9,11 @@ layout: base
             <a href="{{ page.url }}" class="u-url">Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></a>
             <ul class="inline post-tag-list">
                 {% for item in tags %}
+                    {% if item !== 'posts' %}
                     <li class="p-category post-tag post-tag--small">
                         <span>{{ item }}</span>
                     </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
             <span>{{ content | emojiReadTime }}</span>
