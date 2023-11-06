@@ -91,3 +91,24 @@
     }
 }
 
+.post-tag--small {
+    font-size: 0.9rem;
+}
+
+
+.post-meta[class][class] {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+    gap: 1ch 2ch;
+}
+.post-meta ul {
+    margin: 0;
+}
+
+

@@ -5,8 +5,15 @@ layout: base
     <div class="title-container">
         <a href="/posts/"><span aria-hidden="true">Back</span> <span class="visually-hidden">Go to all posts</span></a>
         <h1 class="p-name">{{ title }}</h1>
-        <span>
+        <span class="post-meta">
             <a href="{{ page.url }}" class="u-url">Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></a>
+            <ul class="inline post-tag-list">
+                {% for item in tags %}
+                    <li class="p-category post-tag post-tag--small">
+                        <span>{{ item }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
             <span>{{ content | emojiReadTime }}</span>
         </span>
     </div>
