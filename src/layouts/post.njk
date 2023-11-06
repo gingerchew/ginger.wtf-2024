@@ -25,14 +25,14 @@ layout: base
     </span>
     <article class="post e-content">
         {{ content | safe }}
-        
+        {# https://github.com/CodeFoodPixels/eleventy-plugin-webmentions
             {% set mentions = webmentions | webmentionsForPage %}
 
         {% for mention in mentions %}
         <div class="u-comment">
             <h3 class="p-name">{{ mention.author.name }}</h3>
         </div>
-        {% endfor %}
+        {% endfor %} #}
         <div class="utterances"></div>
         <script>
             new IntersectionObserver(([{ isIntersecting, target }], io) => {
