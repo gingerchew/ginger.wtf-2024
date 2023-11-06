@@ -1,0 +1,27 @@
+{
+  "lastFetched": "2023-11-06T18:20:00.186Z",
+  "children": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://ginger.wtf/",
+      "published": null,
+      "wm-received": "2023-11-06T17:58:06Z",
+      "wm-id": 1735077,
+      "wm-source": "https://ginger.wtf",
+      "wm-target": "https://ginger.wtf/",
+      "wm-protocol": "webmention",
+      "mention-of": "https://ginger.wtf/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://ginger.wtf/"
+      }
+    }
+  ]
+}

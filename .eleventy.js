@@ -1,7 +1,10 @@
 // const schema = require("@quasibit/eleventy-plugin-schema");
+require('dotenv').config();
 
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
+
+const EleventyWebMentions = require('eleventy-plugin-webmentions');
 
 const EleventyRocksReadTime = require('@11tyrocks/eleventy-plugin-emoji-readtime')
 const EleventyInclusiveLanguage = require('@11ty/eleventy-plugin-inclusive-language')
@@ -24,7 +27,13 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("public");
 
 	// Plugins
+
+	eleventyConfig.addPlugin(EleventyWebMentions, {
+		domain: 'ginger.wtf',
+		token: process.env.INDIE_WEB_TOKEN
+	});
 	eleventyConfig.addPlugin(EleventyRocksReadTime);
+	
 	eleventyConfig.addPlugin(EleventyPluginNavigation)
 	eleventyConfig.addPlugin(EleventyPluginRss)
 	eleventyConfig.addPlugin(EleventyInclusiveLanguage)

@@ -25,6 +25,9 @@ layout: base
     </span>
     <article class="post e-content">
         {{ content | safe }}
+        <div class="webmentions">
+            {{ webmentions | webmentionsForPage}}
+        </div>
         <div class="utterances"></div>
         <script>
             new IntersectionObserver(([{ isIntersecting, target }], io) => {
