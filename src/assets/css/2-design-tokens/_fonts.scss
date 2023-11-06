@@ -46,3 +46,9 @@ body {
   font-family: var(--ravioli);
   letter-spacing: .5px;
 }
+
+.serif-name .rotate {
+  display: inline-block;
+  padding-right: 0.05em;
+  transform: rotate(-10deg) translateY(1.5px);
+}
