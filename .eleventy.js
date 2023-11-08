@@ -1,6 +1,8 @@
 // const schema = require("@quasibit/eleventy-plugin-schema");
 require('dotenv').config();
 
+const EleventyPluginPlausible = require('eleventy-plugin-plausible');
+
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 
@@ -34,6 +36,12 @@ module.exports = function (eleventyConfig) {
 	});
 	eleventyConfig.addPlugin(EleventyRocksReadTime);
 	
+	eleventyConfig.addPlugin(EleventyPluginPlausible, {
+		domain: 'ginger.wtf',
+		proxyPath: '/js/script',
+		exclude: [ '/style/', '/test' ],
+	});
+
 	eleventyConfig.addPlugin(EleventyPluginNavigation)
 	eleventyConfig.addPlugin(EleventyPluginRss)
 	eleventyConfig.addPlugin(EleventyInclusiveLanguage)
