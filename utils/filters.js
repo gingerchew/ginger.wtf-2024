@@ -4,12 +4,18 @@ const { uid } = require('uid');
 
 module.exports = {
     dateToFormat: function (date, format) {
+        if (!(date instanceof Date)) {
+            date = new Date(date);
+        }
         return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(
             String(format)
         )
     },
 
     dateToISO: function (date) {
+        if (!(date instanceof Date)) {
+            date = new Date(date);
+        }
         return DateTime.fromJSDate(date, { zone: 'utc' }).toISO({
             includeOffset: false,
             suppressMilliseconds: true
