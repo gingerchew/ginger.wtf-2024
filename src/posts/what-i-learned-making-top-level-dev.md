@@ -30,7 +30,7 @@ Now how do I get the domains from the cache to the webpage. Use the `_data` casc
 ```html
 <ul class="domains">
     {% raw %}{% for domain in domains %}
-    <li>.{ domain }</li>
+    <li>.{{ domain }}</li>
     {% endfor %}{% endraw %}
 </ul>
 ```
