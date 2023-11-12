@@ -4,17 +4,19 @@ body {
     padding-right: var(--scrollbarComp);
     overflow-x: hidden;
     font-weight: 300;
-    &::after {
+    min-height: var(--min-height);
+    border: 5px solid var(--accentColor);
+    /*&::after {
         content: '';
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+        height: 100vh;
         display: block;
-        border: 5px solid var(--accentColor);
         pointer-events: none;
-    }
+    }*/
 }
 
 .show-dark { display: none; }

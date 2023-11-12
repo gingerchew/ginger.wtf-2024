@@ -18,8 +18,7 @@
   text-decoration: none;
 }
 
-:focus,
-:active {
+:where(:not(:body)):is(:focus, :active) {
   border: none;
   outline: none;
 }
