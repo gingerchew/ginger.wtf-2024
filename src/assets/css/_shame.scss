@@ -24,7 +24,9 @@
   container: inline;
 }
 .layout-base .post {
-  max-width: 70cqi;
+  @media (min-width: 768px) {
+    max-width: 70cqi;
+  }
 }
 
 .utterances:not(:has( + .utterances)) {
