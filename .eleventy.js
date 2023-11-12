@@ -42,6 +42,8 @@ module.exports = function (eleventyConfig) {
 		exclude: [ '/style/', '/test' ],
 	});
 
+	
+
 	eleventyConfig.addPlugin(EleventyPluginNavigation)
 	eleventyConfig.addPlugin(EleventyPluginRss)
 	eleventyConfig.addPlugin(EleventyInclusiveLanguage)
