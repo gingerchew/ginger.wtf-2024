@@ -80,8 +80,10 @@ def('featured-label', class extends HTMLElement {
 def('rss-report', class extends HTMLElement {
     constructor() {
         super();
-        this.agent = navigator.userAgent;
-        
+        this.ua = navigator.userAgent;
+        this.ip = (async () => {
+            return await this.getIp();
+        })()
     }
     /**
      *  This gets the ip on the front end, and does not save it. Only sends it to Plausible analytics to generate a "unique visitor" id
@@ -111,9 +113,12 @@ def('rss-report', class extends HTMLElement {
     }
 
     connectedCallback() {
-        this.querySelector('a').addEventListener('click', () => {
-            const ua = this.agent;
-            const ip = this.getIp()
+        this.querySelector('a').addEventListener('click', async () => {
+            // debugger;
+            const {
+                ua,
+                ip
+            } = this;
             navigator.sendBeacon('/api/event', {
                 headers: {
                     'Content-Type': 'application/json',
