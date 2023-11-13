@@ -58,8 +58,13 @@ body {
   .post-grid-title,
   .postlist-item h2,
   .serif,
+  .serif-name,
   .title-container h1,
-  .post :is(h2:not(.sub-title),h3,h4),
+  .post :is(
+    h2:not(.sub-title),
+    h3,
+    h4
+  ),
   .post summary
 ) {
   font-weight: 600;
