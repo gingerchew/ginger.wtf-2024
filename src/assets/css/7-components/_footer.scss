@@ -28,6 +28,10 @@
         }
     }
 
+    &__meta {
+        display: inline-block;
+    }
+
     a {
         font-weight: bold;
         text-decoration: underline;
