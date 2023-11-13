@@ -7,7 +7,7 @@ tags:
     - eleventy
     - build-with-me
 id: making-hit-counter-plausible
-date: 2023-11-03
+date: 2023-11-15
 featured: true
 ---
 
