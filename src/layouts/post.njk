@@ -19,8 +19,8 @@ layout: base
             <span>{{ content | emojiReadTime }}</span>
         </span>
     </div>
-    <a href="{{ meta.url }}" class="visually-hidden" rel="author">Ginger</a>
-    <span class="visually-hidden p-summary">
+    <a aria-hidden="true" href="{{ meta.url }}" class="visually-hidden" rel="author">Ginger</a>
+    <span class="visually-hidden p-summary" aria-hidden="true">
         {{ subtitle }}
     </span>
     <article class="post e-content">
