@@ -1,6 +1,7 @@
 {% edge "njk", page.url %}
 <toggle-mode data-mode="{{ eleventy.edge.cookies.mode | default('light') | escape | safe }}">
-    <button class="toggle-dark-mode" id="$toggleDarkMode">
+    {#- Inlined the size to prevent some CLS issues I spotted -#}
+    <button class="toggle-dark-mode" id="$toggleDarkMode" style="height: 48px;width: 48px;">
         <span class="visually-hidden">Toggle dark mode</span>
         <span class="show-dark"><span class="gg-moon"></span></span>
         <span class="show-light"><span class="gg-sun"></span></span>
