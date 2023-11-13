@@ -5,7 +5,7 @@ body {
     overflow-x: hidden;
     font-weight: 300;
     min-height: var(--min-height);
-    border: 5px solid var(--accentColor);
+    border: 5px solid var(--accentColorTransparent);
     /*&::after {
         content: '';
         position: fixed;
