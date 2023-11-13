@@ -1,10 +1,10 @@
 [dev]
-  targetPort = 8083
+  targetPort = 8080
 [build]
   command = "npm run build"
   publish = "_site"
 [[redirects]]
-  from = "/js/script.js"
+  from = "/js/script.exclusions.js"
   to = "https://plausible.io/js/script.exclusions.js"
   status = 200
 [[redirects]]
