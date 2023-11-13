@@ -77,9 +77,12 @@ h3 {
     position: relative;
 
     .direct-link {
-        position: absolute;
-        left: -1em;
         font-size: 0.8em;
+        margin-right: 0.25em;
+        @media (min-width: 768px) {
+            position: absolute;
+            left: -1em;
+        }
     }
 }
 

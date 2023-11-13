@@ -16,6 +16,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &--left {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5ch;
+            align-items: center;
+            @media (min-width: 768px) {
+                flex-wrap: nowrap;
+            }
+        }
     }
 
     a {

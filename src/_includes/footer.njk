@@ -1,17 +1,17 @@
 <footer class="site-footer" role="contentinfo">
     <div class="site-footer__inner container">
-        <p>
+        <div class="site-footer__inner--left">
             <span>made with <rand-emoji>🌸</rand-emoji> by {% serifName %}</span>
-            {%- if stats.pageviews.value %}
-            <span class="hit-counter">hits: {{ stats.pageviews.value }}</span>
-            {% endif %}
             <rss-report>
                 <a href="/feed.xml" class="icon-link">
                     <span class="visually-hidden">RSS</span>
                     <span class="rss-icon" aria-hidden="true" style="--size: 1.25rem;--curve-width: 1px;"></span>
                 </a>
             </rss-report>
-        </p>
+            {%- if stats.pageviews.value %}
+            <span class="hit-counter">hits: {{ stats.pageviews.value }}</span>
+            {% endif %}
+        </div>
         {% include "themeSelect.njk" %}
     </div>
 </footer>
