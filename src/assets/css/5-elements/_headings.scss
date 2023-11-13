@@ -50,7 +50,7 @@ h1:has( + *:last-child) {
     }
 }
 .main-title:has( + .sub-title) {
-margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .main-title + .sub-title {

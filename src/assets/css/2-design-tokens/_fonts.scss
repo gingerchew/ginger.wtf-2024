@@ -17,7 +17,7 @@
   src: url('/assets/fonts/vanillaravioli_demo-webfont.woff2') format('woff2'), 
     url('/assets/fonts/vanillaravioli_demo-webfont.woff') format('woff'),
     url('/VanillaRavioli_Demo.ttf') format('truetype');
-  unicode-range: U+000-5FF;
+  unicode-range: U+000-07E,U+0A1-0A5,U+0A9,U+0AD-0B0,U+0B4-0B8;
 }
 
 :root {
@@ -51,4 +51,8 @@ body {
   display: inline-block;
   padding-right: 0.05em;
   transform: rotate(-10deg) translateY(1.5px);
+}
+
+:is(.main-title, .post-grid-title, .postlist-item h2, .serif) {
+  font-weight: 600;
 }
