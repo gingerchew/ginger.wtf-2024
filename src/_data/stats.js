@@ -15,9 +15,10 @@ const plausibleEnd = new Date().toISOString().split('T')[0]
 module.exports = async function() {
     
     const requestUrl = encodeURIComponent(`${endpoint}?site_id=${siteId}&period=custom&date=${plausibleStart},${plausibleEnd}&metrics=pageviews`);
+    
     const eleventyFetchOptions = {
         type: 'json',
-        duration: '1d',
+        duration: '0s',
         fetchOptions: {
             headers: {
                 Authorization: 'Bearer '+token
@@ -33,6 +34,8 @@ module.exports = async function() {
     }
     try {
         fetchObj = await EleventyFetch(requestUrl, eleventyFetchOptions);
+    } catch(e) {
+        console.error('Error getting Plausible Stats: ', e.message);
     } finally {
         return fetchObj.results
     }
