@@ -2,7 +2,7 @@
 // import 'focus-visible'
 const def = (name, el) => customElements.define(name, el),
     setCookie = (name) => document.cookie = `${name}; SameSite=Lax; HTTPOnly=true; Secure=true;`,
-    umtc = () => document.getElementById('$themeColor').content = getComputedStyle(document.documentElement).getPropertyValue('--backgroundColor'),
+    umtc = () => document.getElementById('$themeColor').content = getComputedStyle(document.documentElement).getPropertyValue('--accentColor'),
     sendBeacon = (data) => {
         try {
             navigator.sendBeacon('/style/', new URLSearchParams(data))
@@ -65,7 +65,7 @@ def('rand-emoji', class extends HTMLElement {
         this.textContent = emoji[i];
     }
 });
-
+/*
 const labels = [
     'Spicyyy!', 'Hot Dog!', 'Woah!', 'Read Me!', 'Yowza!', 'Featured', 'Oh Boy!', 'Gold Star!', 'Whoopee!'
 ];
@@ -75,7 +75,7 @@ def('featured-label', class extends HTMLElement {
         this.textContent = labels[i];
     }
 });
-
+*/
 
 def('rss-report', class extends HTMLElement {
     constructor() {
@@ -86,7 +86,7 @@ def('rss-report', class extends HTMLElement {
         })()
     }
     /**
-     *  This gets the ip on the front end, and does not save it. Only sends it to Plausible analytics to generate a "unique visitor" id
+     * This gets the ip on the front end, and does not save it. Only sends it to Plausible analytics to generate a "unique visitor" id
      * 
      * Documentation: https://plausible.io/docs/events-api
      */
