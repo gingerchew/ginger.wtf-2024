@@ -1,7 +1,6 @@
 const EleventyFetch = require('@11ty/eleventy-fetch');
 require('dotenv').config();
 
-
 const siteId = 'ginger.wtf';
 const token = process.env.PLAUSIBLE_AUTH_TOKEN;
 const endpoint = 'https://plausible.io/api/v1/stats/aggregate';
@@ -14,8 +13,8 @@ const plausibleEnd = new Date().toISOString().split('T')[0]
 
 module.exports = async function() {
     
-    const requestUrl = encodeURIComponent(`${endpoint}?site_id=${siteId}&period=custom&date=${plausibleStart},${plausibleEnd}&metrics=pageviews`);
-    
+    const requestUrl = `${endpoint}?site_id=${siteId}&period=custom&date=${encodeURIComponent(plausibleStart + ',' + plausibleEnd)}&metrics=pageviews`;
+    console.log(requestUrl);
     const eleventyFetchOptions = {
         type: 'json',
         duration: '0s',
