@@ -2,7 +2,9 @@
     <div class="site-footer__inner container">
         <p>
             <span>made with <rand-emoji>🌸</rand-emoji> by {% serifName %}</span>
-            {#%- if stats.pageviews.value %}<span class="hit-counter">hits: {{ stats.pageviews.value }}</span>{% endif %#}
+            {%- if stats.pageviews.value %}
+            <span class="hit-counter">hits: {{ stats.pageviews.value }}</span>
+            {% endif %}
             <rss-report>
                 <a href="/feed.xml" class="icon-link">
                     <span class="visually-hidden">RSS</span>
