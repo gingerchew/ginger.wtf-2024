@@ -10,7 +10,7 @@
 @font-face {
   font-family: 'Vanilla Ravioli';
   font-weight: 700;
-  font-display: swap;
+  font-display: optional;
   font-style: normal;
   ascent-override: 75%;
   descent-override: 10%;
@@ -53,6 +53,14 @@ body {
   transform: rotate(-10deg) translateY(1.5px);
 }
 
-:is(.main-title, .post-grid-title, .postlist-item h2, .serif) {
+:is(
+  .main-title,
+  .post-grid-title,
+  .postlist-item h2,
+  .serif,
+  .title-container h1,
+  .post :is(h2:not(.sub-title),h3,h4),
+  .post summary
+) {
   font-weight: 600;
 }
