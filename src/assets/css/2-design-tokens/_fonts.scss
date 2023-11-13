@@ -10,14 +10,12 @@
 @font-face {
   font-family: 'Vanilla Ravioli';
   font-weight: 700;
-  font-display: optional;
+  font-display: swap;
   font-style: normal;
   ascent-override: 75%;
   descent-override: 10%;
-  src: url('/assets/fonts/vanillaravioli_demo-webfont.woff2') format('woff2'), 
-    url('/assets/fonts/vanillaravioli_demo-webfont.woff') format('woff'),
-    url('/VanillaRavioli_Demo.ttf') format('truetype');
-  unicode-range: U+000-07E,U+0A1-0A5,U+0A9,U+0AD-0B0,U+0B4-0B8;
+  src: url('/assets/fonts/vanillaravioli_demo-subset-webfont.woff2') format('woff2'), 
+    url('/assets/fonts/vanillaravioli_demo-subset-webfont.woff') format('woff');
 }
 
 :root {
