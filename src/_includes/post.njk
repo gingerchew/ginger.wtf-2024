@@ -5,7 +5,7 @@
     {% if ogImageUrl %}<a href="{{ ogImageUrl }}" target="_blank">See this pages open graph preview</a>{% endif %}
     <a href="{{ post.url | url }}" class="postlist-link">
         <h2>
-            {% if post.data.title %}{{ post.data.title }}
+            {% if post.data.title %}{{ post.data.title | safe }}
             {% else %}
                 <code>{{ post.url }}</code>
             {% endif %}
@@ -17,9 +17,9 @@
         {%- endif -%}
     </a>
     {%- if post.data.subtitle %}
-        <p class="postlist-subtitle">{{ post.data.subtitle }}</p>
+        <p class="postlist-subtitle">{{ post.data.subtitle | safe }}</p>
     {% elif post.data.description %}
-        <p class="postlist-subtitle">{{ post.data.description }}</p>
+        <p class="postlist-subtitle">{{ post.data.description | safe }}</p>
     {% endif %}
     {% for tag in post.data.tags | filterTagList %}
         {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
