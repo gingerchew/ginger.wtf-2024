@@ -8,12 +8,13 @@ tags:
     - build-with-me
 id: making-hit-counter-plausible
 date: 2023-11-03
-featured: false
+featured: true
 ---
 
 <details>
     <summary>Quick notice before you continue</summary>
-    <p>As of <code>11-1-2023</code> the following code seems to only work when run on local. Will update this post when I have a solution figured out.</p>
+    <p><del>As of <code>11-1-2023</code> the following code seems to only work when run on local. Will update this post when I have a solution figured out.</del></p>
+    <p>As of <code>11-13-2023</code>, it is working. I have updated the code below to match the code that is currently working.</p>
 </details>
 
 Remember Neocities? Remember _Geocities_?? I missed out on that craze, but I love looking back on that style of website. 
@@ -62,6 +63,8 @@ To fix this, we update the `period` parameter to `period=custom`. This means we 
 
 I started using Plausible on November 1st, 2022. The date format used in the parameter is the same as what `new Date().toISOString()` returns.
 
+The url must be properly encoded too, so we put our date range through an `encodeURIComponent`.
+
 Here's our updated snippet:
 
 ```js
@@ -75,9 +78,10 @@ const plausibleStart = '2022-11-01';
 // toISOString returns something like this: 2023-11-01T21:21:26.654Z
 // so we split on the `T` for the date only
 const plausibleEnd = new Date().toISOString().split('T')[0]
+const range = encodeURIComponent(`${plausibleStart},${plausibleEnd}`);
 
 module.exports = async function() {
-    const requestUrl = `${endpoint}?site_id=${siteId}&period=custom&date=${plausibleStart},${plausibleEnd}&metrics=pageviews`;
+    const requestUrl = `${endpoint}?site_id=${siteId}&period=custom&date=${range}&metrics=pageviews`;
 
 
     return EleventyFetch(requestUrl, {
@@ -107,10 +111,10 @@ const plausibleStart = '2022-11-01';
 // toISOString returns something like this: 2023-11-01T21:21:26.654Z
 // so we split on the `T` for the date only
 const plausibleEnd = new Date().toISOString().split('T')[0]
+const range = encodeURIComponent(`${plausibleStart},${plausibleEnd}`);
 
 module.exports = async function() {
-    
-    const requestUrl = `${endpoint}?site_id=${siteId}&period=custom&date=${plausibleStart},${plausibleEnd}&metrics=pageviews`;
+    const requestUrl = `${endpoint}?site_id=${siteId}&period=custom&date=${range}&metrics=pageviews`;
 
     return EleventyFetch(requestUrl, {
         type: 'json',
@@ -158,10 +162,10 @@ const plausibleStart = '2022-11-01';
 // toISOString returns something like this: 2023-11-01T21:21:26.654Z
 // so we split on the `T` for the date only
 const plausibleEnd = new Date().toISOString().split('T')[0]
+const range = encodeURIComponent(`${plausibleStart},${plausibleEnd}`);
 
 module.exports = async function() {
-    
-    const requestUrl = `${endpoint}?site_id=${siteId}&period=custom&date=${plausibleStart},${plausibleEnd}&metrics=pageviews`;
+    const requestUrl = `${endpoint}?site_id=${siteId}&period=custom&date=${range}&metrics=pageviews`;
 
     const fetchObj = await EleventyFetch(requestUrl, {
         type: 'json',
@@ -172,6 +176,59 @@ module.exports = async function() {
             }
         }
     });
+
+    return fetchObj.results
+}
+```
+
+### Using a fallback
+
+Even though everyone reading this post is a perfect developer and has never coded a bug in their life, lets create a fallback anyways.
+
+```js
+const EleventyFetch = require('@11ty/eleventy-fetch');
+require('dotenv').config();
+
+
+const siteId = 'ginger.wtf';
+const token = process.env.AUTHORIZATION;
+const endpoint = 'https://plausible.io/api/v1/stats/aggregate';
+
+const plausibleStart = '2022-11-01';
+
+// toISOString returns something like this: 2023-11-01T21:21:26.654Z
+// so we split on the `T` for the date only
+const plausibleEnd = new Date().toISOString().split('T')[0]
+const range = encodeURIComponent(`${plausibleStart},${plausibleEnd}`);
+
+module.exports = async function() {
+    const requestUrl = `${endpoint}?site_id=${siteId}&period=custom&date=${range}&metrics=pageviews`;
+
+    const eleventyFetchOptions = {
+        type: 'json',
+        duration: '1d',
+        fetchOptions: {
+            headers: {
+                Authorization: 'Bearer '+token,
+            }
+        }
+    }
+
+    let fetchObj = {
+        results: {
+            pageviews: {
+                value: ':('
+            }
+        }
+    }
+
+    try {
+        fetchObj = await EleventyFetch(requestUrl, eleventyFetchOptions);
+    } catch(e) {
+        console.error('Error getting Plausible Stats: ', e.message);
+    } finally {
+        return fetchObj.results;
+    }
 
     return fetchObj.results
 }
@@ -192,4 +249,3 @@ This is what the code looks like:
 Yeah, really, it's that simple. The data cascade in 11ty is powerful.
 
 If you are doing this yourself, you should really explore what all is available through the Plausible API. It's a great service, worth every penny. There's a sense of peace knowing you're not selling your users data or breaking the law by using your analytics.
-
