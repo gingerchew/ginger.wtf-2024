@@ -38,7 +38,7 @@ module.exports = function (eleventyConfig) {
 	
 	eleventyConfig.addPlugin(EleventyPluginPlausible, {
 		domain: 'ginger.wtf',
-		proxyPath: '/js/script.exclusions',
+		proxyPath: '/js/script',
 		exclude: [ '/style/', '/test' ],
 	});
 
