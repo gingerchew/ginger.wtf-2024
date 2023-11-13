@@ -239,7 +239,7 @@ module.exports = async function() {
 This is what the code looks like:
 
 {% raw %}
-```njk
+```html
 <span class="hit-counter">
     hits: {{ stats.pageviews.value }}
 </span>
