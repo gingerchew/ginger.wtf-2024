@@ -20,6 +20,7 @@ layout: base
                     {% include 'post.njk' %}
                 {% endif %}
             {% endfor %}
+            {{ collections.posts | tagCloud }}
         </div>
     </div>
 </div>

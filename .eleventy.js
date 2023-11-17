@@ -1,3 +1,5 @@
+const EleventyPluginTagCloud = require('eleventy-plugin-tag-cloud');
+
 // const schema = require("@quasibit/eleventy-plugin-schema");
 require('dotenv').config();
 
@@ -29,6 +31,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("public");
 
 	// Plugins
+
+	eleventyConfig.addPlugin(EleventyPluginTagCloud);
 
 	eleventyConfig.addPlugin(EleventyWebMentions, {
 		domain: 'ginger.wtf',

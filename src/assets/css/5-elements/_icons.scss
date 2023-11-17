@@ -107,7 +107,7 @@
     border-top-right-radius: 500000rem;
 }
 
-/** Maybe implement another time when the colors are figured out */
+/** Maybe implement another time when the colors are figured out *
 .star-icon {
     --size: 1em;
     width: var(--size);
@@ -145,8 +145,10 @@
             border-top-right-radius: 5000000rem;
         }
     }
+}*/
+
+.icon-link.icon-link:has(svg) {
+    text-decoration: none;
 }
-
-
 
 

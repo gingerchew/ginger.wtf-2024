@@ -45,16 +45,21 @@
         font-size: var(--fluid-0);
         letter-spacing: 0.5px;
     }
+    
     .post-grid & .postlist-subtitle {
         // An extra clamp just to be safe the font isn't going smaller than 16px
         font-size: clamp(16px, var(--fluid-0) - 5px, 24px);
     }
+    
     &:has(a + time) h2 {
         margin-bottom: 1rem;
     }
+    
     &:has(.postlist-subtitle) h2 {
         margin-bottom: 0.5rem;
     }
+
+    .tag,
     time,
     .post-tag {
         font-size: 0.95rem;
@@ -71,6 +76,7 @@
     }
 }
 
+.tag,
 .post-tag {
     min-width: 48px;
     min-height: 48px;
@@ -95,7 +101,6 @@
     font-size: 0.9rem;
 }
 
-
 .post-meta[class][class] {
     justify-content: center;
     display: flex;
@@ -107,8 +112,7 @@
     }
     gap: 1ch 2ch;
 }
+
 .post-meta ul {
     margin: 0;
 }
-
-

@@ -1,0 +1,19 @@
+---
+layout: base
+permalink: /tags/
+excludeFromSitemap: true
+---
+<div class="container tag-cloud">
+    <h1 class="main-title">Cloud</h1>
+    <div class="post">
+        <ul class="tag-cloud">
+        {% for tag in collections.posts | tagCloud %}
+            <li>
+                <a href="/tags/{{ tag }}" class="tag">
+                    <span>{{ tag }}</span>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
