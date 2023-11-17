@@ -21,7 +21,7 @@ npm install eleventy-plugin-tag-cloud
 
 ## What is it?
 
-Tag cloud is a page or component that shows all of the tags (or the most popular) on your site. It's a nice way of exposing all the content in your site without being a giant list of posts.
+A tag cloud is a page or component that shows all of the tags (or the most popular) on your site. It's a nice way of exposing all the content in your site without being a giant list of posts.
 
 ## The gist of it
 
@@ -48,7 +48,7 @@ function tagCloud(posts) {
 }
 ```
 
-Since this is going to be a plugin though, we have to make some more additions. This means weapping it in the usual `module.exports` config.
+Since this is going to be a plugin though, we have to make some additions. This means wrapping it in the usual `module.exports` config.
 
 ```js
 module.exports = (eleventyConfig) => {
@@ -74,15 +74,14 @@ const _defaults = {
 }
 ```
 
-Now we add a loop to remove based on that array:
+Now we add a loop to remove tags based on that array:
 
 ```js
-
 function tagCloud(posts, { ignore }) {
     const tagSet = new Set();
 
     for (const post of posts) {
-        const tags = post.data.tags;
+        const { tags } = post.data;
         tags.forEach(tag => tagSet.add(tag));
     }
 
@@ -94,7 +93,7 @@ function tagCloud(posts, { ignore }) {
 }
 ```
 
-I've changed up something to give it a more *11ty* vibe.
+I've changed up a couple of things to give it a more *11ty* vibe.
 
 ```js
 const _defaults = {
