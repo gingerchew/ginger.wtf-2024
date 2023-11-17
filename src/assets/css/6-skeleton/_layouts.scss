@@ -7,7 +7,7 @@ body {
 .layout {
     display: flex;
     flex-direction: column;
-    min-height: var(--min-height);
+    // min-height: var(--min-height);
     position: relative;
     height: 100%;
 }

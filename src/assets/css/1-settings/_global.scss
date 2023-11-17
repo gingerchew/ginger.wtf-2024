@@ -6,6 +6,6 @@
     text-wrap: balance;
 }
 
-:where(body) {
-    --min-height: calc(100vh - 10px);
+:where(body, .layout) {
+    min-height: calc(100vh - 10px);
 }
