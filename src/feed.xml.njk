@@ -16,8 +16,8 @@ eleventyExcludeFromCollections: true
     {% endif %}
     <id>{{ meta.url }}/</id>
     {%- for post in collections.posts | reverse -%}
-    {% if post.data.published %}
-    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(meta.url) }}{% endset %}
+    {%- if post.data.published -%}
+    {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(meta.url) }}{% endset -%}
         <entry>
             <title>{{ post.data.title }}</title>
             <link href="{{ absolutePostUrl }}"/>
@@ -27,6 +27,6 @@ eleventyExcludeFromCollections: true
                 {{ post.templateContent | fixForFeedbin | htmlToAbsoluteUrls(absolutePostUrl) | safe }}
             ]]></content>
         </entry>
+    {%- endif -%}
     {%- endfor -%}
-    {% endif %}
 </feed>
