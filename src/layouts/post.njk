@@ -8,10 +8,15 @@ layout: base
         <span class="post-meta">
             <a href="{{ page.url }}" class="u-url">Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></a>
             <ul class="inline post-tag-list">
-                {% for item in tags %}
-                    {% if item !== 'posts' %}
+                {% for tag in tags %}
+                    {% set tagUrl = tag | slug %}
+                    {% if tag != 'posts' %}
                     <li class="p-category post-tag post-tag--small">
-                        <span>{{ item }}</span>
+                        {% if tagUrl != 'tags//' %}
+                        <a href="{{ tagUrl | url }}">{{ tag }}</a>
+                        {% else %}
+                        <span>{{ tag }}</span>
+                        {% endif %}
                     </li>
                     {% endif %}
                 {% endfor %}

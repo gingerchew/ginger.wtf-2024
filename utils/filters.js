@@ -3,6 +3,9 @@ const { JSDOM } = require('jsdom')
 const { uid } = require('uid');
 
 module.exports = {
+    makeTagUrl(tag) {
+        return `/tags/${tag}/`
+    },
     dateToFormat: function (date, format) {
         if (!(date instanceof Date)) {
             date = new Date(date);
