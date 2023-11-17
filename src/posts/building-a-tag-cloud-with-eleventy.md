@@ -144,6 +144,8 @@ Then we just use it like this:
 </ul>
 ```
 
+If you want to [see the results then follow this link](/tags/).
+
 That's it, despite not finding it anywhere, I sat down, did it, and packaged it up. `npm install eleventy-plugin-tag-cloud` Hope this helps you make your own plugins or gives you some inspiration!
 
 ### Addendum
