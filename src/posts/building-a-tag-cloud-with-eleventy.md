@@ -145,3 +145,19 @@ Then we just use it like this:
 ```
 
 That's it, despite not finding it anywhere, I sat down, did it, and packaged it up. `npm install eleventy-plugin-tag-cloud` Hope this helps you make your own plugins or gives you some inspiration!
+
+### Addendum
+
+From Mastodon, [@rubenwardy](https://fosstodon.org/@rubenwardy) reminded me that `flatMap` exists. This makes the `tagCloud` function much smaller.
+
+```js
+function tagCloud(posts, { ignore }) {
+  const tagSet = new Set(posts.flatMap(post => post.data.tags));
+
+  ignore.forEach(tag => tagSet.delete(tag));
+
+  return [...tagSet]
+}
+```
+
+Personally, I like a good old fashioned `for of` loop, but the code golfer in me enjoys how succinct this version is.
