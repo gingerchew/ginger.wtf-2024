@@ -48,9 +48,13 @@ body {
 .serif-name .rotate {
   display: inline-block;
   padding-right: 0.05em;
-  transform: rotate(-10deg) translateY(1.5px);
+  transform: rotate(-10deg) translateX(5px);
+  transition: transform 0.25s ease;
+  transform-origin: bottom right;
 }
-
+:where(button:hover, a:hover) .serif-name .rotate {
+  transform: rotate(0) translateX(0);
+}
 :is(
   .main-title,
   .post-grid-title,

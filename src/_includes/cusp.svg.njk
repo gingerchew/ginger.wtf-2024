@@ -1,0 +1,29 @@
+<div class="decoration">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
+        <path d="M.99975 6c2.7617188 0 5-2.2382812 5-5.00000002C5.99975 3.7617188 8.2380312 6 10.99975 6c-2.7617188 0-5 2.2382812-5 5 0-2.7617188-2.2382812-5-5-5z" fill="none" stroke="currentcolor" stroke-width=".6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" />
+    </svg>
+    <style>
+        *:has( > .decoration) {
+            position: relative;
+        }
+        .decoration {
+            opacity: 0.25;
+        }
+        @keyframes rotate {
+            to {
+                rotate: calc(360deg + var(--default, 0deg));
+            }
+        }
+        .decoration svg {
+            font-size: var(--fz);
+            position: fixed;
+            inset: var(--inset);
+            max-width: 0.5em;
+            display: inline-block;
+            animation: rotate 1s linear infinite;
+            animation-play-state: paused;
+            animation-direction: var(--dir, normal);
+            animation-delay: calc(var(--scroll) * (var(--speed, 0.05) * -1s));
+        }
+    </style>
+</div>
