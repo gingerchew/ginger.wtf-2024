@@ -16,6 +16,7 @@ eleventyExcludeFromCollections: true
     {% endif %}
     <id>{{ meta.url }}/</id>
     {%- for post in collections.posts | reverse -%}
+    {% if post.data.published %}
     {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(meta.url) }}{% endset %}
         <entry>
             <title>{{ post.data.title }}</title>
@@ -27,4 +28,5 @@ eleventyExcludeFromCollections: true
             ]]></content>
         </entry>
     {%- endfor -%}
+    {% endif %}
 </feed>
