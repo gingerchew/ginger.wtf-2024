@@ -58,13 +58,13 @@ module.exports = (eleventyConfig) => {
 
 We have to make some options. First, and only, we want to ignore some tags.
 
-{% raw %}
 ```njk
+{% raw %}
 {% for tag in collections.posts | tagCloud %}
 {# We don't need a tag for "posts" we're already using it as our collection #}
 {% endfor %}
-```
 {% endraw %}
+```
 
 So our options look like this:
 
@@ -131,14 +131,17 @@ module.exports = (eleventyConfig, _options) => {
 
 Then we just use it like this:
 
-{% raw %}
+
 ```html
 <ul>
+    {% raw %}
     {% for tag in collections.posts | tagCloud %}
-    <li><a href="{ link to tag page }">{{tag}}</a></li>
+    {% endraw %}
+    <li><a href="{ link to tag page }">{% raw %}{{tag}}{% endraw %}</a></li>
+    {% raw %}
     {% endfor %}
+    {% endraw %}
 </ul>
 ```
-{% endraw %}
 
 That's it, despite not finding it anywhere, I sat down, did it, and packaged it up. `npm install eleventy-plugin-tag-cloud` Hope this helps you make your own plugins or gives you some inspiration!
