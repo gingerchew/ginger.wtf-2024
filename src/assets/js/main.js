@@ -66,17 +66,6 @@ def('rand-emoji', class extends HTMLElement {
     }
 });
 /*
-const labels = [
-    'Spicyyy!', 'Hot Dog!', 'Woah!', 'Read Me!', 'Yowza!', 'Featured', 'Oh Boy!', 'Gold Star!', 'Whoopee!'
-];
-def('featured-label', class extends HTMLElement {
-    connectedCallback() {
-        let i = Math.floor(Math.random() * labels.length);
-        this.textContent = labels[i];
-    }
-});
-*/
-
 def('rss-report', class extends HTMLElement {
     constructor() {
         super();
@@ -89,7 +78,7 @@ def('rss-report', class extends HTMLElement {
      * This gets the ip on the front end, and does not save it. Only sends it to Plausible analytics to generate a "unique visitor" id
      * 
      * Documentation: https://plausible.io/docs/events-api
-     */
+     *//*
     async getIp() {
         const pc = new RTCPeerConnection({ iceServers: [] });
         
@@ -133,4 +122,10 @@ def('rss-report', class extends HTMLElement {
             })
         })
     }
-})
+})*/
+
+/* Not feeling it, but I'll leave it for posterity
+document.addEventListener('scroll', () => {
+    document.body.style.setProperty('--scroll', window.scrollY / (document.body.offsetHeight - window.innerHeight))
+}, { passive: true });
+*/
