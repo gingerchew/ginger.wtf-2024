@@ -9,7 +9,7 @@ excludeFromSitemap: true
         <ul class="tag-cloud">
         {% for tag in collections.posts | tagCloud %}
             <li>
-                <a href="/tags/{{ tag }}" class="tag">
+                <a href="/tags/{{ tag }}" class="post-tag">
                     <span>{{ tag }}</span>
                 </a>
             </li>
