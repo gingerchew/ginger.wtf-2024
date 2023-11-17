@@ -11,7 +11,7 @@ tags:
   - css
   - explainer
 id: advanced-css-selectors
-featured: true
+featured: false
 published: true
 ---
 The introduction of `:has()` and `:where()` has given CSS all of the "maybe some day" feature requests from the last 10 years (give or take).

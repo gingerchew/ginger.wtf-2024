@@ -129,7 +129,7 @@ module.exports = (eleventyConfig, _options) => {
 };
 ```
 
-Then we just use it like this:
+Then we use it like this:
 
 
 ```html
