@@ -17,7 +17,7 @@ module.exports = async function() {
     console.log(requestUrl);
     const eleventyFetchOptions = {
         type: 'json',
-        duration: '0s',
+        duration: '7d',
         fetchOptions: {
             headers: {
                 Authorization: 'Bearer '+token
