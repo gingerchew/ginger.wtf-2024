@@ -11,6 +11,7 @@ date: 2023-10-21
 eleventyNavigation:
     key: 'create-theme-switcher'
     permalink: false
+published: true
 ---
 
 ## Plan

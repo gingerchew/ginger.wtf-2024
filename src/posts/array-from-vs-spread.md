@@ -5,6 +5,7 @@ date: 2023-10-25
 tags:
   - explainer
 id: 'array-from-vs-spread'
+published: true
 ---
 
 I had a conversation with a coworker about the merits of using spread `...` vs `Array.from`. While they look the same on the outside, they work differently.

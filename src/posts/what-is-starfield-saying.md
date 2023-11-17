@@ -7,6 +7,7 @@ tags:
     - bethesda
     - rant
 id: 'what-is-starfield-saying'
+published: true
 ---
 
 I am rounding the 10 hour mark on Starfield and I'm very much enjoying it. It is definitely a Bethesda game set in space, and not *"Skyrim In Space"*. A well polished set of yoinks and twists from their previous games. It is going to be a major contender for GOTY 2023.

@@ -11,6 +11,7 @@ tags:
   - personal
 id: blogging-frequently
 featured: false
+published: true
 ---
 I was late to myspace, and when I got to Facebook, I was really on the cusp of it dying off. I enjoyed Tumblr, but it always felt like I wasn't contributing, only ever consuming.
 

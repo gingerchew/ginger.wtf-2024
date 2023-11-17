@@ -8,6 +8,7 @@ tags:
     - eleventy
     - rss
     - javascript
+published: true
 ---
 
 I was notified of this thanks to @pontus (if you are reading this, lemme know if you want better credit or whatever), apparently Feedbin's feed was rendering my posts incorrectly. 

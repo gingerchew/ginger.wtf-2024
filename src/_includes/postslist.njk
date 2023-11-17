@@ -1,7 +1,9 @@
 <ol reversed class="postlist">
 {% for post in postslist | reverse %}
+  {% if post.data.published %}
   <li>
     {% include 'post.njk' %}
   </li>
+  {% endif %}
 {% endfor %}
 </ol>

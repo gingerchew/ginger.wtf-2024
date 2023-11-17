@@ -7,6 +7,7 @@ tags:
     - eleventy
 id: 'what-i-learned-topleveldev'
 date: 2023-10-18
+published: true
 ---
 
 My name is Ginger, and I have problem. Anytime someone says "Do you think there is a website {x}.com?" I have to look it up. What's worse is the number I end up registering. Instead of dealing with that issue, I've decided to enable all my fellow domain addicts.

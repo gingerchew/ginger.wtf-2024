@@ -8,6 +8,7 @@ tags:
 id: 'finished-website'
 date: 2023-10-25
 featured: true
+published: true
 ---
 
 ## It can be done.

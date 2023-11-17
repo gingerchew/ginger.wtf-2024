@@ -9,6 +9,7 @@ tags:
     - explainer
     - spicy
 featured: true
+published: true
 ---
 
 I wrote something like this the other day:

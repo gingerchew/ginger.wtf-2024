@@ -8,6 +8,7 @@ tags:
     - web-development
     - javascript
 id: 'using-foreach-map-and-reduce'
+published: true
 ---
 
 First thing to get out of the way is that each of these methods returns something different. 

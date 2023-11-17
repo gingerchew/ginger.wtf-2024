@@ -12,6 +12,7 @@ tags:
   - how-to
 id: agit-cms-eleventy-setup
 featured: false
+published: true
 ---
 I'm tired of writing my own front matter for my posts. It is so boring and I'm always afraid I'm going to forget an attribute. I am always a sucker for consistency. There are plenty of Content Mangement Systems (CMS) out there, especially for the JAMStack group of websites. Contentful, NetlifyCMS, others, I've set them up before and they're all good. It feels like too much when I'm the only one making the content.
 

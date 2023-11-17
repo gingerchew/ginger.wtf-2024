@@ -8,6 +8,7 @@ tags:
     - personal
     - rant
     - retrospective
+published: true
 ---
 
 As a kid I had anger issues, and counting to ten never really worked. I got into fights I didn't need to, and stuck my nose where it shouldn't go.

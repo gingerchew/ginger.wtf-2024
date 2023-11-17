@@ -10,6 +10,7 @@ tags:
   - typescript
 id: why-you-shouldnt-use-typescript-enums
 date: 2023-10-31T00:00:00.000Z
+published: true
 ---
 
 If you're not familiar with what an `enum` looks like, here you go:

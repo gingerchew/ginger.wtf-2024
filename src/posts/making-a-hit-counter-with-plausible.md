@@ -9,6 +9,7 @@ tags:
 id: making-hit-counter-plausible
 date: 2023-11-15
 featured: true
+published: true
 ---
 
 <details>

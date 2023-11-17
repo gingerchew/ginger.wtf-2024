@@ -7,6 +7,7 @@ tags:
     - css
 id: 'arc-browser-theme'
 date: 2023-10-25
+published: true
 ---
 
 I'm in the process of making a theme switcher for my site, this means messing with CSS custom properties. Checking and double checking contrast ratios, thinking up worth-while themes.
