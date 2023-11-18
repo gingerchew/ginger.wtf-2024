@@ -4,7 +4,7 @@ module.exports = {
     image: async (src, alt, classNames) => {
         const meta = await Image(src, {
             widths: [300, 600],
-            formats: ['webp','avif'],
+            formats: ['avif'],
             urlPath: '/images/',
             outputDir: './_site/public/images/'
         });
