@@ -10,6 +10,10 @@
                     <p class="visually-hidden p-note" aria-hidden="true">
                         My name is <span class="p-fn">Ginger</span> and I am a <span class="p-gender-identity">trans</span> web developer that likes playing video games, writing, and building websites.
                     </p>
+                    <span aria-hidden="true" class="visually-hidden">
+                        {% set profileSrc = './public/assets/images/profile-image.png' | url %}
+                        {% profilePic profileSrc, "Drawing of a girl in a flannel with pins. She has short mullet hair cut dyed white, her eyes are closed and she is holding up a peace sign. There is a pair of demonic horns coming from her forehead." %}
+                    </span>
                 </div>
             </div>
         </div>

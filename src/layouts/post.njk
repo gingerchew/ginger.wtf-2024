@@ -8,8 +8,6 @@ layout: base
         <span class="post-meta">
             <span class="post-author">
                 Written by <a href="{{ meta.url }}" rel="author" class="p-author h-card">Ginger</a>
-                {% set profileSrc = './public/assets/images/profile-image.png' | url %}
-                {% profilePic profileSrc, "Drawing of a girl in a flannel with pins. She has short mullet hair cut dyed white, her eyes are closed and she is holding up a peace sign. There is a pair of demonic horns coming from her forehead." %}
             </span>
             <a href="{{ page.url }}" class="u-url">Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></a>
             <ul class="inline post-tag-list">
