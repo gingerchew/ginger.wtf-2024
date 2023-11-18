@@ -1,0 +1,16 @@
+{% set siblings = collections.posts | siblingNav(page) %}
+
+<ul class="sibling-nav">
+    {% if siblings.prev %}
+    <li>
+        <span aria-hidden="true">Previous </span>
+        <a href="{{ siblings.prev.url }}"><span class="visually-hidden">Read the previous post: </span>{{ siblings.prev.data.title }}</a>
+    </li>
+    {% endif %}
+    {% if siblings.next %}
+    <li>
+        <span aria-hidden="true">Next</span>
+        <a href="{{ siblings.next.url }}"><span class="visually-hidden">Read the next post: </span>{{ siblings.next.data.title }}</a>
+    </li>
+    {% endif %}
+</ul>

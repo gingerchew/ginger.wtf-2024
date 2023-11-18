@@ -2,7 +2,37 @@ const { DateTime } = require('luxon')
 const { JSDOM } = require('jsdom')
 const { uid } = require('uid');
 
+function siblingNav(posts, currentPage) {
+    const set = new Set();
+
+    posts = posts.sort((a, z) => {
+        set.add(+Date.parse(a.date));
+        return +Date.parse(a.date) > +Date.parse(z.date)
+    });
+
+    const indexOfCurrPost = posts.findIndex(post => post.url === currentPage.url);
+
+    let prevPost = null;
+    let nextPost = null;
+
+    posts.forEach((post, i) => {
+        if (i < indexOfCurrPost) prevPost = post;
+    })
+
+
+    posts.forEach((post, i) => {
+        if (i > indexOfCurrPost && nextPost === null) nextPost = post;
+    });
+
+    return {
+        prev: prevPost,
+        next: nextPost
+    };
+}
+
+
 module.exports = {
+    siblingNav,
     makeTagUrl(tag) {
         return `/tags/${tag}/`
     },

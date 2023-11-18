@@ -29,7 +29,9 @@
     }
 
     &__meta {
-        display: inline-block;
+        display: flex;
+        gap: 1.5ch;
+        align-items: center;
     }
 
     a {

@@ -96,6 +96,11 @@
     }
 }
 
+.post-tag-list {
+    display: flex;
+    gap: 1ch;
+}
+
 .post-tag--small {
     font-size: 0.9rem;
 }

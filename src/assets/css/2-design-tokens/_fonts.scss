@@ -52,9 +52,7 @@ body {
   transition: transform 0.25s ease;
   transform-origin: bottom right;
 }
-:where(button:hover, a:hover) .serif-name .rotate {
-  transform: rotate(0) translateX(0);
-}
+
 :is(
   .main-title,
   .post-grid-title,
@@ -69,5 +67,6 @@ body {
   ),
   .post summary
 ) {
+  line-height: 1.2;
   font-weight: 600;
 }

@@ -11,9 +11,11 @@ layout: base
                 {% for tag in tags %}
                     {% set tagUrl = tag | slug %}
                     {% if tag != 'posts' %}
-                    <li class="p-category post-tag post-tag--small">
+                    <li class="p-category">
                         {% if tagUrl != 'tags//' %}
-                        <a href="{{ tagUrl | url }}">{{ tag }}</a>
+                        <a href="{{ tagUrl | url }}" class="post-tag post-tag--small">
+                            <span>{{ tag }}</span>
+                        </a>
                         {% else %}
                         <span>{{ tag }}</span>
                         {% endif %}
@@ -25,19 +27,7 @@ layout: base
         </span>
     </div>
     <a aria-hidden="true" href="{{ meta.url }}" class="visually-hidden" rel="author">Ginger</a>
-    <nav>
-        {% set navPosts = collections.posts | eleventyNavigation %}
-        {% for post in navPosts %}
-            {% if post.url == page.url %}
-                {% set prevSibling = navPosts[loop.index - 1] %}
-                {% set nextSibling = navPosts[loop.index + 1] %}
-            {% endif %}
-        {% endfor %}
-        {{ prevSibling | dump }}
-        {% if prevSibling %}
-        {{ prevSibling.title }}
-        {% endif %}
-    </nav>
+
     <span class="visually-hidden p-summary" aria-hidden="true">
         {{ subtitle }}
     </span>
@@ -51,6 +41,7 @@ layout: base
             <h3 class="p-name">{{ mention.author.name }}</h3>
         </div>
         {% endfor %} #}
+        {#% include "siblingNav.njk" %#}
         <div class="utterances"></div>
         <script>
             new IntersectionObserver(([{ isIntersecting, target }], io) => {

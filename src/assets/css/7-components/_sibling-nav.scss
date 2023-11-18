@@ -1,0 +1,17 @@
+.sibling-nav {
+    container-type: inline-size;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    li {
+        font-size: clamp(1rem, 3cqi, var(--fluid-0));
+        display: flex;
+        gap: 1ch;
+        justify-content: space-between;
+
+        > span {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    }
+}
