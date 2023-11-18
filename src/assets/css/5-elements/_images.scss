@@ -2,3 +2,12 @@ img {
     display: block;
     max-width: 100%;
 }
+
+.post-author {
+    display: flex;
+    gap: 1ex;
+    & .u-photo {
+        max-width: 2.5ch;
+        border-radius: 50rem;
+    }
+}

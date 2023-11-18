@@ -6,9 +6,11 @@ layout: base
         <a href="/posts/"><span aria-hidden="true">Back</span> <span class="visually-hidden">Go to all posts</span></a>
         <h1 class="p-name">{{ title }}</h1>
         <span class="post-meta">
-            <span>Written by <a href="{{ meta.url }}" rel="author" class="p-author h-card">Ginger</a></span>
-            {% set profilePic = 'public/assets/images/profile-image.png' | url %}
-            {% image profilePic, "Drawing of a girl in a flannel with pins. She has short mullet hair cut dyed white, her eyes are closed and she is holding up a peace sign. There is a pair of demonic horns coming from her forehead.", "visually-hidden" %}
+            <span class="post-author">
+                Written by <a href="{{ meta.url }}" rel="author" class="p-author h-card">Ginger</a>
+                {% set profilePic = './public/assets/images/profile-image.png' | url %}
+                {% image profilePic, "Drawing of a girl in a flannel with pins. She has short mullet hair cut dyed white, her eyes are closed and she is holding up a peace sign. There is a pair of demonic horns coming from her forehead.", "u-photo" %}
+            </span>
             <a href="{{ page.url }}" class="u-url">Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></a>
             <ul class="inline post-tag-list">
                 {% for tag in tags %}
