@@ -31,7 +31,7 @@
         {% include "footer.njk" %}
     </div>
 
-    <script type="module" src="{{ '/assets/js/main.js' | url }}" async></script>
+    <script type="module" src="{{ '/assets/js/main.js' | url }}"></script>
     {% plausible %}
     {% if permalink == '404.html' %}
         {% plausible404 %}
