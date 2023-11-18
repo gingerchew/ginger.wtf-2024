@@ -1,25 +1,22 @@
 ---
 layout: base
 ---
-
-<div class="container">
-    <h1 class="main-title">
-        <span>Welcome!</span>
-    </h1>
-    <div class="post">
-        <h2 class="sub-title" style="font-size: var(--fluid-1);font-family: var(--sub-sans);font-weight:500;">
-            My name is {% serifName %} and this is my blog where I post thoughts, tutorials, <del>rants</del> opinions, and just general blog posts.
-        </h2>
-        <br/>
-        <div class="post-grid">
-            <h3 class="post-grid-title" style="font-size: var(--fluid-1);">Here's some posts that I think you should check out!</h3>
-            {% set numberOfFeaturedPosts = 0 %}
-            {% for post in collections.posts | reverse %}
-                {% if post.data.published and post.data.featured and numberOfFeaturedPosts < 2%}
-                    {% set numberOfFeaturedPosts = numberOfFeaturedPosts + 1 %}
-                    {% include 'post.njk' %}
-                {% endif %}
-            {% endfor %}
-        </div>
+<h1 class="main-title">
+    <span>Welcome!</span>
+</h1>
+<div class="post">
+    <h2 class="sub-title" style="font-size: var(--fluid-1);font-family: var(--sub-sans);font-weight:500;">
+        My name is {% serifName %} and this is my blog where I post thoughts, tutorials, <del>rants</del> opinions, and just general blog posts.
+    </h2>
+    <br/>
+    <div class="post-grid">
+        <h3 class="post-grid-title" style="font-size: var(--fluid-1);">Here's some posts that I think you should check out!</h3>
+        {% set numberOfFeaturedPosts = 0 %}
+        {% for post in collections.posts | reverse %}
+            {% if post.data.published and post.data.featured and numberOfFeaturedPosts < 2%}
+                {% set numberOfFeaturedPosts = numberOfFeaturedPosts + 1 %}
+                {% include 'post.njk' %}
+            {% endif %}
+        {% endfor %}
     </div>
 </div>

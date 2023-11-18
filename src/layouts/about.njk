@@ -1,14 +1,12 @@
 ---
 layout: base
 ---
-<div class="container">
-    <div class="title-container">
-        <h1 class="main-title">
-            <span>{{ title }}</span>
-            {#- <span class="size-adjust">{{ title }}</span> -#}
-        </h1>
-    </div>
-    <article class="post">
-        {{ content | safe }}
-    </article>
+<div class="title-container">
+    <h1 class="main-title">
+        <span>{{ title }}</span>
+        {#- <span class="size-adjust">{{ title }}</span> -#}
+    </h1>
 </div>
+<article class="post">
+    {{ content | safe }}
+</article>
