@@ -6,6 +6,7 @@ layout: base
         <a href="/posts/"><span aria-hidden="true">Back</span> <span class="visually-hidden">Go to all posts</span></a>
         <h1 class="p-name">{{ title }}</h1>
         <span class="post-meta">
+            <span>Written by <a href="{{ meta.url }}" rel="author" class="p-author">Ginger</a></span>
             <a href="{{ page.url }}" class="u-url">Published: <time class="postlist-date dt-published" datetime="{{ date | dateToFormat('yyyy-MM-dd') }}">{{ date | dateToFormat('dd LLL yyyy') }}</time></a>
             <ul class="inline post-tag-list">
                 {% for tag in tags %}
