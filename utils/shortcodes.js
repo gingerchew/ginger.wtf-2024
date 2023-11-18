@@ -12,7 +12,7 @@ module.exports = {
         const { avif } = meta;
         const data = avif[avif.length - 1];
 
-        return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" decoding="async" loading="lazy" class="u-photo" />`
+        return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" decoding="async" loading="lazy" class="u-photo h-card" />`
     },
     image: async (src, alt, classNames) => {
         const meta = await Image(src, {
