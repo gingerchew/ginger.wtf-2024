@@ -16,7 +16,7 @@ layout: base
                     {% if tag != 'posts' %}
                     <li class="p-category">
                         {% if tagUrl != 'tags//' %}
-                        <a href="{{ tagUrl | url }}" class="post-tag post-tag--small">
+                        <a href="/tags/{{ tag }}" class="post-tag post-tag--small">
                             <span>{{ tag }}</span>
                         </a>
                         {% else %}
