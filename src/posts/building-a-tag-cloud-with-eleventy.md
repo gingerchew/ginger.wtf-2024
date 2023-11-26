@@ -11,6 +11,11 @@ published: true
 date: 2023-11-16
 ---
 
+<details>
+  <summary>There is an update!</summary>
+  <p>I wrote this post on 11/16/2023, and since updated the package. To see what has been added <a href="/posts/updating-tag-cloud-with-eleventy/">check out the post here</a>.</p>
+</details>
+
 I'm on a streak with creating things that I missed out on from the early Web 2.0 days. So buckle up, 'cause we're bringing back the tag cloud!
 
 This post is also available as a plugin here: 

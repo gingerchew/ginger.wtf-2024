@@ -10,7 +10,7 @@ id: updating-tag-cloud-with-eleventy
 featured: false
 published: true
 ---
-I posted about the `tagCloud` solution I coded up a little while ago, and saw some responses that were very inspiring. The main one being [this one from Nicolas Hoizey](https://nicolas-hoizey.photo/tags/).
+[I posted about the `tagCloud` solution](/posts/building-a-tag-cloud-with-eleventy/) I coded up a little while ago, and saw some responses that were very inspiring. The main one being [this one from Nicolas Hoizey](https://nicolas-hoizey.photo/tags/).
 
 The idea of filtering tags by "must have at least x entries" was really a clever idea. Generating a component like that seems outside of the per-view of a plugin, in my opinion. So I want to give the ability to create one by exposing more data.
 
