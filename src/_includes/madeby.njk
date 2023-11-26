@@ -1,5 +1,5 @@
 <div>
-    <made-by>
+    <div class="mb">
         <div class="mb-container">
             <div class="mb-inner">
             <div class="mb-smiley">
@@ -14,20 +14,20 @@
             </div>
         </div>
 		<span class="support-warning">If you are seeing this, it means your browser doesn't support container units yet</span>
-    </made-by>
+    </div>
 </div>
 <style>
-made-by {
+.mb {
     display: block;
 }
-made-by .support-warning {
+.mb .support-warning {
 	display: none;
 }
-made-by .mb-container {
+.mb .mb-container {
 	height: 150px;
 	container-type: size;
 }
-made-by .mb-inner {
+.mb .mb-inner {
 	border-bottom-left-radius: 12.5cqi;
 	border-top-right-radius: 12.5cqi;
 	border: 1cqi solid black;
@@ -39,7 +39,7 @@ made-by .mb-inner {
 	padding-inline: 7.5cqi;
 }
 
-made-by .mb-smiley {
+.mb .mb-smiley {
 	--eye-size: 3cqi;
 	border-radius: 500000rem;
 	border: 1cqi solid black;
@@ -50,7 +50,7 @@ made-by .mb-smiley {
 	grid-template-rows: 1fr min-content 1fr 2cqb 1fr;
 }
 
-made-by .mb-eye {
+.mb .mb-eye {
 	background-color: black;
 	border-radius: 10000000px;
 	grid-row: 2;
@@ -58,44 +58,44 @@ made-by .mb-eye {
 	height: var(--eye-size)
 }
 
-made-by .mb-eye + .mb-eye {
+.mb .mb-eye + .mb-eye {
 	grid-column: 4 / span 1;
 }
 
-made-by .mb-smile {
+.mb .mb-smile {
 	height: min(1vmin, 5cqb);
 	background-color: black;
 	grid-row: 4;
 	grid-column: 2 / -2;
 }
 
-made-by .mb-slogan {
+.mb .mb-slogan {
 	display: grid;
 	grid-template-rows: min-content min-content;
 	line-height: 0.95;
 }
 
-made-by .mb-slogan small {
+.mb .mb-slogan small {
 	font-size: 7.3cqi;
 	white-space: nowrap;
 	letter-spacing: 1px;
 }
 
-made-by .mb-slogan strong {
+.mb .mb-slogan strong {
 	letter-spacing: 0.5px;
 	font-size: 12.5cqi;
 	font-weight: 900;
 	white-space: nowrap;
 }
-made-by .mb-slogan span {
+.mb .mb-slogan span {
 	font-family: monospace;
 }
 
 @supports not (container-type: size) {
-	made-by > * {
+	.mb > * {
 		display: none;
 	}
-	made-by .support-warning {
+	.mb .support-warning {
 		display: block;
 	}
 }

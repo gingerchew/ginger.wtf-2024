@@ -35,7 +35,7 @@ This means that you could make a similar component like this:
 ```
 {% endraw %}
 
-That is just a gist written using `petite-vue`, so there is some wiring that would need to be done still
+That is a gist written using `petite-vue`, so there is some wiring that would need to be done still
 
 To get this working, I added another filter called `tagCloudIndex`. It is used almost exactly like the other, except an object is returned instead of a string.
 

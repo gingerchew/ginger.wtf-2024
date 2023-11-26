@@ -20,7 +20,7 @@ There isn't anything behind this other than signing up. I'm not "supporting" a s
 
 ## Would something _like_ this work?
 
-I mean, no. It would simply start an arms race. Remember when a captcha was  4 letters, a number, and a line between them? Now we have to identify all the stop signs in an image.
+I mean, no. It would start an arms race. Remember when a captcha was  4 letters, a number, and a line between them? Now we have to identify all the stop signs in an image.
 
 I am also not thrilled by the fact that this website is asking for donations for a moderately well designed image?
 
@@ -32,4 +32,4 @@ I am also not thrilled by the fact that this website is asking for donations for
 
 _Yeah yeah, mine doesn't smile I know._
 
-I think there _should_ be some way to distinguish between AI generated content and "bespoke" human made content. I just don't think an `.svg` and a donate link are gonna get us there.
+I think there _should_ be some way to distinguish between AI generated content and "bespoke" human made content. I don't think an `.svg` and a donate link are gonna get us there.

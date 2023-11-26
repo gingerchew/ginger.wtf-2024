@@ -27,7 +27,7 @@ A tag cloud is a page or component that shows all of the tags (or the most popul
 
 After doing a fair bit of searching on the web, I couldn't find any plugin for generating a tag cloud. This had me worried, maybe this was really difficult to put together. Maybe it wasn't even worth doing.
 
-It was super easy.
+It was quick and painless.
 
 We're going to loop through the posts in our blog and return an array of tags, no duplicates!
 

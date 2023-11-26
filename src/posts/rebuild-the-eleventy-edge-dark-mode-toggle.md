@@ -76,7 +76,7 @@ sendBeacon = (data) => {
   } finally {}
 }
     
-// def is just window.customElements.define aliased
+// def is window.customElements.define aliased
 def('toggle-mode', class extends HTMLElement {
     constructor() {
         super()
