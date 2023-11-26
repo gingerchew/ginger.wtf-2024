@@ -30,8 +30,20 @@ function siblingNav(posts, currentPage) {
     };
 }
 
+function returnPublished(posts) {
+    const publishedPosts = posts.filter(post => post.data.published ?? false);
+    const pastPublishDate = publishedPosts.filter(post => {
+        console.log(post.data.title, +Date.parse(post.data.date) < Date.now());
+        return Date.now() > +(Date.parse(post.data.date));
+    });
+    
+    console.log(pastPublishDate.length, publishedPosts.length, posts.length);
+    return pastPublishDate;
+}
+
 
 module.exports = {
+    returnPublished,
     siblingNav,
     makeTagUrl(tag) {
         return `/tags/${tag}/`

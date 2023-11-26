@@ -10,7 +10,7 @@ eleventyNavigation:
     <h1 class="main-title">
       <span>Posts</span>
     </h1>
-    {% set postslist = collections.posts %}
+    {% set postslist = collections.posts | returnPublished %}
     {% include "postslist.njk" %}
 </div>
 
