@@ -44,7 +44,8 @@ layout: base
         </div>
         {% endfor %} #}
         {#% include "siblingNav.njk" %#}
-        <div class="utterances"></div>
+        <!--div class="utterances"></div>
+        Replace with webmentions when that is figured out
         <script>
             new IntersectionObserver(([{ isIntersecting, target }], io) => {
                 if (isIntersecting) {
@@ -59,6 +60,6 @@ layout: base
                     io.disconnect();
                 }
             }).observe(document.querySelector('.utterances'))
-        </script>
+        </script-->
     </article>
 </div>
