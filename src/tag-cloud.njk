@@ -7,10 +7,10 @@ excludeFromSitemap: true
     <h1 class="main-title">Cloud</h1>
     <div class="post">
         <ul class="tag-cloud">
-        {% for tag in collections.posts | tagCloud %}
+        {% for tag in collections.posts | tagCloudIndex %}
             <li>
-                <a href="/tags/{{ tag }}" class="post-tag">
-                    <span>{{ tag }}</span>
+                <a href="/tags/{{ tag.tagName }}" class="post-tag">
+                    <span>{{ tag.tagName }} ({{ tag.tagAmount }})</span>
                 </a>
             </li>
         {% endfor %}
