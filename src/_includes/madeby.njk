@@ -13,11 +13,15 @@
             </div>
             </div>
         </div>
+		<span class="support-warning">If you are seeing this, it means your browser doesn't support container units yet</span>
     </made-by>
 </div>
 <style>
 made-by {
     display: block;
+}
+made-by .support-warning {
+	display: none;
 }
 made-by .mb-container {
 	height: 150px;
@@ -85,5 +89,14 @@ made-by .mb-slogan strong {
 }
 made-by .mb-slogan span {
 	font-family: monospace;
+}
+
+@supports not (container-type: size) {
+	made-by > * {
+		display: none;
+	}
+	made-by .support-warning {
+		display: block;
+	}
 }
 </style>

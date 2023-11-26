@@ -24,7 +24,7 @@ I mean, no. It would simply start an arms race. Remember when a captcha was  4 l
 
 I am also not thrilled by the fact that this website is asking for donations for a moderately well designed image?
 
-[One which can be reasonably recreated using HTML and CSS.](https://codepen.io/gingerchew/full/RwvJqRe)
+[One which can be reasonably recreated using HTML and CSS.](https://codepen.io/gingerchew/full/RwvJqRe) using container queries/units.
 
 {% include 'madeby.njk' %}
 
