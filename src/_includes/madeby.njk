@@ -1,0 +1,89 @@
+<div>
+    <made-by>
+        <div class="mb-container">
+            <div class="mb-inner">
+            <div class="mb-smiley">
+                <div class="mb-eye"></div>
+                <div class="mb-eye"></div>
+                <div class="mb-smile"></div>
+            </div>
+            <div class="mb-slogan">
+                <small>coded by human</small>
+                <strong>not by A<span>I</span></strong>
+            </div>
+            </div>
+        </div>
+    </made-by>
+</div>
+<style>
+made-by {
+    display: block;
+}
+made-by .mb-container {
+	height: 150px;
+	container-type: size;
+}
+made-by .mb-inner {
+	border-bottom-left-radius: 12.5cqi;
+	border-top-right-radius: 12.5cqi;
+	border: 1cqi solid black;
+	display: grid;
+	grid-template-columns: minmax(1cqi, 1fr) max-content;
+	align-items: center;
+	column-gap: 1rem;
+	padding-block: 10cqb;
+	padding-inline: 7.5cqi;
+}
+
+made-by .mb-smiley {
+	--eye-size: 3cqi;
+	border-radius: 500000rem;
+	border: 1cqi solid black;
+	container-type: inline;
+	aspect-ratio: 1;
+	display: grid;
+	grid-template-columns: 1fr var(--eye-size) 1fr var(--eye-size) 1fr;
+	grid-template-rows: 1fr min-content 1fr 2cqb 1fr;
+}
+
+made-by .mb-eye {
+	background-color: black;
+	border-radius: 10000000px;
+	grid-row: 2;
+	grid-column: 2 / span 1;
+	height: var(--eye-size)
+}
+
+made-by .mb-eye + .mb-eye {
+	grid-column: 4 / span 1;
+}
+
+made-by .mb-smile {
+	height: min(1vmin, 5cqb);
+	background-color: black;
+	grid-row: 4;
+	grid-column: 2 / -2;
+}
+
+made-by .mb-slogan {
+	display: grid;
+	grid-template-rows: min-content min-content;
+	line-height: 0.95;
+}
+
+made-by .mb-slogan small {
+	font-size: 7.3cqi;
+	white-space: nowrap;
+	letter-spacing: 1px;
+}
+
+made-by .mb-slogan strong {
+	letter-spacing: 0.5px;
+	font-size: 12.5cqi;
+	font-weight: 900;
+	white-space: nowrap;
+}
+made-by .mb-slogan span {
+	font-family: monospace;
+}
+</style>
