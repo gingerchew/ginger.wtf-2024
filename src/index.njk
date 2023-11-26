@@ -12,7 +12,7 @@ layout: base
     <div class="post-grid">
         <h3 class="post-grid-title" style="font-size: var(--fluid-1);">Here's some posts that I think you should check out!</h3>
         {% set numberOfFeaturedPosts = 0 %}
-        {% for post in collections.posts | reverse %}
+        {% for post in collections.posts | returnPublished | reverse %}
             {% if post.data.published and post.data.featured and numberOfFeaturedPosts < 2%}
                 {% set numberOfFeaturedPosts = numberOfFeaturedPosts + 1 %}
                 {% include 'post.njk' %}
