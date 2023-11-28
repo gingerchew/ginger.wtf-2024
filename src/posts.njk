@@ -6,11 +6,11 @@ eleventyNavigation:
   order: 2
 ---
 
-<div class="container postlist-wrapper">
-    <h1 class="main-title">
-      <span>Posts</span>
-    </h1>
-    {% set postslist = collections.posts | returnPublished %}
-    {% include "postslist.njk" %}
+<h1 class="main-title">
+  <span>Posts</span>
+</h1>
+<div class="postlist-wrapper">
+  {% set postslist = collections.posts | returnPublished %}
+  {% include "postslist.njk" %}
 </div>
 
