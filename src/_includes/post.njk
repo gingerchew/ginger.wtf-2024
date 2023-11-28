@@ -1,6 +1,13 @@
 {% set isFeatured = post.data.featured %}
 {% set featuredLabels = [ 'Spicyyy!', 'Hot Dog!', 'Woah!', 'Read Me!', 'Yowza!', 'Featured', 'Oh Boy!', 'Gold Star!', 'Whoopee!'] %}
 {% set variants = [0, 1, 2, 3] %}
+{%- set viewTransitionName -%}
+    {%- if post.data.id -%}
+        {%- if post.data.tags[0] != 'tag' -%}
+        view-transition-name: {{ post.data.id }}
+        {%- endif -%}
+    {%- endif -%}
+{%- endset -%}
 <article class="postlist-item{% if isFeatured %} postlist-item-featured {% endif %}{% if post.url == url %} postlist-item-active{% endif %}">
     {% if ogImageUrl %}<a href="{{ ogImageUrl }}" target="_blank">See this pages open graph preview</a>{% endif %}
     <a href="{{ post.url | url }}" class="postlist-link">
