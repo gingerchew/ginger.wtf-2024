@@ -17,7 +17,7 @@ body {
     margin: 0 auto;
     max-width: var(--container-max-width);
     padding: 2rem 1rem; // fallback
-    padding: 2rem clamp(var(--spacing-medium), 3.75vw, var(--spacing-x-large));
+    padding: 2rem clamp(var(--spacing-small), 3.75vw, var(--spacing-large));
 }
 
 /**

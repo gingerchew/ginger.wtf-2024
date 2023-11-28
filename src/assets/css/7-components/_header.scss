@@ -81,5 +81,5 @@
 }
 
 .site-brand {
-    font-size: clamp(1rem, 3cqi, 3rem);
+    font-size: max(30px, 3cqi) //clamp(1rem, 3cqi, 3rem);
 }

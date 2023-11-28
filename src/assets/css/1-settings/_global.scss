@@ -8,6 +8,3 @@
 html {
     min-height: 100vh;
 }
-:where(body, .layout) {
-    min-height: calc(100vh - 10px);
-}
