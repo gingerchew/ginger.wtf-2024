@@ -65,5 +65,6 @@ def('rand-emoji', class extends HTMLElement {
     }
 });
 
-if ($('user-agent')) await import('./components/user-agent.js');
-if ($('user-agent-data')) await import('./components/user-agent-data.js');
+
+if ($('user-agent')) import('./components/user-agent.js');
+if ($('user-agent-data')) import('./components/user-agent-data.js');
