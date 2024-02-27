@@ -1,6 +1,6 @@
 
 if (!navigator.userAgentData) {
-    (await import('../polyfills/useragentdata.js')).polyfill()
+    (import('../polyfills/useragentdata.js')).polyfill()
 }
 
 class UADHelper {
