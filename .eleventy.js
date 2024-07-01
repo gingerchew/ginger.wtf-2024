@@ -1,4 +1,5 @@
 const EleventyPluginTagCloud = require('eleventy-plugin-tag-cloud');
+const EleventyPoison = require('eleventy-plugin-poison');
 
 // const schema = require("@quasibit/eleventy-plugin-schema");
 require('dotenv').config();
@@ -46,6 +47,7 @@ module.exports = function (eleventyConfig) {
 		exclude: [ '/style/', '/test' ],
 	});
 
+	eleventyConfig.addPlugin(EleventyPoison);
 	
 
 	eleventyConfig.addPlugin(EleventyPluginNavigation)
