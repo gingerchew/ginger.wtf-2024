@@ -18,7 +18,7 @@ Bad news everyone. The internet isn't dead like everyone was jokingly hoping for
 
 ## Truth is it's infested. The official diagnosis is in.
 
-You've seen it, every time you interact with the web, you see less and less of it. Gemini, Bard, Meta AI, ChatGPT, Bing AI, DDGAI, everything and everyone has a bespoke version of the same monstrous titan that is quickly gobbling up the web under the assumption that [your work is free to use](https://www.windowscentral.com/software-apps/ever-put-content-on-the-web-microsoft-says-that-its-okay-for-them-to-steal-it-because-its-freeware).
+Every time you interact with the web, you see less and less of it. Gemini, Bard, Meta AI, ChatGPT, Bing AI, DDGAI, everything and everyone has a bespoke version of the same monstrous titan that is quickly gobbling up the web under the assumption that [your work is free to use](https://www.windowscentral.com/software-apps/ever-put-content-on-the-web-microsoft-says-that-its-okay-for-them-to-steal-it-because-its-freeware).
 
 Even when they offer up solutions for "avoiding our bots accidentally using content that doesn't want to be included", there exists no system that makes it possible to reprimand and demonize those who betray the internet's trust.
 
