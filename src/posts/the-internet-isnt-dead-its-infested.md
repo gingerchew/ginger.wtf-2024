@@ -12,7 +12,7 @@ id: the-internet-isnt-dead-its-infested
 featured: false
 published: true
 ---
-> This post is inspired by [this post by Eric W. Bailey](https://ericwbailey.website/published/consent-llm-scrapers-and-poisoning-the-well/)
+> This post is inspired by [this post by Eric W. Bailey](https://ericwbailey.website/published/consent-llm-scrapers-and-poisoning-the-well/).
 
 Bad news everyone. The internet isn't dead like everyone was jokingly hoping for. It's not full of bots that post relatable content in an endless cycle until the JPEG artifacts make it either impossible to tolerate or impossible to relate to. It's not an endless money machine and it shows no signs of stopping any preexisting [orphan crushing machines](https://knowyourmeme.com/memes/orphan-crushing-machine).
 
@@ -20,17 +20,17 @@ Bad news everyone. The internet isn't dead like everyone was jokingly hoping for
 
 Every time you interact with the web, you see less and less of it. Gemini, Bard, Meta AI, ChatGPT, Bing AI, DDGAI, everything and everyone has a bespoke version of the same monstrous titan that is quickly gobbling up the web under the assumption that [your work is free to use](https://www.windowscentral.com/software-apps/ever-put-content-on-the-web-microsoft-says-that-its-okay-for-them-to-steal-it-because-its-freeware).
 
-Even when they offer up solutions for "avoiding our bots accidentally using content that doesn't want to be included", there exists no system that makes it possible to reprimand and demonize those who betray the internet's trust.
+Even when they offer up solutions for "avoiding our bots accidentally using content that doesn't want to be included", there is no existing system to reprimand, demonize, and punish those who betray the internet's trust.
 
 Why call it theft when you can rebrand it so easily?
 
 These voracious monsters that burn through our electrical grid in the promise of automation and making your life easier seek only to fulfill their own idiotic ideals. Consume. _Consume._ **Consume.**
 
-The existence of AI on the web is cancerous, if we do not cut it out at the source it will continue consuming until there is nothing left.
+The existence of AI on the web is cancerous, if we do nothing it will continue consuming until there is nothing left.
 
 ## The solution
 
-There are only a few solutions to solving a cancerous infection. You can cut it out using a blade, blast it with radiation, or make the very thing it is consuming poisonous to it's very existence.
+There are only a few solutions to solving a cancerous infection. You can cut it out using a blade, blast it with radiation, or make the very thing it is consuming poisonous to it's existence.
 
 And so we must poison the well.
 
