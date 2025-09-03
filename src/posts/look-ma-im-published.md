@@ -22,5 +22,5 @@ So when [Andy Bell](https://piccalil.li/author/andy-bell/) put out a call for wr
 
 With a generic thumbs up, I wrote up another 1500 words about the topic I pitched, and now, [I'm officially a web dev blogger/article writer/words type person](https://piccalil.li/blog/functional-custom-elements-the-easy-way/).
 
-Granted, I have already blogged about web dev stuff on this site so "official" is doing some heavy lifting.
+Granted, I have already blogged about web dev stuff on my own site so "official" is doing some heavy lifting.
 
