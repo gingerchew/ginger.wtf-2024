@@ -2,7 +2,7 @@
 title: Look Ma! I'm published!
 subtitle: Finally completing a goal I have had since I became a developer.
 description: null
-date: '2025-8-29T00:00:00-00:00'
+date: 2025-8-29
 tags:
   - personal
 id: look-ma-im-published
