@@ -7,7 +7,7 @@ tags:
   - personal
 id: look-ma-im-published
 featured: true
-published: false
+published: true
 ---
 
 Everyone has their favorite web blog. Maybe it was the first one they found on google, or it is another dev's personal blog, or a collection of writers that all post about web dev.
